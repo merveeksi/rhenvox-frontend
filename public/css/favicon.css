@@ -1,0 +1,20 @@
+/* Rounded favicon styles */
+link[rel="icon"],
+link[rel="apple-touch-icon"],
+link[rel="shortcut icon"] {
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  overflow: hidden !important;
+  -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
+  mask-image: radial-gradient(circle, black 100%, transparent 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Target the images inside favicon links */
+link[rel="icon"] img,
+link[rel="apple-touch-icon"] img,
+link[rel="shortcut icon"] img {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+} 

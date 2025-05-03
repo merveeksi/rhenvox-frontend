@@ -2,20 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base colors for light theme (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --rhenvox-bg: #FFFFFF;
+  --rhenvox-surface: #F2F4F8;
+  --rhenvox-text: #0B0E19;
+  --rhenvox-muted: #4B5563;
+  
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
+  --chart-1: 210, 65%, 65%;
+  --chart-2: 180, 65%, 65%;
+  --chart-3: 150, 65%, 65%;
+  --chart-4: 120, 65%, 65%;
+  --chart-5: 90, 65%, 65%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Explicitly set light theme colors */
+.light {
+  --rhenvox-bg: #FFFFFF;
+  --rhenvox-surface: #F2F4F8;
+  --rhenvox-text: #0B0E19;
+  --rhenvox-muted: #4B5563;
+}
+
+/* Dark theme colors */
+.dark {
+  --rhenvox-bg: #0B0E19;
+  --rhenvox-surface: #131720;
+  --rhenvox-text: #F8F9FF;
+  --rhenvox-muted: #B0B5C3;
+  
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --chart-1: 210, 85%, 65%;
+  --chart-2: 180, 85%, 65%;
+  --chart-3: 150, 85%, 65%;
+  --chart-4: 120, 85%, 65%;
+  --chart-5: 90, 85%, 65%;
+}
+
+/* Basic styles */
+body {
+  min-height: 100vh;
+  @apply bg-rhenvox-bg text-rhenvox-text;
+}
+
+/* Apply base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Theme transition */
+html, body, * {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-rhenvox-turquoise to-rhenvox-purple;
+}
+
+/* Favicon style */
+link[rel="icon"] {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+/* Theme toggle animation */
+.theme-toggle-icon {
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+html:not(.dark) .theme-toggle-icon.dark-icon {
+  transform: rotate(30deg) scale(0);
+}
+
+html:not(.dark) .theme-toggle-icon.light-icon {
+  transform: rotate(0) scale(1);
+}
+
+html.dark .theme-toggle-icon.dark-icon {
+  transform: rotate(0) scale(1);
+}
+
+html.dark .theme-toggle-icon.light-icon {
+  transform: rotate(-30deg) scale(0);
+}
+
+/* Rounded favicon styles */
+.rounded-favicons link[rel="icon"],
+.rounded-favicons link[rel="shortcut icon"],
+.rounded-favicons link[rel="apple-touch-icon"] {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
