@@ -11,9 +11,13 @@ export default {
   	extend: {
   		colors: {
   			'rhenvox-turquoise': '#68F9E5',
+  			'rhenvox-turquoise-light': '#7DD3FC',
   			'rhenvox-sky': '#48C5FF',
+  			'rhenvox-sky-light': '#7DD3FC',
   			'rhenvox-indigo': '#5B6BFF',
+  			'rhenvox-indigo-light': '#A78BFA',
   			'rhenvox-purple': '#7A30DC',
+  			'rhenvox-purple-light': '#A78BFA',
   			'rhenvox-bg': '#0B0E19',
   			'rhenvox-surface': '#131720',
   			'rhenvox-text': '#F8F9FF',

@@ -1,10 +1,68 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n";
+
 export default function ServicesPage() {
+  const { t } = useI18n();
+
+  // Define services with translated content
+  const services = [
+    {
+      icon: "SE",
+      title: t('services.categories.software.title'),
+      description: t('services.categories.software.description'),
+      features: [
+        "Web Application Development",
+        "Mobile App Development",
+        "Enterprise Software Solutions",
+        "API Development & Integration"
+      ]
+    },
+    {
+      icon: "AI",
+      title: t('services.categories.ai.title'),
+      description: t('services.categories.ai.description'),
+      features: [
+        "Predictive Analytics",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Recommendation Systems"
+      ]
+    },
+    {
+      icon: "UX",
+      title: t('services.categories.design.title'),
+      description: t('services.categories.design.description'),
+      features: [
+        "User Research & Testing",
+        "UX Strategy & Design",
+        "UI Design & Prototyping",
+        "Design Systems"
+      ]
+    }
+  ];
+
+  // Define engagement models
+  const engagementModels = [
+    {
+      title: "Fixed Scope Projects",
+      description: "Well-defined projects with clear requirements and deliverables, perfect for specific initiatives."
+    },
+    {
+      title: "Time & Materials",
+      description: "Flexible engagement model ideal for projects with evolving requirements or ongoing development."
+    },
+    {
+      title: "Dedicated Team",
+      description: "A full-time team extension model with dedicated engineers working exclusively on your projects."
+    }
+  ];
+
   return (
     <div className="container py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold mb-8 text-center gradient-text">Our Services</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center gradient-text">{t('services.pageTitle')}</h1>
       <p className="text-rhenvox-muted text-center max-w-3xl mx-auto mb-16">
-        We offer a comprehensive suite of software engineering, AI R&D, and design services
-        tailored to meet your business needs.
+        {t('services.heroSubtitle')}
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -27,7 +85,7 @@ export default function ServicesPage() {
       </div>
       
       <div className="bg-rhenvox-bg rounded-lg p-8">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Engagement Models</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">{t('services.process.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {engagementModels.map((model, index) => (
             <div key={index} className="p-6 bg-rhenvox-surface rounded-lg">
@@ -39,55 +97,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-}
-
-const services = [
-  {
-    icon: "SE",
-    title: "Software Engineering",
-    description: "End-to-end software development with a focus on quality, scalability, and maintainability.",
-    features: [
-      "Web & Mobile Applications",
-      "Cloud Architecture",
-      "API Development",
-      "Database Design"
-    ]
-  },
-  {
-    icon: "AI",
-    title: "AI Research & Development",
-    description: "Cutting-edge AI solutions to transform your business processes and customer experiences.",
-    features: [
-      "Machine Learning Models",
-      "Natural Language Processing",
-      "Computer Vision",
-      "Predictive Analytics"
-    ]
-  },
-  {
-    icon: "UX",
-    title: "UI/UX Design",
-    description: "Beautiful, intuitive interfaces that delight users and enhance brand experience.",
-    features: [
-      "User Research",
-      "Interface Design",
-      "Prototyping",
-      "Usability Testing"
-    ]
-  }
-];
-
-const engagementModels = [
-  {
-    title: "Fixed Scope Projects",
-    description: "Well-defined projects with clear requirements and deliverables, perfect for specific initiatives."
-  },
-  {
-    title: "Time & Materials",
-    description: "Flexible engagement model ideal for projects with evolving requirements or ongoing development."
-  },
-  {
-    title: "Dedicated Team",
-    description: "A full-time team extension model with dedicated engineers working exclusively on your projects."
-  }
-]; 
+} 

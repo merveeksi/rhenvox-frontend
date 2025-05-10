@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
-import Script from "next/script";
+import type React from "react"
+import "@/app/globals.css"
+import { Inter } from "next/font/google"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +40,7 @@ export const metadata: Metadata = {
     'msapplication-TileImage': '/apple-touch-icon.png',
     'msapplication-TileColor': '#0B0E19',
     'theme-color': '#7A30DC',
+    'light-theme-color': '#E4D5F8',
   },
 };
 
@@ -67,34 +71,6 @@ export default function RootLayout({
             {children}
           </I18nProvider>
         </ThemeProvider>
-
-        {/* Improved theme initialization script */}
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
-            (function() {
-              try {
-                // Get theme from localStorage
-                const savedTheme = localStorage.getItem('theme');
-                // Initialize theme correctly
-                if (savedTheme && ['dark', 'light'].includes(savedTheme)) {
-                  // Remove any existing theme classes
-                  document.documentElement.classList.remove('light', 'dark');
-                  // Apply the saved theme
-                  document.documentElement.classList.add(savedTheme);
-                } else {
-                  // Default to dark theme
-                  document.documentElement.classList.remove('light', 'dark');
-                  document.documentElement.classList.add('dark');
-                  localStorage.setItem('theme', 'dark');
-                }
-              } catch (e) {
-                console.error('Error initializing theme:', e);
-                // Fallback to dark theme on error
-                document.documentElement.classList.add('dark');
-              }
-            })();
-          `}
-        </Script>
       </body>
     </html>
   );

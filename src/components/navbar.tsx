@@ -7,13 +7,10 @@ import { useState, useEffect } from "react";
 import { Logo } from "./logo";
 import ThemeSwitcher from "./ThemeSwitcher";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useTheme } from "next-themes";
-import { applyThemeClass } from "@/lib/theme-utils";
 import { useI18n } from "@/lib/i18n";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { t } = useI18n();
   
@@ -21,13 +18,6 @@ export function Navbar() {
   useEffect(() => {
     setMounted(true);
   }, []);
-  
-  // Handle theme change for proper rendering
-  useEffect(() => {
-    if (mounted && resolvedTheme) {
-      applyThemeClass(resolvedTheme);
-    }
-  }, [resolvedTheme, mounted]);
 
   // Get translated nav links
   const navLinks = [
@@ -40,8 +30,39 @@ export function Navbar() {
     { href: "/contact", label: t('navbar.contact') },
   ];
 
+  // Avoid rendering different HTML on server vs client
+  if (!mounted) {
+    return (
+      <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-bg/80">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <Logo />
+          <div className="hidden md:flex items-center space-x-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-rhenvox-text hover:text-rhenvox-sky transition-colors font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Button>{t('navbar.getInTouch')}</Button>
+          </div>
+          <div className="flex md:hidden">
+            <button
+              className="p-2 rounded-md hover:bg-rhenvox-surface"
+              aria-label="Toggle menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
-    <nav className="fixed w-full top-0 z-50 bg-rhenvox-bg/80 backdrop-blur-md py-4 px-4 md:px-8">
+    <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-bg/80">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Logo />
 
@@ -84,7 +105,7 @@ export function Navbar() {
 
       {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-rhenvox-bg/95 backdrop-blur-md shadow-lg border-t border-rhenvox-surface p-4">
+        <div className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md shadow-lg p-4 bg-rhenvox-bg/95 border-t border-rhenvox-surface">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link

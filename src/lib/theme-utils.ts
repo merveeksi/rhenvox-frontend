@@ -1,42 +1,33 @@
 /**
- * Apply theme class to HTML element
- * Ensures the theme is correctly applied to the root element
+ * Helper for theme related functionality
+ * These functions are designed to work with next-themes without manipulating the DOM directly
  */
-export function applyThemeClass(theme: string | undefined): void {
-  if (!theme) return;
-  
-  try {
-    // First remove both classes
-    document.documentElement.classList.remove('light', 'dark');
-    // Then add the current theme
-    document.documentElement.classList.add(theme);
-    // Store in localStorage for persistence
-    localStorage.setItem('theme', theme);
-  } catch (error) {
-    console.error('Error applying theme class:', error);
-  }
+
+/**
+ * Get theme as a boolean indicator (true = dark, false = light)
+ */
+export function isDarkTheme(theme: string | undefined): boolean {
+  return theme === 'dark';
 }
 
 /**
- * Get theme from localStorage or system preference
+ * Get proper color classes based on current theme
  */
-export function getInitialTheme(): string {
-  try {
-    // Check localStorage first
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      return storedTheme;
-    }
-    
-    // Fall back to system preference if available
-    if (typeof window !== 'undefined' && window.matchMedia) {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return isDark ? 'dark' : 'light';
-    }
-  } catch (error) {
-    console.error('Error getting initial theme:', error);
-  }
+export function getThemeColorClass(darkClass: string, lightClass: string, theme: string | undefined): string {
+  return theme === 'dark' ? darkClass : lightClass;
+}
+
+/**
+ * Get theme from localStorage 
+ * This is only for reading, not setting - let next-themes handle the setting
+ */
+export function getStoredTheme(): string | null {
+  if (typeof window === 'undefined') return null;
   
-  // Default to dark theme if all else fails
-  return 'dark';
-} 
+  try {
+    return localStorage.getItem('theme');
+  } catch (error) {
+    console.error('Error reading theme from localStorage:', error);
+    return null;
+  }
+}

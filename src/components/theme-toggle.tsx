@@ -14,42 +14,20 @@ export function ThemeToggle() {
     setMounted(true);
   }, []);
   
-  // Force apply the theme from localStorage or default
-  React.useEffect(() => {
-    if (mounted) {
-      const savedTheme = localStorage.getItem("theme") || "dark";
-      document.documentElement.classList.remove("light", "dark");
-      document.documentElement.classList.add(savedTheme);
-      setTheme(savedTheme);
-    }
-  }, [mounted, setTheme]);
-  
-  const toggleTheme = React.useCallback(() => {
-    const currentTheme = theme || resolvedTheme || "dark";
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    
-    // Update HTML classes
-    document.documentElement.classList.remove("light", "dark");
-    document.documentElement.classList.add(newTheme);
-    
-    // Store in localStorage
-    localStorage.setItem("theme", newTheme);
-    
-    // Update next-themes
-    setTheme(newTheme);
-  }, [theme, resolvedTheme, setTheme]);
-  
   // Don't render toggle until hydration completes to avoid mismatch
   if (!mounted) {
     return null;
   }
+  
+  const currentTheme = theme || resolvedTheme || "dark";
+  const isDark = currentTheme === "dark";
 
   return (
     <Button 
       variant="ghost" 
       size="icon" 
       className="rounded-full"
-      onClick={toggleTheme}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label="Toggle theme"
     >
       <Sun className="h-[1.2rem] w-[1.2rem] theme-toggle-icon light-icon" />
