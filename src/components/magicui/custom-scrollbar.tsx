@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 // Hide native scrollbar style (added as a separate component)
 function HideNativeScrollbar() {

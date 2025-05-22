@@ -2,19 +2,16 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, ChevronRight, Calendar, User, Tag } from "lucide-react";
 
 // Define image URLs as constants to ensure consistency
-const FEATURED_IMAGE_URL = "/blog/featured-ai.jpg"; // Local image path for better reliability
 const UNSPLASH_FEATURED_FALLBACK = "https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=1200&q=80";
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [imageError, setImageError] = useState(false);
 
   return (
     <div className="container py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,0 +1,25 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+.npm
+.npmrc
+README.md
+.next
+.git
+
+# Test files
+test/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+*.test.*
+*.spec.*
+
+# Other files
+*.pdf
+*.txt
+.env.local
+.env.development
+.env.test

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -153,7 +152,7 @@ export default function PortfolioPage() {
           <h2 className="text-3xl font-bold mb-4">Our Development Process</h2>
           <p className="text-rhenvox-muted max-w-2xl mx-auto">
             We follow a structured yet flexible approach to deliver high-quality, 
-            scalable solutions that meet our clients' unique requirements.
+            scalable solutions that meet our clients&apos; unique requirements.
           </p>
         </div>
 

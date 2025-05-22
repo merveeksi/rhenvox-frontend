@@ -6,11 +6,11 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
           <p className="text-rhenvox-muted mb-4">
-            Founded in 2023, Rhenvox was born from a vision to create software that doesn't just function, but transforms. 
+            Founded in 2023, Rhenvox was born from a vision to create software that doesn&apos;t just function, but transforms. 
             Our team of engineers, designers, and researchers work together to build innovative solutions.
           </p>
           <p className="text-rhenvox-muted">
-            We're passionate about using technology to solve complex problems and create exceptional user experiences.
+            We&apos;re passionate about using technology to solve complex problems and create exceptional user experiences.
           </p>
         </div>
         <div className="bg-rhenvox-surface rounded-lg p-8">

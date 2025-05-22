@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+src/components/earth-with-shader.tsx
+
+src/components/hero-gradient.tsx

@@ -19,7 +19,9 @@ const I18nContext = createContext<I18nContextType | undefined>(undefined);
 import { en } from '@/lib/i18n/dictionaries/en';
 import { tr } from '@/lib/i18n/dictionaries/tr';
 
-const dictionaries = {
+type Dictionary = typeof en;
+
+const dictionaries: Record<Locale, Dictionary> = {
   en,
   tr,
 };
@@ -27,11 +29,9 @@ const dictionaries = {
 // Provider component
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('en');
-  const [mounted, setMounted] = useState(false);
 
   // Load locale from localStorage on client side
   useEffect(() => {
-    setMounted(true);
     try {
       const savedLocale = localStorage.getItem('locale') as Locale;
       if (savedLocale && (savedLocale === 'en' || savedLocale === 'tr')) {
@@ -61,14 +61,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     const dict = dictionaries[locale];
     
     // Navigate through the dictionary using the keys
-    let value: any = dict;
+    let value: unknown = dict;
     for (const k of keys) {
-      value = value?.[k];
+      value = (value as Record<string, unknown>)?.[k];
       if (!value) break;
     }
     
     // Return the translation or the key if not found
-    return value || key;
+    return typeof value === 'string' ? value : key;
   };
 
   return (

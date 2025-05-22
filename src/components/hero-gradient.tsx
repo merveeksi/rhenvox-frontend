@@ -6,7 +6,6 @@ import { useI18n } from "@/lib/i18n";
 import { useTheme } from "next-themes";
 import { Globe } from "@/components/magicui/globe";
 import { OrbitingStars } from "@/components/magicui/orbiting-stars";
-import { Search } from "lucide-react";
 import { CustomScrollbar } from "@/components/magicui/custom-scrollbar";
 
 export function HeroGradient() {

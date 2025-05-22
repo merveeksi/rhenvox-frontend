@@ -27,7 +27,7 @@ export default function CareersPage() {
           Join Our Team
         </h1>
         <p className="text-rhenvox-muted text-lg max-w-3xl mx-auto mb-8">
-          At Rhenvox, we're building the future of technology together. Join a team of passionate innovators 
+          At Rhenvox, we&apos;re building the future of technology together. Join a team of passionate innovators 
           dedicated to creating exceptional software solutions.
         </p>
         <Button size="lg" className="px-8">
@@ -54,7 +54,7 @@ export default function CareersPage() {
               <p className="text-rhenvox-muted">
                 Our commitment to excellence, continuous innovation, and ethical technology development drives 
                 everything we do. We believe that the right blend of human creativity and cutting-edge technology 
-                can solve the world's most pressing problems.
+                can solve the world&apos;s most pressing problems.
               </p>
             </motion.div>
             <motion.div 
@@ -88,8 +88,8 @@ export default function CareersPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Culture</h2>
           <p className="text-rhenvox-muted max-w-2xl mx-auto">
-            We've built a culture that celebrates diversity, encourages innovation, and promotes 
-            work-life balance. Here's what it's like to work at Rhenvox:
+            We&apos;ve built a culture that celebrates diversity, encourages innovation, and promotes 
+            work-life balance. Here&apos;s what it&apos;s like to work at Rhenvox:
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export default function CareersPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Open Positions</h2>
           <p className="text-rhenvox-muted max-w-2xl mx-auto">
-            Join our team and help build the next generation of software. We're always looking for 
+            Join our team and help build the next generation of software. We&apos;re always looking for 
             talented individuals to join our growing team.
           </p>
         </div>
@@ -193,9 +193,9 @@ export default function CareersPage() {
       {/* CTA Section */}
       <section>
         <div className="bg-gradient-to-r from-rhenvox-indigo/10 via-rhenvox-sky/10 to-rhenvox-turquoise/10 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Don't See a Position That Fits?</h2>
+          <h2 className="text-3xl font-bold mb-4">Don&apos;t See a Position That Fits?</h2>
           <p className="text-rhenvox-muted max-w-2xl mx-auto mb-8">
-            We're always looking for exceptional talent. Send us your resume and tell us why you'd 
+            We&apos;re always looking for exceptional talent. Send us your resume and tell us why you&apos;d 
             be a great addition to the Rhenvox team.
           </p>
           <Button size="lg">
