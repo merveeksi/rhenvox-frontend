@@ -1,23 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Docker için ekliyoruz
+  output: 'standalone', 
+
   images: {
-    domains: ['ui.shadcn.com'], // Add any domains from which you'll load external images
-  },
-  async headers() {
-    return [
+    domains: ['ui.shadcn.com', 'images.unsplash.com'], // Her iki dosyadan gelen domainleri birleştir
+    remotePatterns: [ // mjs dosyasından alındı
       {
-        // Apply to all routes
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Link',
-            // Add preload for favicon with a mask to show rounded corners
-            value: '</favicon-32x32.png>; rel=icon; as=image; type=image/png; sizes=32x32',
-          },
-        ],
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '**',
       },
-    ]
+    ],
+  },
+
+  eslint: { // mjs dosyasından alındı
+    ignoreDuringBuilds: true, // Eğer ESLint hatalarının build'i durdurmasını istemiyorsanız
   },
 };
 
