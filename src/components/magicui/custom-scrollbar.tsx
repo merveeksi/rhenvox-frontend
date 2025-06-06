@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // Hide native scrollbar style (added as a separate component)
 function HideNativeScrollbar() {
@@ -27,34 +27,18 @@ function HideNativeScrollbar() {
   return null;
 }
 
-// Büyük yıldız SVG (parlayan, gradientli)
+// Main star SVG (optimized with simpler rendering)
 const MainStar = ({ size = 32 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 32 32" fill="none">
-    <defs>
-      <radialGradient id="star-glow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stopColor="#fff" stopOpacity="1" />
-        <stop offset="60%" stopColor="#6ecaff" stopOpacity="0.7" />
-        <stop offset="100%" stopColor="#7A30DC" stopOpacity="0.25" />
-      </radialGradient>
-    </defs>
     <polygon
       points="16,2 20,12 30,16 20,20 16,30 12,20 2,16 12,12"
-      fill="url(#star-glow)"
-      filter="url(#main-glow)"
+      fill="#fff"
+      fillOpacity="0.9"
     />
-    <defs>
-      <filter id="main-glow" x="-40%" y="-40%" width="180%" height="180%">
-        <feGaussianBlur stdDeviation="3" result="blur" />
-        <feMerge>
-          <feMergeNode in="blur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
   </svg>
 );
 
-// Küçük yan yıldızlar
+// Small side stars
 const SmallStar = ({ size = 10, x = 0, y = 0 }: { size?: number; x?: number; y?: number }) => (
   <svg
     width={size}
@@ -74,44 +58,69 @@ const SmallStar = ({ size = 10, x = 0, y = 0 }: { size?: number; x?: number; y?:
 export const CustomScrollbar: React.FC = () => {
   const [scrollInfo, setScrollInfo] = useState({ scrollPercent: 0, viewportHeight: 0 });
   const [isMounted, setIsMounted] = useState(false);
+  const scrollThrottleRef = useRef<number | null>(null);
   
-  // Kullanıcı scroll olayını izle
+  // Throttle scroll updates for better performance
+  const throttleScroll = (callback: () => void, delay = 10) => {
+    if (scrollThrottleRef.current === null) {
+      scrollThrottleRef.current = window.setTimeout(() => {
+        callback();
+        scrollThrottleRef.current = null;
+      }, delay);
+    }
+  };
+  
+  // Track user scroll event
   useEffect(() => {
-    // Client-side render olduğunu belirt
+    // Mark as client-side rendered
     setIsMounted(true);
     
     const handleScroll = () => {
-      const doc = document.documentElement;
-      const scrollTop = window.scrollY || doc.scrollTop;
-      const scrollHeight = doc.scrollHeight - doc.clientHeight;
-      const viewportHeight = doc.clientHeight;
-      
-      setScrollInfo({
-        scrollPercent: scrollTop / (scrollHeight || 1),
-        viewportHeight
+      throttleScroll(() => {
+        const doc = document.documentElement;
+        const scrollTop = window.scrollY || doc.scrollTop;
+        const scrollHeight = doc.scrollHeight - doc.clientHeight;
+        const viewportHeight = doc.clientHeight;
+        
+        setScrollInfo({
+          scrollPercent: scrollTop / (scrollHeight || 1),
+          viewportHeight
+        });
       });
     };
     
-    // İlk yüklenmede pozisyonu hesapla
+    // Calculate position on initial load
     handleScroll();
     
-    // Event listener'ları ekle
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
+    // Add event listeners
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    
+    // Only recalculate on resize when needed
+    const handleResize = () => {
+      const viewportHeight = document.documentElement.clientHeight;
+      if (Math.abs(viewportHeight - scrollInfo.viewportHeight) > 50) {
+        handleScroll();
+      }
+    };
+    
+    window.addEventListener("resize", handleResize, { passive: true });
     
     // Cleanup function
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      if (scrollThrottleRef.current) {
+        clearTimeout(scrollThrottleRef.current);
+      }
     };
-  }, []);
+  }, [scrollInfo.viewportHeight]);
 
-  // Client-side değilse render etme
+  // Don't render on server
   if (!isMounted) {
     return null;
   }
   
-  // Thumb yüksekliği ve pozisyonu
+  // Thumb height and position
   const thumbHeight = 180;
   const trackHeight = scrollInfo.viewportHeight - 40;
   const thumbTop = scrollInfo.scrollPercent * (trackHeight - thumbHeight) + 20;
@@ -144,7 +153,7 @@ export const CustomScrollbar: React.FC = () => {
             borderRadius: 4,
           }}
         />
-        {/* Thumb (gradient çizgi + yıldız) */}
+        {/* Thumb (simplified gradient line + star) */}
         <div
           style={{
             position: "absolute",
@@ -156,9 +165,11 @@ export const CustomScrollbar: React.FC = () => {
             flexDirection: "column",
             alignItems: "center",
             pointerEvents: "none",
+            willChange: "transform", // Optimize animations
+            transform: "translateZ(0)", // Hardware acceleration
           }}
         >
-          {/* Gradient çizgi */}
+          {/* Gradient line */}
           <div
             style={{
               width: 2,
@@ -166,14 +177,11 @@ export const CustomScrollbar: React.FC = () => {
               background:
                 "linear-gradient(180deg, #48C5FF, #68F9E5 40%, #7A30DC 100%)",
               marginBottom: -8,
-              boxShadow:
-                "0 0 16px 2px #48C5FF44, 0 0 32px 8px #7A30DC22, 0 0 24px 0px #68F9E566",
               borderRadius: 2,
               opacity: 0.95,
-              filter: "blur(0.5px)",
             }}
           />
-          {/* Yıldız ve yan yıldızlar */}
+          {/* Star and side stars */}
           <div style={{ position: "relative", width: 40, height: 40 }}>
             <MainStar size={32} />
             <SmallStar size={10} x={-8} y={18} />

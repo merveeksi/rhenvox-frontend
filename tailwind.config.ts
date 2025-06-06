@@ -10,6 +10,14 @@ export default {
   theme: {
   	extend: {
   		colors: {
+  			rhenvox: {
+  				primary: '#4A137C',
+  				surface: '#F0E9FB',
+  				bg: '#E4D5F8',
+  				muted: '#4A137C',
+  				white: '#FFFFFF',
+  				text: '#0B0E19'
+  			},
   			'rhenvox-turquoise': '#68F9E5',
   			'rhenvox-turquoise-light': '#7DD3FC',
   			'rhenvox-sky': '#48C5FF',
@@ -18,10 +26,6 @@ export default {
   			'rhenvox-indigo-light': '#A78BFA',
   			'rhenvox-purple': '#7A30DC',
   			'rhenvox-purple-light': '#A78BFA',
-  			'rhenvox-bg': '#0B0E19',
-  			'rhenvox-surface': '#131720',
-  			'rhenvox-text': '#F8F9FF',
-  			'rhenvox-muted': '#B0B5C3',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

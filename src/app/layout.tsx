@@ -5,8 +5,6 @@ import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +22,7 @@ export const metadata: Metadata = {
   description: "Premium software engineering, AI R&D, and UI/UX design services",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
@@ -33,6 +31,7 @@ export const metadata: Metadata = {
     ],
     other: [
       { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -52,7 +51,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <style dangerouslySetInnerHTML={{ __html: `
           link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"] {
             border-radius: 50% !important; 

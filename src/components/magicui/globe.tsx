@@ -2,22 +2,23 @@
 
 import createGlobe, { COBEOptions } from "cobe";
 import { useMotionValue, useSpring } from "motion/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 const MOVEMENT_DAMPING = 1400;
 
+// Restored original quality settings but keeping optimizations
 const GLOBE_CONFIG: COBEOptions = {
-  width: 1400,
-  height: 1400,
+  width: 1400, // Restored original value
+  height: 1400, // Restored original value
   onRender: () => {},
-  devicePixelRatio: 2,
+  devicePixelRatio: 2, // Restored original value
   phi: 0,
   theta: 0.3,
   dark: 1,
   diffuse: 0.2,
-  mapSamples: 40000,
+  mapSamples: 40000, // Restored original value
   mapBrightness: 3,
   baseColor: [0.1, 0.1, 0.15],
   markerColor: [1, 1, 1],
@@ -48,6 +49,8 @@ export function Globe({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
+  const [isInViewport, setIsInViewport] = useState(false);
+  const globeInstanceRef = useRef<any>(null);
 
   const r = useMotionValue(0);
   const rs = useSpring(r, {
@@ -71,6 +74,28 @@ export function Globe({
     }
   };
 
+  // Check if element is in viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsInViewport(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (canvasRef.current) {
+      observer.observe(canvasRef.current);
+    }
+
+    return () => {
+      if (canvasRef.current) {
+        observer.unobserve(canvasRef.current);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const onResize = () => {
       if (canvasRef.current) {
@@ -86,19 +111,24 @@ export function Globe({
       width: widthRef.current * 2,
       height: widthRef.current * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phiRef.current += 0.002;
+        // Only rotate when in viewport or when interacting
+        if (isInViewport && !pointerInteracting.current) {
+          phiRef.current += 0.002; // Restored original rotation speed
+        }
         state.phi = phiRef.current + rs.get();
         state.width = widthRef.current * 2;
         state.height = widthRef.current * 2;
       },
     });
 
+    globeInstanceRef.current = globe;
+
     setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0);
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [rs, config]);
+  }, [rs, config, isInViewport]);
 
   return (
     <div
