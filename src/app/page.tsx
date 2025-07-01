@@ -8,6 +8,9 @@ import { useTheme } from "next-themes";
 import { ThemeAwareSection } from "@/components/theme-aware-section";
 import { useEffect, useState } from "react";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import Image from "next/image";
+import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 
 export default function Home() {
   const { t } = useI18n();
@@ -39,10 +42,9 @@ export default function Home() {
 
   // Tech stack array - these are brand names, so they stay the same
   const techStack = [
-    "Next.js", "React", "TypeScript", 
-    "Node.js", ".NET", "PostgreSQL", 
-    "Azure", "AWS", "TensorFlow", 
-    "Docker", "Kubernetes", "CI/CD"
+    ".NET", "Next.js", "Node.js", "React Native",
+    "TypeScript", "TailwindCSS", "PostgreSQL",
+    "Docker", "AI", "AWS", "Google Cloud", "OpenAI",
   ];
 
   // If not mounted yet, return a loading state or skeleton
@@ -106,21 +108,47 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
+            {[
+              {
+                id: 1,
+                name: "Nur Bilgi Web",
+                image: "/images/nurbilgi.logo.png",
+                description: t('latestProjects.projectDescription'),
+                technologies: ["Next.js", "TypeScript", ".NET"]
+              },
+              {
+                id: 2,
+                name: "Nur Bilgi Mobil",
+                image: "/images/nurbilgi.logo.png",
+                description: t('latestProjects.projectDescription'),
+                technologies: ["React Native", "TailwindCSS", ".NET"]
+              },
+              {
+                id: 3,
+                name: "Project 3",
+                image: "/images/nurbilgi.logo.png",
+                description: t('latestProjects.projectDescription'),
+                technologies: ["React Native", "TailwindCSS", ".NET"]
+              }
+            ].map((project) => (
               <div 
-                key={item} 
+                key={project.id} 
                 className="rounded-lg overflow-hidden hover:translate-y-[-8px] transition-transform duration-300 bg-rhenvox-surface"
               >
-                <div className="h-48 bg-gradient-to-r from-rhenvox-turquoise to-rhenvox-purple"></div>
+                <div className="h-48 bg-gradient-to-r from-rhenvox-turquoise to-rhenvox-purple">
+                  <div className="relative w-full h-full">
+                    <Image src={project.image} alt={project.name} fill className="object-contain" />
+                  </div>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Project {item}</h3>
+                  <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                   <p className="mb-4 text-rhenvox-muted">
-                    {t('latestProjects.projectDescription')}
+                    {project.description}
                   </p>
-                  <div className="flex space-x-2">
-                    <span className="inline-block px-2 py-1 rounded text-xs bg-rhenvox-bg">React</span>
-                    <span className="inline-block px-2 py-1 rounded text-xs bg-rhenvox-bg">TypeScript</span>
-                    <span className="inline-block px-2 py-1 rounded text-xs bg-rhenvox-bg">Next.js</span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, index) => (
+                      <span key={index} className="inline-block px-2 py-1 rounded text-xs bg-rhenvox-bg">{tech}</span>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -146,7 +174,21 @@ export default function Home() {
             {techStack.map((tech, index) => (
               <div key={index} className="text-center">
                 <div className="h-16 w-16 mx-auto mb-2 flex items-center justify-center">
-                  <div className="h-10 w-10 rounded-full bg-rhenvox-bg"></div>
+                  <div className="h-12 w-12 rounded-full bg-rhenvox-bg flex items-center justify-center">
+                    {/* Using react-icons instead of image files */}
+                    {tech === "React" && <FaReact className="h-8 w-8 text-blue-400" />}
+                    {tech === "Next.js" && <SiNextdotjs className="h-7 w-7" />}
+                    {tech === "TypeScript" && <SiTypescript className="h-7 w-7 text-blue-600" />}
+                    {tech === "Node.js" && <FaNodeJs className="h-8 w-8 text-green-500" />}
+                    {tech === "Python" && <FaPython className="h-8 w-8 text-yellow-500" />}
+                    {tech === "TailwindCSS" && <SiTailwindcss className="h-8 w-8 text-cyan-400" />}
+                    {tech === "AWS" && <FaAws className="h-7 w-7 text-orange-400" />}
+                    {tech === "Docker" && <FaDocker className="h-8 w-8 text-blue-500" />}
+                    {/* Fallback for any tech without an icon */}
+                    {!["React", "Next.js", "TypeScript", "Node.js", "Python", "TailwindCSS", "AWS", "Docker"].includes(tech) && 
+                      <div className="h-8 w-8 flex items-center justify-center text-xs font-bold">{tech.substring(0, 2)}</div>
+                    }
+                  </div>
                 </div>
                 <span className="text-sm text-rhenvox-muted">{tech}</span>
               </div>
