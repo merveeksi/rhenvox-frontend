@@ -1,6 +1,7 @@
 import { HeroGradient } from "@/components/hero-gradient";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 export default function HomePage() {
   return (
@@ -15,7 +16,9 @@ export default function HomePage() {
           <p className="text-rhenvox-muted max-w-2xl mx-auto mb-8">
             Let&apos;s unlock your next big product together
           </p>
-          <Button>Book a free 30-minute consultation</Button>
+          <ShimmerButton>
+            <span className="text-sm font-medium text-white">Book a free 30-minute consultation</span>
+          </ShimmerButton>
         </div>
       </section>
     </>

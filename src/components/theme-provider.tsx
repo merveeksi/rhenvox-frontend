@@ -14,6 +14,7 @@ export default function ThemeProvider({
       attribute="class" 
       defaultTheme="dark" 
       enableSystem={false}
+      storageKey="theme"
       {...props}
     >
       {children}

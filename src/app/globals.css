@@ -8,7 +8,9 @@
   --rhenvox-surface: #F2F4F8;
   --rhenvox-text: #0B0E19;
   --rhenvox-muted: #4B5563;
-  
+  --rhenvox-primary: #4A137C;
+  --rhenvox-white: #FFFFFF;
+
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
   --card: 0 0% 100%;
@@ -38,19 +40,23 @@
 
 /* Explicitly set light theme colors */
 .light {
-  --rhenvox-bg: #FFFFFF;
-  --rhenvox-surface: #F2F4F8;
+  --rhenvox-bg: #cbb4d4;
+  --rhenvox-surface: #86A8E7;
   --rhenvox-text: #0B0E19;
   --rhenvox-muted: #4B5563;
+  --rhenvox-primary: #4A137C;
+  --rhenvox-white: #FFFFFF;
 }
 
 /* Dark theme colors */
 .dark {
-  --rhenvox-bg: #0B0E19;
-  --rhenvox-surface: #131720;
+  --rhenvox-bg: #141E30;
+  --rhenvox-surface: #243B55;
   --rhenvox-text: #F8F9FF;
   --rhenvox-muted: #B0B5C3;
-  
+  --rhenvox-primary: #7A30DC;
+  --rhenvox-white: #131720;
+
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
   --card: 240 10% 3.9%;
@@ -89,7 +95,11 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground transition-colors;
+    @apply bg-rhenvox-bg text-rhenvox-text transition-colors;
+  }
+  .theme {
+    --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+    --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
   }
 }
 
@@ -115,20 +125,20 @@ link[rel="icon"] {
   transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-html:not(.dark) .theme-toggle-icon.dark-icon {
+.dark .theme-toggle-icon.dark-icon {
+  transform: rotate(0) scale(1);
+}
+
+.dark .theme-toggle-icon.light-icon {
+  transform: rotate(-30deg) scale(0);
+}
+
+.light .theme-toggle-icon.dark-icon {
   transform: rotate(30deg) scale(0);
 }
 
-html:not(.dark) .theme-toggle-icon.light-icon {
+.light .theme-toggle-icon.light-icon {
   transform: rotate(0) scale(1);
-}
-
-html.dark .theme-toggle-icon.dark-icon {
-  transform: rotate(0) scale(1);
-}
-
-html.dark .theme-toggle-icon.light-icon {
-  transform: rotate(-30deg) scale(0);
 }
 
 /* Rounded favicon styles */
@@ -139,3 +149,49 @@ html.dark .theme-toggle-icon.light-icon {
   overflow: hidden !important;
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes shimmer-slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+    }
+  15%, 35% {
+    transform: translateZ(0) rotate(90deg);
+    }
+  65%, 85% {
+    transform: translateZ(0) rotate(270deg);
+    }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;
+}
+
+/* IE ve Edge (eski sürümler) */
+body {
+  -ms-overflow-style: none;
+}

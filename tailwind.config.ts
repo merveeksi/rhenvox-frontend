@@ -9,14 +9,23 @@ export default {
   ],
   theme: {
   	extend: {
+      keyframes: {
+        shimmer: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+      },
+      animation: {
+        shimmer: "shimmer 2s infinite",
+      },
   		colors: {
   			rhenvox: {
-  				primary: '#4A137C',
-  				surface: '#F0E9FB',
-  				bg: '#E4D5F8',
-  				muted: '#4A137C',
-  				white: '#FFFFFF',
-  				text: '#0B0E19'
+  				primary: 'var(--rhenvox-primary)',
+  				surface: 'var(--rhenvox-surface)',
+  				bg: 'var(--rhenvox-bg)',
+  				muted: 'var(--rhenvox-muted)',
+  				white: 'var(--rhenvox-white)',
+  				text: 'var(--rhenvox-text)'
   			},
   			'rhenvox-turquoise': '#68F9E5',
   			'rhenvox-turquoise-light': '#7DD3FC',

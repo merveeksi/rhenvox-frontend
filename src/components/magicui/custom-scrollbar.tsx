@@ -132,13 +132,13 @@ export const CustomScrollbar: React.FC = () => {
         style={{
           position: "fixed",
           top: 0,
-          left: 0,
+          right: 0,
           width: 48,
           height: "100vh",
           zIndex: 50,
           pointerEvents: "none",
           display: "flex",
-          justifyContent: "flex-start",
+          justifyContent: "flex-end",
         }}
       >
         {/* Track */}
@@ -146,7 +146,7 @@ export const CustomScrollbar: React.FC = () => {
           style={{
             position: "absolute",
             top: 20,
-            left: 22,
+            right: 22,
             width: 2,
             height: trackHeight,
             background: "rgba(120,130,150,0.13)",

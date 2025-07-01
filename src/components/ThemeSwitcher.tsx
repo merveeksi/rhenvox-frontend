@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
 
 export default function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // Only run on client to avoid hydration mismatch
@@ -18,13 +18,16 @@ export default function ThemeSwitcher() {
     return null;
   }
 
+  const currentTheme = theme || resolvedTheme || 'dark';
+  const isDark = currentTheme === 'dark';
+
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className="p-2 rounded-full transition-colors hover:bg-rhenvox-surface"
       aria-label="Tema değiştir"
     >
-      {theme === 'dark' ? (
+      {isDark ? (
         <Sun className="h-5 w-5 text-rhenvox-text" />
       ) : (
         <Moon className="h-5 w-5 text-rhenvox-text" />

@@ -8,6 +8,7 @@ import { Logo } from "./logo";
 import ThemeSwitcher from "./ThemeSwitcher";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/lib/i18n";
+import { ShimmerButton } from "./magicui/shimmer-button";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ export function Navbar() {
   // Avoid rendering different HTML on server vs client
   if (!mounted) {
     return (
-      <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-bg/80">
+      <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-surface/95 shadow-lg border-b border-rhenvox-purple/20">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Logo />
           <div className="hidden md:flex items-center space-x-6">
@@ -41,12 +42,16 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-rhenvox-text hover:text-rhenvox-sky transition-colors font-medium"
+                className="text-rhenvox-text hover:text-rhenvox-purple transition-colors font-medium"
               >
                 {link.label}
               </Link>
             ))}
-            <Button>{t('navbar.getInTouch')}</Button>
+            <ShimmerButton>
+              <span className="text-sm font-medium text-white">
+                {t('navbar.getInTouch')}
+              </span>
+            </ShimmerButton>
           </div>
           <div className="flex md:hidden">
             <button
@@ -62,7 +67,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-bg/80">
+    <nav className="fixed w-full top-0 z-50 backdrop-blur-md py-4 px-4 md:px-8 bg-rhenvox-surface/95 shadow-lg border-b border-rhenvox-purple/20">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Logo />
 
@@ -72,7 +77,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-rhenvox-text hover:text-rhenvox-sky transition-colors font-medium"
+              className="text-rhenvox-text hover:text-rhenvox-purple transition-colors font-medium"
             >
               {link.label}
             </Link>
@@ -84,14 +89,18 @@ export function Navbar() {
           {/* Theme Switcher */}
           <ThemeSwitcher />
           
-          <Button>{t('navbar.getInTouch')}</Button>
+          <ShimmerButton>
+            <span className="text-sm font-medium text-white">
+              {t('navbar.getInTouch')}
+            </span>
+          </ShimmerButton>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-md hover:bg-rhenvox-surface"
+            className="p-2 rounded-md hover:bg-rhenvox-purple/20 text-rhenvox-text"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -105,13 +114,13 @@ export function Navbar() {
 
       {/* Mobile Menu Panel */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md shadow-lg p-4 bg-rhenvox-bg/95 border-t border-rhenvox-surface">
+        <div className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md shadow-lg p-4 bg-rhenvox-bg/95 border-t border-rhenvox-purple/20">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-rhenvox-text hover:text-rhenvox-turquoise py-2 transition-colors"
+                className="text-rhenvox-text hover:text-rhenvox-purple py-2 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
@@ -124,9 +133,11 @@ export function Navbar() {
               {/* Mobile Theme Switcher */}
               <ThemeSwitcher />
               
-              <Button onClick={() => setMobileMenuOpen(false)}>
-                {t('navbar.getInTouch')}
-              </Button>
+              <ShimmerButton onClick={() => setMobileMenuOpen(false)}>
+                <span className="text-sm font-medium text-white">
+                  {t('navbar.getInTouch')}
+                </span>
+              </ShimmerButton>
             </div>
           </div>
         </div>

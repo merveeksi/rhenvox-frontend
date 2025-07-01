@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { Globe } from "@/components/magicui/globe";
 import { OrbitingStars } from "@/components/magicui/orbiting-stars";
 import { CustomScrollbar } from "@/components/magicui/custom-scrollbar";
+import { ShimmerButton } from "./magicui/shimmer-button";
 
 export function HeroGradient() {
   const { t } = useI18n();
@@ -59,9 +60,11 @@ export function HeroGradient() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg">
-                {t('cta.button') || "Book a free 30-minute consultation"}
-              </Button>
+              <ShimmerButton>
+                <span className="text-sm font-medium text-white">
+                  {t('cta.button') || "Book a free 30-minute consultation"}
+                </span>
+              </ShimmerButton>
               <Button variant="outline" size="lg">
                 {t('portfolio.viewWork') || "View Our Work"}
               </Button>

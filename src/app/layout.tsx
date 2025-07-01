@@ -5,6 +5,7 @@ import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
 import type React from "react"
 import "@/app/globals.css"
+import { CustomScrollbar } from "@/components/magicui/custom-scrollbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,13 +60,9 @@ export default function RootLayout({
         `}} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          storageKey="theme"
-        >
+        <ThemeProvider>
           <I18nProvider>
+            <CustomScrollbar />
             {children}
           </I18nProvider>
         </ThemeProvider>

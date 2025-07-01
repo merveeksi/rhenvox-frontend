@@ -8,17 +8,17 @@ import { cn } from "@/lib/utils";
 
 const MOVEMENT_DAMPING = 1400;
 
-// Restored original quality settings but keeping optimizations
+// Optimized settings with slightly increased size
 const GLOBE_CONFIG: COBEOptions = {
-  width: 1400, // Restored original value
-  height: 1400, // Restored original value
+  width: 1000, // Increased from 800
+  height: 1000, // Increased from 800
   onRender: () => {},
-  devicePixelRatio: 2, // Restored original value
+  devicePixelRatio: 1.2, // Slightly increased from 1
   phi: 0,
   theta: 0.3,
   dark: 1,
   diffuse: 0.2,
-  mapSamples: 40000, // Restored original value
+  mapSamples: 10000, // Slightly increased from 8000 but still much lower than original 40000
   mapBrightness: 3,
   baseColor: [0.1, 0.1, 0.15],
   markerColor: [1, 1, 1],
@@ -50,6 +50,7 @@ export function Globe({
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
   const [isInViewport, setIsInViewport] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const globeInstanceRef = useRef<any>(null);
 
   const r = useMotionValue(0);
@@ -74,12 +75,16 @@ export function Globe({
     }
   };
 
-  // Check if element is in viewport
+  // Enhanced viewport detection
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           setIsInViewport(entry.isIntersecting);
+          // Add a small delay to prevent unnecessary renders
+          setTimeout(() => {
+            setIsVisible(entry.isIntersecting);
+          }, 100);
         });
       },
       { threshold: 0.1 }
@@ -98,7 +103,7 @@ export function Globe({
 
   useEffect(() => {
     const onResize = () => {
-      if (canvasRef.current) {
+      if (canvasRef.current && isVisible) {
         widthRef.current = canvasRef.current.offsetWidth;
       }
     };
@@ -106,51 +111,63 @@ export function Globe({
     window.addEventListener("resize", onResize);
     onResize();
 
+    // Only create globe when visible
+    if (!isVisible) return;
+
     const globe = createGlobe(canvasRef.current!, {
       ...config,
-      width: widthRef.current * 2,
-      height: widthRef.current * 2,
+      width: Math.min(widthRef.current * 1.8, 1000), // Increased multiplier and max size
+      height: Math.min(widthRef.current * 1.8, 1000), // Increased multiplier and max size
       onRender: (state) => {
-        // Only rotate when in viewport or when interacting
-        if (isInViewport && !pointerInteracting.current) {
-          phiRef.current += 0.002; // Restored original rotation speed
+        // Only rotate when in viewport, visible, and not interacting
+        if (isInViewport && isVisible && !pointerInteracting.current) {
+          phiRef.current += 0.001; // Kept slow rotation for better performance
         }
         state.phi = phiRef.current + rs.get();
-        state.width = widthRef.current * 2;
-        state.height = widthRef.current * 2;
+        state.width = Math.min(widthRef.current * 1.8, 1400);
+        state.height = Math.min(widthRef.current * 1.8, 1400);
       },
     });
 
     globeInstanceRef.current = globe;
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0);
+    // Delayed opacity for smoother loading
+    const timeoutId = setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    }, 200);
+
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
+      clearTimeout(timeoutId);
     };
-  }, [rs, config, isInViewport]);
+  }, [rs, config, isVisible, isInViewport]);
 
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[1600px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[1200px]", // Increased max width from 800px to 1200px
         className,
       )}
     >
       <canvas
         className={cn(
-          "size-full opacity-0 transition-opacity duration-700 [contain:layout_paint_size]",
+          "size-full opacity-0 transition-opacity duration-1000 [contain:layout_paint_size]",
+          !isVisible && "pointer-events-none" // Disable interactions when not visible
         )}
         ref={canvasRef}
         onPointerDown={(e) => {
+          if (!isVisible) return;
           pointerInteracting.current = e.clientX;
           updatePointerInteraction(e.clientX);
         }}
         onPointerUp={() => updatePointerInteraction(null)}
         onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
+        onMouseMove={(e) => isVisible && updateMovement(e.clientX)}
         onTouchMove={(e) =>
-          e.touches[0] && updateMovement(e.touches[0].clientX)
+          isVisible && e.touches[0] && updateMovement(e.touches[0].clientX)
         }
       />
     </div>
