@@ -40,12 +40,32 @@
 
 /* Explicitly set light theme colors */
 .light {
-  --rhenvox-bg: #cbb4d4;
-  --rhenvox-surface: #86A8E7;
+  --rhenvox-bg: #F8F9FF;
+  --rhenvox-surface: #E8ECFD;
   --rhenvox-text: #0B0E19;
   --rhenvox-muted: #4B5563;
-  --rhenvox-primary: #4A137C;
+  --rhenvox-primary: #5B21B6;
   --rhenvox-white: #FFFFFF;
+
+  --background: 220 33% 98%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 260 50% 40%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 220 14% 90%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 220 14% 90%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 220 14% 90%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 13% 85%;
+  --input: 220 13% 85%;
+  --ring: 260 50% 40%;
 }
 
 /* Dark theme colors */
@@ -156,6 +176,13 @@ link[rel="icon"] {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Light theme card styles */
+.light .bg-rhenvox-surface {
+  background-color: var(--rhenvox-white);
+  border: 1px solid var(--rhenvox-surface);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
 @theme inline {

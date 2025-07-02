@@ -13,7 +13,7 @@ interface ThemeAwareSectionProps {
 export function ThemeAwareSection({ 
   children, 
   className = "", 
-  lightBg = "bg-rhenvox.surface",
+  lightBg = "bg-rhenvox-surface",
   darkBg = "bg-rhenvox-surface"
 }: ThemeAwareSectionProps) {
   const { resolvedTheme } = useTheme();

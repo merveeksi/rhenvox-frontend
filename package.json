@@ -36,6 +36,7 @@
     "react-hook-form": "^7.56.1",
     "react-icons": "^5.5.0",
     "shadcn-ui": "^0.9.5",
+    "sharp": "^0.34.2",
     "tabs": "^0.2.0",
     "tailwind-merge": "^3.2.0",
     "tailwindcss-animate": "^1.0.7",
@@ -51,7 +52,9 @@
     "@types/three": "^0.176.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
+    "png-to-ico": "^2.1.8",
     "postcss": "^8",
+    "svgexport": "^0.4.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

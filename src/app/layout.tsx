@@ -23,7 +23,8 @@ export const metadata: Metadata = {
   description: "Premium software engineering, AI R&D, and UI/UX design services",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   other: {
     'msapplication-TileImage': '/apple-touch-icon.png',
-    'msapplication-TileColor': '#0B0E19',
-    'theme-color': '#7A30DC',
+    'msapplication-TileColor': '#7A30DC',
+    'theme-color': '#0A0025',
     'light-theme-color': '#E4D5F8',
   },
 };
@@ -52,12 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"] {
-            border-radius: 50% !important; 
-            overflow: hidden !important;
-          }
-        `}} />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
