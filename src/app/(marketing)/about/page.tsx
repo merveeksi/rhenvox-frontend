@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* Company Info Card */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-rhenvox-indigo/20 to-rhenvox-purple/20 p-8 mb-16">
         <div className="absolute -right-20 -top-20 opacity-10 pointer-events-none">
-          <Globe size={300} />
+          <Globe />
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
