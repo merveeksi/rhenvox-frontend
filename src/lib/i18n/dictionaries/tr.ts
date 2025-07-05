@@ -56,7 +56,11 @@ export const tr = {
   footer: {
     copyright: "© 2023 Rhenvox. Tüm hakları saklıdır.",
     privacyPolicy: "Gizlilik Politikası",
-    termsOfService: "Kullanım Şartları"
+    termsOfService: "Kullanım Şartları",
+    kvkk: "KVKK Aydınlatma Metni",
+    pages: "Sayfalar",
+    legal: "Yasal",
+    social: "Sosyal Medya"
   },
   // About page translations
   about: {

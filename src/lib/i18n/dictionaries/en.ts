@@ -55,7 +55,11 @@ export const en = {
   footer: {
     copyright: "© 2023 Rhenvox. All rights reserved.",
     privacyPolicy: "Privacy Policy",
-    termsOfService: "Terms of Service"
+    termsOfService: "Terms of Service",
+    kvkk: "KVKK",
+    pages: "Pages",
+    legal: "Legal",
+    social: "Social"
   },
   // About page translations
   about: {

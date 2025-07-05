@@ -3,39 +3,42 @@
 import Link from "next/link";
 import { Logo } from "./logo";
 import { useState, useEffect } from "react";
-
-const footerLinks = [
-  {
-    title: "Pages",
-    links: [
-      { href: "/", label: "Home" },
-      { href: "/about", label: "About Us" },
-      { href: "/services", label: "Services" },
-      { href: "/portfolio", label: "Portfolio" },
-      { href: "/blog", label: "Blog" },
-      { href: "/careers", label: "Careers" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { href: "/legal/privacy", label: "Privacy Policy" },
-      { href: "/legal/terms", label: "Terms of Service" },
-    ],
-  },
-  {
-    title: "Social",
-    links: [
-      { href: "https://twitter.com/rhenvox", label: "Twitter" },
-      { href: "https://linkedin.com/company/rhenvox", label: "LinkedIn" },
-      { href: "https://github.com/rhenvox", label: "GitHub" },
-    ],
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
   const [mounted, setMounted] = useState(false);
+  const { t } = useI18n();
+
+  const footerLinks = [
+    {
+      title: t('footer.pages'),
+      links: [
+        { href: "/", label: t('navbar.home') },
+        { href: "/about", label: t('navbar.about') },
+        { href: "/services", label: t('navbar.services') },
+        { href: "/portfolio", label: t('navbar.portfolio') },
+        { href: "/blog", label: t('navbar.blog') },
+        { href: "/careers", label: t('navbar.careers') },
+        { href: "/contact", label: t('navbar.contact') },
+      ],
+    },
+    {
+      title: t('footer.legal'),
+      links: [
+        { href: "/legal/privacy", label: t('footer.privacyPolicy') },
+        { href: "/legal/terms", label: t('footer.termsOfService') },
+        { href: "/legal/kvkk", label: t('footer.kvkk') },
+      ],
+    },
+    {
+      title: t('footer.social'),
+      links: [
+        { href: "https://twitter.com/rhenvox", label: "Twitter" },
+        { href: "https://linkedin.com/company/rhenvox", label: "LinkedIn" },
+        { href: "https://github.com/rhenvox", label: "GitHub" },
+      ],
+    },
+  ];
   
   useEffect(() => {
     setMounted(true);
@@ -130,7 +133,7 @@ export function Footer() {
         <div className="pt-8 border-t border-rhenvox-bg/30">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm mb-4 md:mb-0 text-rhenvox-muted">
-              © {new Date().getFullYear()} Rhenvox. All rights reserved.
+              {t('footer.copyright').replace('2023', new Date().getFullYear().toString())}
             </p>
             <div className="flex space-x-4">
               <a
