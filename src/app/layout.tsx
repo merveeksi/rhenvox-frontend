@@ -36,6 +36,31 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://rhenvox.com",
+    title: "Rhenvox | Software Engineering & AI R&D",
+    description: "Premium software engineering, AI R&D, and UI/UX design services",
+    siteName: "Rhenvox",
+    images: [
+      {
+        url: "https://rhenvox.com/images/og-image.jpg", // Özel oluşturulmuş og-image.jpg kullan
+        width: 1200,
+        height: 630,
+        alt: "Rhenvox Logo",
+        type: "image/jpeg", // JPG formatı belirt
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rhenvox | Software Engineering & AI R&D",
+    description: "Premium software engineering, AI R&D, and UI/UX design services",
+    images: ["https://rhenvox.com/images/og-image.jpg"], // Aynı görsel
+    creator: "@rhenvox",
+    site: "@rhenvox",
+  },
   other: {
     'msapplication-TileImage': '/images/apple-touch-icon.png',
     'msapplication-TileColor': '#7A30DC',
@@ -54,6 +79,19 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+        
+        {/* WhatsApp ve diğer sosyal medya platformları için özel meta etiketleri */}
+        <meta property="og:image" content="https://rhenvox.com/images/rhenvox-logo.png" />
+        <meta property="og:image:secure_url" content="https://rhenvox.com/images/rhenvox-logo.png" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Rhenvox Logo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Rhenvox | Software Engineering & AI R&D" />
+        <meta property="og:description" content="Premium software engineering, AI R&D, and UI/UX design services" />
+        <meta property="og:url" content="https://rhenvox.com" />
+        <meta property="og:site_name" content="Rhenvox" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
