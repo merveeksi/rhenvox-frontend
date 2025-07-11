@@ -23,22 +23,21 @@ export const metadata: Metadata = {
   description: "Premium software engineering, AI R&D, and UI/UX design services",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/favicon.ico", sizes: "any" },
+      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
-      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/images/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
     ],
   },
   manifest: "/site.webmanifest",
   other: {
-    'msapplication-TileImage': '/apple-touch-icon.png',
+    'msapplication-TileImage': '/images/apple-touch-icon.png',
     'msapplication-TileColor': '#7A30DC',
     'theme-color': '#0A0025',
     'light-theme-color': '#E4D5F8',
@@ -53,9 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>

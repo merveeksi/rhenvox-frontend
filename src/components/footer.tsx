@@ -25,9 +25,9 @@ export function Footer() {
     {
       title: t('footer.legal'),
       links: [
-        { href: "/legal/privacy", label: t('footer.privacyPolicy') },
-        { href: "/legal/terms", label: t('footer.termsOfService') },
-        { href: "/legal/kvkk", label: t('footer.kvkk') },
+        { href: "/privacy", label: t('footer.privacyPolicy') },
+        { href: "/terms", label: t('footer.termsOfService') },
+        { href: "/kvkk", label: t('footer.kvkk') },
       ],
     },
     {
