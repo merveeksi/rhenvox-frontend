@@ -280,7 +280,7 @@ export default function ContactPage() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-base font-medium text-white">Full Name</FormLabel>
+                              <FormLabel className="text-base font-medium text-gray-800 dark:text-white">Full Name</FormLabel>
                               <FormControl>
                                 <Input
                                   placeholder="John Doe"
