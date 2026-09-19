@@ -72,8 +72,8 @@ export const en = {
   },
   footer: {
     copyright: "Rhenvox. All rights reserved.",
-    privacyPolicy: "Privacy Policy",
-    termsOfService: "Terms of Service",
+    privacyPolicy: "Privacy Notice",
+    termsOfService: "Website Terms",
     kvkk: "KVKK",
     pages: "Pages",
     legal: "Legal",

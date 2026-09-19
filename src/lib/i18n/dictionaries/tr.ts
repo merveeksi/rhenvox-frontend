@@ -72,8 +72,8 @@ export const tr = {
   },
   footer: {
     copyright: "Rhenvox. Tüm hakları saklıdır.",
-    privacyPolicy: "Gizlilik Politikası",
-    termsOfService: "Kullanım Şartları",
+    privacyPolicy: "Gizlilik Bildirimi",
+    termsOfService: "Site Kullanım Şartları",
     kvkk: "KVKK Aydınlatma Metni",
     pages: "Sayfalar",
     legal: "Yasal",
