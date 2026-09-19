@@ -75,87 +75,73 @@ export const en = {
     description: "Founder-led software company. Web, mobile, and API development."
   },
   about: {
-    pageTitle: "About",
-    heroTitle: "About Rhenvox",
-    heroSubtitle: "A founder-led software company building practical digital products",
-    mission: {
-      title: "Focus",
-      description: "Build useful web and mobile software, including backend/API work and practical AI integrations where they belong in the product."
-    },
-    values: {
-      title: "How we work",
-      innovation: {
-        title: "Clarity",
-        description: "Prefer direct communication and explicit scope."
-      },
-      excellence: {
-        title: "Craft",
-        description: "Write software that can be maintained after launch."
-      },
-      collaboration: {
-        title: "Collaboration",
-        description: "Work closely with the people who own the product."
-      },
-      integrity: {
-        title: "Honesty",
-        description: "Do not claim work, capacity, or results that cannot be shown."
-      }
-    },
-    team: {
-      title: "Rhenvox",
-      subtitle: "Founder-led software company"
-    },
-    story: {
-      title: "About",
-      description: "Rhenvox LTD is a UK registered company, incorporated in 2025. It is founder-led and focused on building software products for web and mobile."
-    }
+    eyebrow: "About",
+    title: "A small software company focused on shipping real products.",
+    subtitle: "Rhenvox LTD is founder-led, registered in the United Kingdom, and operated from Türkiye.",
+    storyTitle: "The company",
+    story: "The company was incorporated in 2025. Rhenvox is a founder-led software company focused on web, mobile and backend product development.",
+    howTitle: "How Rhenvox works",
+    p1Title: "Build around the product",
+    p1Body: "Technical choices should serve the product rather than follow whatever is currently fashionable.",
+    p2Title: "Keep scope clear",
+    p2Body: "Define what needs to ship. Avoid extra complexity that does not help the product.",
+    p3Title: "Work across the stack",
+    p3Body: "When web, mobile, and backend belong to the same product, those decisions are considered together.",
+    p4Title: "Use AI selectively",
+    p4Body: "Use AI where it creates a useful product capability, not simply because it is expected.",
+    factsTitle: "Company facts",
+    factCompany: "Company",
+    factCompanyValue: "Rhenvox LTD",
+    factIncorporated: "Incorporated",
+    factIncorporatedValue: "2025",
+    factRegistered: "Registered",
+    factRegisteredValue: "United Kingdom",
+    factOperated: "Operated from",
+    factOperatedValue: "Türkiye",
+    ctaWork: "View our work",
+    ctaDiscuss: "Discuss a project"
   },
   services: {
-    pageTitle: "Services",
-    heroTitle: "What we build",
-    heroSubtitle: "Software development for web and mobile products, including APIs and practical AI integrations.",
-    categories: {
-      software: {
-        title: "Software Development",
-        description: "Web applications, APIs, and ongoing product work",
-        services: [
-          "Web applications",
-          "Backend and API development",
-          "Product development",
-          "Integrations",
-          "Maintenance and improvement of existing products"
-        ]
-      },
-      ai: {
-        title: "AI Integrations",
-        description: "Practical AI features inside software products",
-        services: [
-          "AI-assisted product features",
-          "API-based model integrations",
-          "Chat and Q&A assistants inside an existing product"
-        ]
-      },
-      design: {
-        title: "Mobile Development",
-        description: "React Native applications connected to product APIs",
-        services: [
-          "React Native applications",
-          "iOS and Android product development",
-          "API-connected mobile apps",
-          "Release and support work"
-        ]
-      }
-    },
-    process: {
-      title: "How a project usually runs",
-      discovery: "Discovery",
-      planning: "Planning",
-      design: "Design",
-      development: "Development",
-      testing: "Testing",
-      deployment: "Deployment",
-      support: "Support"
-    }
+    eyebrow: "Services",
+    title: "Software product development across web, mobile and backend.",
+    subtitle: "Rhenvox works on implementation of digital products and selected integrations.",
+    webTitle: "Web products",
+    webBody: "Web work is product implementation: applications people sign into and use, connected to a backend, including work on products that already exist.",
+    web1: "Customer-facing web applications",
+    web2: "Product dashboards",
+    web3: "Authenticated application flows",
+    web4: "Backend-connected interfaces",
+    web5: "Frontend and backend integration on an existing product",
+    mobileTitle: "Mobile products",
+    mobileBody: "Mobile work is React Native product implementation for iOS and Android, connected to the same APIs as the rest of the product.",
+    mobile1: "React Native applications",
+    mobile2: "iOS and Android product implementation",
+    mobile3: "API-connected mobile products",
+    mobile4: "Authentication flows",
+    mobile5: "Notifications and third-party integrations where the product needs them",
+    mobile6: "Release and iteration support",
+    backendTitle: "Backend and APIs",
+    backendBody: "Backend work covers the application services that web and mobile products depend on.",
+    backend1: "Application APIs",
+    backend2: "Authentication",
+    backend3: "Data flows between product surfaces",
+    backend4: "Third-party product integrations",
+    backend5: "Shared backend systems for web and mobile",
+    aiTitle: "AI integrations",
+    aiBody: "Rhenvox can add practical AI features to products when they solve a clear product problem — for example through LLM/API integrations, structured workflows and contextual user-facing features. AI is treated as a product capability rather than a standalone research offering.",
+    ai1: "LLM and API integrations",
+    ai2: "Structured product workflows",
+    ai3: "Contextual product features",
+    ai4: "AI-assisted interactions",
+    engageTitle: "How projects usually start",
+    engageIntro: "Work usually starts with a short written exchange.",
+    engage1: "Scope the problem",
+    engage2: "Review the current product and technical context",
+    engage3: "Define implementation boundaries",
+    engage4: "Start with a clear first milestone",
+    ctaTitle: "Have a product or technical problem to discuss?",
+    ctaPrimary: "Discuss a project",
+    ctaSecondary: "View our work"
   },
   portfolio: {
     pageTitle: "Work",
@@ -216,25 +202,27 @@ export const en = {
     ctaBody: "If you are planning a web, mobile, or API product, Rhenvox can review the scope and see whether it is a fit."
   },
   contact: {
-    pageTitle: "Contact",
-    heroTitle: "Contact",
-    heroSubtitle: "For project enquiries, email hello@rhenvox.com.",
-    form: {
-      name: "Your name",
-      email: "Email address",
-      subject: "Subject",
-      message: "Your message",
-      submit: "Send Message",
-      success: "Please email hello@rhenvox.com.",
-      error: "Something went wrong. Please email hello@rhenvox.com."
-    },
-    info: {
-      title: "Contact",
-      email: "Email",
-      phone: "Phone",
-      address: "Registered office",
-      hours: "Working Hours",
-      hoursValue: ""
-    }
+    eyebrow: "Contact",
+    title: "Tell us what you are building.",
+    subtitle: "Share the product, problem or technical scope you are working on. Rhenvox can review it and tell you whether it is a fit.",
+    emailTitle: "Email",
+    emailCta: "Email Rhenvox",
+    emailLead: "A useful first message usually covers:",
+    q1: "What are you building?",
+    q2: "What already exists?",
+    q3: "What do you need help with?",
+    q4: "Is there a target date?",
+    otherTitle: "Phone and WhatsApp",
+    phoneLabel: "Phone",
+    whatsappLabel: "WhatsApp",
+    officeTitle: "Registered office",
+    officeNote: "Company registration address.",
+    address1: "71-75 Shelton Street",
+    address2: "Covent Garden, London",
+    address3: "United Kingdom, WC2H 9JQ",
+    companyNumberLabel: "Company number",
+    companyNumberValue: "16423845",
+    turkeyTitle: "Operated from Türkiye",
+    turkeyBody: "Day-to-day work is based in Türkiye."
   }
 };

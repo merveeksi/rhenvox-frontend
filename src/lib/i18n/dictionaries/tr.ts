@@ -75,87 +75,73 @@ export const tr = {
     description: "Kurucu yönetimli yazılım şirketi. Web, mobil ve API geliştirme."
   },
   about: {
-    pageTitle: "Hakkında",
-    heroTitle: "Rhenvox hakkında",
-    heroSubtitle: "Web ve mobil için pratik dijital ürünler geliştiren, kurucu yönetimli bir yazılım şirketi",
-    mission: {
-      title: "Odak",
-      description: "Web ve mobil yazılım geliştirmek; gerektiğinde backend/API çalışması ve ürün içi pratik yapay zeka entegrasyonları."
-    },
-    values: {
-      title: "Çalışma biçimi",
-      innovation: {
-        title: "Netlik",
-        description: "Doğrudan iletişim ve açık kapsam."
-      },
-      excellence: {
-        title: "İşçilik",
-        description: "Yayından sonra da bakımı yapılabilir yazılım."
-      },
-      collaboration: {
-        title: "İşbirliği",
-        description: "Ürünün sahibiyle yakın çalışma."
-      },
-      integrity: {
-        title: "Dürüstlük",
-        description: "Kanıtlanamayan iş, kapasite veya sonuç iddiasında bulunmamak."
-      }
-    },
-    team: {
-      title: "Rhenvox",
-      subtitle: "Kurucu yönetimli yazılım şirketi"
-    },
-    story: {
-      title: "Hakkında",
-      description: "Rhenvox LTD, 2025’te kurulmuş, Birleşik Krallık’ta tescilli bir şirkettir. Kurucu yönetimli olarak web ve mobil yazılım ürünleri geliştirir."
-    }
+    eyebrow: "Hakkında",
+    title: "Gerçek ürünleri yayına almaya odaklanan küçük bir yazılım şirketi.",
+    subtitle: "Rhenvox LTD kurucu yönetimli bir şirkettir; Birleşik Krallık’ta tescillidir ve Türkiye’den faaliyet gösterir.",
+    storyTitle: "Şirket",
+    story: "Şirket 2025’te kuruldu. Rhenvox, web, mobil ve backend ürün geliştirmeye odaklanan kurucu yönetimli bir yazılım şirketidir.",
+    howTitle: "Rhenvox nasıl çalışır",
+    p1Title: "Ürünün etrafında kurmak",
+    p1Body: "Teknik tercihler, o anın moda teknolojisini değil ürünü desteklemelidir.",
+    p2Title: "Kapsamı net tutmak",
+    p2Body: "Yayına çıkması gereken iş tanımlanır. Ürüne yardım etmeyen karmaşıklıktan kaçınılır.",
+    p3Title: "Yığın genelinde çalışmak",
+    p3Body: "Web, mobil ve backend aynı ürüne aitse bu kararlar birlikte ele alınır.",
+    p4Title: "Yapay zekayı seçerek kullanmak",
+    p4Body: "Yapay zeka, beklenen bir şey olduğu için değil, işe yarar bir ürün yeteneği oluşturduğu yerde kullanılır.",
+    factsTitle: "Şirket bilgileri",
+    factCompany: "Şirket",
+    factCompanyValue: "Rhenvox LTD",
+    factIncorporated: "Kuruluş",
+    factIncorporatedValue: "2025",
+    factRegistered: "Tescil",
+    factRegisteredValue: "Birleşik Krallık",
+    factOperated: "Faaliyet yeri",
+    factOperatedValue: "Türkiye",
+    ctaWork: "İşleri görün",
+    ctaDiscuss: "Projeyi konuşun"
   },
   services: {
-    pageTitle: "Hizmetler",
-    heroTitle: "Neler geliştiriyoruz",
-    heroSubtitle: "Web ve mobil ürünler için yazılım geliştirme, API’ler ve pratik yapay zeka entegrasyonları.",
-    categories: {
-      software: {
-        title: "Yazılım Geliştirme",
-        description: "Web uygulamaları, API’ler ve süregelen ürün çalışması",
-        services: [
-          "Web uygulamaları",
-          "Backend ve API geliştirme",
-          "Ürün geliştirme",
-          "Entegrasyonlar",
-          "Mevcut ürünlerin bakımı ve iyileştirilmesi"
-        ]
-      },
-      ai: {
-        title: "Yapay Zeka Entegrasyonları",
-        description: "Yazılım ürünlerinin içindeki pratik yapay zeka özellikleri",
-        services: [
-          "Ürün içi yapay zeka özellikleri",
-          "API tabanlı model entegrasyonları",
-          "Mevcut bir ürün içinde sohbet ve soru-cevap asistanları"
-        ]
-      },
-      design: {
-        title: "Mobil Geliştirme",
-        description: "Ürün API’lerine bağlı React Native uygulamaları",
-        services: [
-          "React Native uygulamaları",
-          "iOS ve Android ürün geliştirme",
-          "API bağlantılı mobil uygulamalar",
-          "Yayın ve destek çalışması"
-        ]
-      }
-    },
-    process: {
-      title: "Bir proje genelde nasıl ilerler",
-      discovery: "Keşif",
-      planning: "Planlama",
-      design: "Tasarım",
-      development: "Geliştirme",
-      testing: "Test",
-      deployment: "Dağıtım",
-      support: "Destek"
-    }
+    eyebrow: "Hizmetler",
+    title: "Web, mobil ve backend kapsamında yazılım ürünü geliştirme.",
+    subtitle: "Rhenvox dijital ürünlerin uygulanması ve seçili entegrasyonlar üzerinde çalışır.",
+    webTitle: "Web ürünleri",
+    webBody: "Web işi ürün uygulamasıdır: insanların giriş yapıp kullandığı, bir backend’e bağlı uygulamalar; halihazırda var olan ürünler üzerindeki çalışma dahil.",
+    web1: "Kullanıcıya dönük web uygulamaları",
+    web2: "Ürün panelleri",
+    web3: "Kimlik doğrulamalı uygulama akışları",
+    web4: "Backend’e bağlı arayüzler",
+    web5: "Mevcut bir üründe frontend ve backend entegrasyonu",
+    mobileTitle: "Mobil ürünler",
+    mobileBody: "Mobil iş, ürünün geri kalanıyla aynı API’lere bağlı React Native ürün uygulamasıdır; iOS ve Android bu kapsamdadır.",
+    mobile1: "React Native uygulamaları",
+    mobile2: "iOS ve Android ürün uygulaması",
+    mobile3: "API bağlantılı mobil ürünler",
+    mobile4: "Kimlik doğrulama akışları",
+    mobile5: "Ürünün ihtiyaç duyduğu yerde bildirimler ve üçüncü taraf entegrasyonlar",
+    mobile6: "Yayın ve iterasyon desteği",
+    backendTitle: "Backend ve API’ler",
+    backendBody: "Backend işi, web ve mobil ürünlerin dayandığı uygulama servislerini kapsar.",
+    backend1: "Uygulama API’leri",
+    backend2: "Kimlik doğrulama",
+    backend3: "Ürün yüzeyleri arasındaki veri akışları",
+    backend4: "Üçüncü taraf ürün entegrasyonları",
+    backend5: "Web ve mobil için ortak backend sistemleri",
+    aiTitle: "Yapay zeka entegrasyonları",
+    aiBody: "Rhenvox, net bir ürün sorununu çözdüğünde ürüne pratik yapay zeka özellikleri ekleyebilir — örneğin LLM/API entegrasyonları, yapılandırılmış iş akışları ve bağlama duyarlı kullanıcı özellikleri. Yapay zeka, bağımsız bir araştırma teklifi olarak değil, bir ürün yeteneği olarak ele alınır.",
+    ai1: "LLM ve API entegrasyonları",
+    ai2: "Yapılandırılmış ürün iş akışları",
+    ai3: "Bağlama duyarlı ürün özellikleri",
+    ai4: "Yapay zeka destekli etkileşimler",
+    engageTitle: "Projeler genellikle nasıl başlar",
+    engageIntro: "İş genellikle kısa bir yazılı yazışmayla başlar.",
+    engage1: "Sorunu kapsamına almak",
+    engage2: "Mevcut ürünü ve teknik bağlamı incelemek",
+    engage3: "Uygulama sınırlarını tanımlamak",
+    engage4: "Net bir ilk kilometre taşıyla başlamak",
+    ctaTitle: "Konuşmak istediğiniz bir ürün veya teknik sorun mu var?",
+    ctaPrimary: "Projeyi konuşun",
+    ctaSecondary: "İşleri görün"
   },
   portfolio: {
     pageTitle: "İşler",
@@ -216,25 +202,27 @@ export const tr = {
     ctaBody: "Web, mobil veya API ürünü planlıyorsanız Rhenvox kapsamı inceler ve uygun olup olmadığını söyleyebilir."
   },
   contact: {
-    pageTitle: "İletişim",
-    heroTitle: "İletişim",
-    heroSubtitle: "Proje talepleri için hello@rhenvox.com adresine yazabilirsiniz.",
-    form: {
-      name: "Adınız",
-      email: "E-posta adresiniz",
-      subject: "Konu",
-      message: "Mesajınız",
-      submit: "Mesaj Gönder",
-      success: "Lütfen hello@rhenvox.com adresine yazın.",
-      error: "Bir sorun oluştu. Lütfen hello@rhenvox.com adresine yazın."
-    },
-    info: {
-      title: "İletişim",
-      email: "E-posta",
-      phone: "Telefon",
-      address: "Tescilli ofis",
-      hours: "Çalışma Saatleri",
-      hoursValue: ""
-    }
+    eyebrow: "İletişim",
+    title: "Ne geliştirdiğinizi yazın.",
+    subtitle: "Üzerinde çalıştığınız ürünü, sorunu veya teknik kapsamı paylaşın. Rhenvox inceleyip uygun olup olmadığını söyleyebilir.",
+    emailTitle: "E-posta",
+    emailCta: "Rhenvox’a e-posta yazın",
+    emailLead: "İlk mesajda genelde şunlar yeter:",
+    q1: "Neyi geliştiriyorsunuz?",
+    q2: "Şu anda ne var?",
+    q3: "Hangi konuda yardım istiyorsunuz?",
+    q4: "Hedef bir tarih var mı?",
+    otherTitle: "Telefon ve WhatsApp",
+    phoneLabel: "Telefon",
+    whatsappLabel: "WhatsApp",
+    officeTitle: "Tescilli ofis",
+    officeNote: "Şirket tescil adresi.",
+    address1: "71-75 Shelton Street",
+    address2: "Covent Garden, London",
+    address3: "United Kingdom, WC2H 9JQ",
+    companyNumberLabel: "Şirket numarası",
+    companyNumberValue: "16423845",
+    turkeyTitle: "Türkiye’den faaliyet",
+    turkeyBody: "Günlük iş Türkiye’den yürütülür."
   }
 };
