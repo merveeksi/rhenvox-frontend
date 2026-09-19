@@ -18,18 +18,18 @@ export default function KVKKPage() {
         <h2 className="text-2xl font-semibold mb-4">1. Veri Sorumlusu</h2>
         <p className="mb-4">
           İşbu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) kapsamında,
-          veri sorumlusu sıfatıyla Rhenvox tarafından, kişisel verilerinizin işlenmesine ilişkin
+          veri sorumlusu sıfatıyla Rhenvox LTD tarafından, kişisel verilerinizin işlenmesine ilişkin
           bilgilendirmenizi sağlamak amacıyla hazırlanmıştır.
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Şirket Bilgileri:</h3>
           <ul className="space-y-1 text-sm">
-            <li><strong>Şirket Adı:</strong> Rhenvox</li>
+            <li><strong>Şirket Adı:</strong> Rhenvox LTD</li>
             <li><strong>İngiltere Şirket Numarası:</strong> 16423845</li>
-            <li><strong>İngiltere Adresi:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
-            <li><strong>Türkiye Ofisi:</strong> İstanbul, Türkiye</li>
+            <li><strong>Tescilli merkez (Registered Office):</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Faaliyet yeri:</strong> Türkiye&apos;den faaliyet göstermektedir</li>
             <li><strong>İletişim:</strong> +44 7845 722801</li>
-            <li><strong>E-posta:</strong> info@rhenvox.com</li>
+            <li><strong>E-posta:</strong> hello@rhenvox.com</li>
           </ul>
         </div>
       </section>
@@ -37,21 +37,30 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">2. İşlenen Kişisel Veriler</h2>
         <h3 className="text-lg font-medium mb-3">2.1 Doğrudan Sağladığınız Bilgiler</h3>
-        <p className="mb-4">Hizmetlerimizi kullandığınızda veya bizimle iletişime geçtiğinizde topladığımız veriler:</p>
+        <p className="mb-4">
+          Mevcut web sitesinde iletişim formu, üye hesabı veya bülten kaydı bulunmamaktadır.
+          Rhenvox ile e-posta, telefon veya WhatsApp üzerinden iletişime geçerseniz, göndermeyi tercih ettiğiniz bilgiler alınabilir. Örneğin:
+        </p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li><strong>Kimlik Verileri:</strong> Ad, soyad, e-posta adresi, telefon numarası</li>
           <li><strong>İletişim Verileri:</strong> Posta adresi, e-posta adresi, telefon numarası</li>
           <li><strong>Müşteri İşlem Verileri:</strong> Hizmet talepleri, proje gereksinimleri, teknik özellikler</li>
           <li><strong>Mesajlaşma Verileri:</strong> İletişim kayıtları, sorular ve diğer yazışmalar</li>
-          <li><strong>Pazarlama Verileri:</strong> Tercihlere ilişkin bilgiler</li>
         </ul>
+        <p className="mb-4">
+          Bu yazışmalar ilgili e-posta, telefon veya mesajlaşma sağlayıcısı üzerinden iletilir.
+          İşbu metin web sitesinin uyguladığı işlemleri açıklar; söz konusu sağlayıcıların kendi veri işleme faaliyetlerini tanımlamaz.
+        </p>
 
-        <h3 className="text-lg font-medium mb-3">2.2 Otomatik Olarak Toplanan Bilgiler</h3>
-        <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Teknik Veriler:</strong> IP adresi, tarayıcı türü, cihaz bilgileri, işletim sistemi</li>
-          <li><strong>Kullanım Verileri:</strong> Web sitesi etkileşimleri, ziyaret edilen sayfalar, geçirilen süre</li>
-          <li><strong>Çerez Verileri:</strong> Web sitesi performansı ve kullanıcı davranış analizleri</li>
-        </ul>
+        <h3 className="text-lg font-medium mb-3">2.2 Web Sitesi Uygulaması Tarafından Toplanan Bilgiler</h3>
+        <p className="mb-4">
+          Mevcut kurumsal web sitesi, uygulama düzeyinde analitik veya reklam izleme teknolojileri kullanmamaktadır.
+          Uygulama içinde ziyaret edilen sayfalar, sayfada geçirilen süre veya benzer kullanım metrikleri kaydedilmemektedir.
+        </p>
+        <p className="mb-4">
+          Bu açıklama uygulama ile sınırlıdır. Barındırma sağlayıcısı, içerik dağıtım ağı veya benzer altyapının
+          bu siteden bağımsız olarak tutabileceği kayıtlara ilişkin bir beyan içermez.
+        </p>
       </section>
 
       <section>
@@ -63,8 +72,6 @@ export default function KVKKPage() {
           <li><strong>Sözleşme Yönetimi:</strong> Sözleşmelerin müzakeresi, imzalanması ve yerine getirilmesi</li>
           <li><strong>İş Geliştirme:</strong> İhtiyaçlarınızı anlamak ve hizmetlerimizi geliştirmek</li>
           <li><strong>Hukuki Yükümlülük:</strong> Yasal yükümlülüklerin yerine getirilmesi</li>
-          <li><strong>Pazarlama Faaliyetleri:</strong> Rızanız dahilinde pazarlama iletişimi</li>
-          <li><strong>Web Sitesi Geliştirme:</strong> Kullanımın analiz edilmesi ve işlevselliğin iyileştirilmesi</li>
         </ul>
       </section>
 
@@ -83,14 +90,16 @@ export default function KVKKPage() {
         <h2 className="text-2xl font-semibold mb-4">5. Kişisel Verilerin Paylaşılması</h2>
         <p className="mb-4">Kişisel verileriniz aşağıdaki durumlar ve kişilerle paylaşılabilir:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Hizmet Sağlayıcılar:</strong> Bulut hosting, analitik araçlar, iletişim araçları sağlayan üçüncü taraf firmalar</li>
+          <li><strong>Hizmet Sağlayıcılar:</strong> Sizinle iletişim kurmak veya şirketi işletmek için gerekli olduğu ölçüde e-posta veya telefon gibi sağlayıcılar</li>
           <li><strong>İş Ortakları:</strong> Ortak projeler için açık rızanız dahilinde</li>
           <li><strong>Kanunen Yetkili Kişi ve Kurumlar:</strong> Mahkemeler, savcılıklar, icra müdürlükleri gibi yetkili makamlar</li>
-          <li><strong>Grup Şirketleri:</strong> İş süreçlerinin yürütülmesi amacıyla</li>
         </ul>
         <p className="mb-4">
-          <strong>Yurtdışı Aktarımlar:</strong> Verileriniz İngiltere ofisimizde işlenebilir.
-          Yurtdışı veri aktarımları için uygun güvenlik önlemleri alınmaktadır.
+          Mevcut kurumsal web sitesi, ziyaretçi verilerini analitik veya reklam tedarikçilerine göndermemektedir.
+        </p>
+        <p className="mb-4">
+          <strong>İşleme yeri:</strong> Bize gönderdiğiniz kişisel veriler, Türkiye&apos;den faaliyet gösteren Rhenvox çalışanları tarafından erişilebilir.
+          Şirket Birleşik Krallık&apos;ta tescillidir.
         </p>
       </section>
 
@@ -122,7 +131,7 @@ export default function KVKKPage() {
           <li><strong>Tazminat:</strong> Zararın giderilmesini talep etme</li>
         </ul>
         <p className="mb-4">
-          Bu haklarınızı kullanmak için info@rhenvox.com adresine yazılı olarak başvurabilirsiniz.
+          Bu haklarınızı kullanmak için hello@rhenvox.com adresine yazılı olarak başvurabilirsiniz.
           Başvurunuz en geç 30 gün içinde yanıtlanacaktır.
         </p>
       </section>
@@ -134,20 +143,20 @@ export default function KVKKPage() {
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>Verilerin iletim ve depolama esnasında şifrelenmesi</li>
-          <li>Düzenli güvenlik değerlendirmeleri ve güncellemeleri</li>
           <li>Erişim kontrolleri ve kimlik doğrulama mekanizmaları</li>
-          <li>Personel eğitimleri ve gizlilik sözleşmeleri</li>
           <li>Olay müdahale prosedürleri</li>
-          <li>Fiziksel güvenlik önlemleri</li>
         </ul>
       </section>
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">9. Çerezler (Cookies)</h2>
         <p className="mb-4">
-          Web sitemiz, işlevselliği geliştirmek ve kullanımı analiz etmek için çerezler kullanmaktadır.
-          Çerez ayarlarını tarayıcı tercihleriniz üzerinden kontrol edebilirsiniz.
-          Çerez kullanımımız hakkında detaylı bilgi için Çerez Politikamızı inceleyebilirsiniz.
+          Mevcut kurumsal web sitesi reklam veya analitik çerezleri uygulamamakta ve çerez onay bandı göstermemektedir.
+          Dil ve görünüm tercihleri, uygulama çerezi olarak değil, tarayıcıdaki localStorage ile saklanmaktadır.
+        </p>
+        <p className="mb-4">
+          Ayrı bir Çerez Politikası yayımlanmamaktadır. Bu bölüm, barındırma veya ağ altyapısının uygulamadan bağımsız olarak
+          oluşturabileceği çerezler hakkında bir beyan içermez.
         </p>
       </section>
 
@@ -187,10 +196,10 @@ export default function KVKKPage() {
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
-            <li><strong>E-posta:</strong> info@rhenvox.com</li>
+            <li><strong>E-posta:</strong> hello@rhenvox.com</li>
             <li><strong>Telefon:</strong> +44 7845 722801</li>
-            <li><strong>Adres:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
-            <li><strong>Türkiye Ofisi:</strong> İstanbul, Türkiye</li>
+            <li><strong>Adres:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom (tescilli merkez)</li>
+            <li><strong>Faaliyet yeri:</strong> Türkiye&apos;den faaliyet göstermektedir</li>
           </ul>
         </div>
         <p className="mb-4">

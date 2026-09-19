@@ -17,18 +17,19 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">1. Who We Are</h2>
         <p className="mb-4">
-          Rhenvox is a software company registered in England and Wales.
+          Rhenvox LTD is a software company registered in England and Wales.
           We are committed to protecting your privacy and handling your personal data in accordance with
           the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Company Details:</h3>
           <ul className="space-y-1 text-sm">
-            <li><strong>Company Name:</strong> Rhenvox</li>
+            <li><strong>Company Name:</strong> Rhenvox LTD</li>
             <li><strong>Company Number:</strong> 16423845</li>
-            <li><strong>Registered Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Registered Office:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Operated from:</strong> Türkiye</li>
             <li><strong>Contact:</strong> +44 7845 722801</li>
-            <li><strong>Email:</strong> info@rhenvox.com</li>
+            <li><strong>Email:</strong> hello@rhenvox.com</li>
           </ul>
         </div>
       </section>
@@ -36,19 +37,29 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
         <h3 className="text-lg font-medium mb-3">2.1 Information You Provide Directly</h3>
-        <p className="mb-4">When you use our services or contact us, we may collect:</p>
+        <p className="mb-4">
+          The current website does not include a contact form, user accounts, or a newsletter signup.
+          If you contact Rhenvox by email, telephone, or WhatsApp, we may receive information you choose to send, such as:
+        </p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li><strong>Contact Information:</strong> Name, email address, phone number, company name, job title</li>
           <li><strong>Communication Data:</strong> Messages, inquiries, and any other information you provide when contacting us</li>
           <li><strong>Business Information:</strong> Project requirements, technical specifications, and business needs</li>
         </ul>
+        <p className="mb-4">
+          Those communications are handled by the relevant email, telephone, or messaging provider.
+          This policy describes what the website implements; it does not describe those providers&apos; own processing.
+        </p>
 
-        <h3 className="text-lg font-medium mb-3">2.2 Information We Collect Automatically</h3>
-        <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Technical Data:</strong> IP address, browser type, device information, operating system</li>
-          <li><strong>Usage Data:</strong> How you interact with our website, pages visited, time spent on pages</li>
-          <li><strong>Analytics Data:</strong> Website performance metrics and user behavior patterns</li>
-        </ul>
+        <h3 className="text-lg font-medium mb-3">2.2 Information Collected by the Website Application</h3>
+        <p className="mb-4">
+          The current marketing website does not implement application-level analytics or advertising tracking technologies.
+          It does not record pages visited, time spent on pages, or similar usage metrics in the application.
+        </p>
+        <p className="mb-4">
+          This statement is limited to the application. It does not describe records that a hosting provider,
+          content delivery network, or similar infrastructure may generate independently of this website.
+        </p>
       </section>
 
       <section>
@@ -60,7 +71,6 @@ export default function PrivacyPage() {
           <li><strong>Contract Management:</strong> To negotiate, execute, and fulfill contractual obligations</li>
           <li><strong>Business Development:</strong> To understand your needs and improve our services</li>
           <li><strong>Legal Compliance:</strong> To comply with legal obligations and protect our legitimate interests</li>
-          <li><strong>Website Improvement:</strong> To analyze usage and improve website functionality</li>
         </ul>
       </section>
 
@@ -79,14 +89,17 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-semibold mb-4">5. Data Sharing and Disclosure</h2>
         <p className="mb-4">We may share your personal data with:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Service Providers:</strong> Third-party vendors who assist in delivering our services (cloud hosting, analytics, communication tools)</li>
+          <li><strong>Service Providers:</strong> Providers needed to communicate with you or operate the company (for example email or telephony), where that is necessary</li>
           <li><strong>Business Partners:</strong> When collaborating on joint projects with your explicit consent</li>
           <li><strong>Legal Authorities:</strong> When required by law or to protect our legal rights</li>
           <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of business assets</li>
         </ul>
         <p className="mb-4">
-          <strong>International Transfers:</strong> Your data may be processed in our Turkey office.
-          We ensure appropriate safeguards are in place for any international data transfers.
+          The current marketing website does not send visitor data to analytics or advertising vendors.
+        </p>
+        <p className="mb-4">
+          <strong>Location of processing:</strong> Personal data you send to us may be accessed by people
+          working for Rhenvox who operate from Türkiye. The company is registered in the United Kingdom.
         </p>
       </section>
 
@@ -117,7 +130,7 @@ export default function PrivacyPage() {
           <li><strong>Withdraw Consent:</strong> Withdraw consent for consent-based processing</li>
         </ul>
         <p className="mb-4">
-          To exercise these rights, please contact us at info@rhenvox.com.
+          To exercise these rights, please contact us at hello@rhenvox.com.
           We will respond to your request within one month.
         </p>
       </section>
@@ -130,9 +143,7 @@ export default function PrivacyPage() {
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>Encryption of data in transit and at rest</li>
-          <li>Regular security assessments and updates</li>
           <li>Access controls and authentication mechanisms</li>
-          <li>Staff training on data protection principles</li>
           <li>Incident response procedures</li>
         </ul>
       </section>
@@ -140,9 +151,13 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">9. Cookies and Tracking</h2>
         <p className="mb-4">
-          Our website uses cookies and similar technologies to improve functionality and analyze usage.
-          You can control cookie settings through your browser preferences. For detailed information
-          about our cookie usage, please refer to our Cookie Policy.
+          The current marketing website does not implement advertising or analytics cookies,
+          and it does not present a cookie consent banner. Language and appearance preferences
+          are stored in the browser using localStorage, not as application cookies.
+        </p>
+        <p className="mb-4">
+          A separate Cookie Policy is not published. This section does not make statements about
+          cookies that hosting or network infrastructure may set independently of the application.
         </p>
       </section>
 
@@ -180,9 +195,9 @@ export default function PrivacyPage() {
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
-            <li><strong>Email:</strong> info@rhenvox.com</li>
+            <li><strong>Email:</strong> hello@rhenvox.com</li>
             <li><strong>Phone:</strong> +44 7845 722801</li>
-            <li><strong>Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Registered Office:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
           </ul>
         </div>
         <p className="mb-4">

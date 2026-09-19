@@ -18,7 +18,7 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
         <p className="mb-4">
           These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you
-          (&quot;Client&quot;, &quot;You&quot;) and Rhenvox (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), a company registered in England
+          (&quot;Client&quot;, &quot;You&quot;) and Rhenvox LTD (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), a company registered in England
           and Wales under company number 16423845, regarding your use of our services and website.
         </p>
         <p className="mb-4">
@@ -32,11 +32,12 @@ export default function TermsPage() {
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Company Information:</h3>
           <ul className="space-y-1 text-sm">
-            <li><strong>Legal Name:</strong> Rhenvox</li>
+            <li><strong>Legal Name:</strong> Rhenvox LTD</li>
             <li><strong>Company Number:</strong> 16423845</li>
-            <li><strong>Registered Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Registered Office:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Operated from:</strong> Türkiye</li>
             <li><strong>Contact:</strong> +44 7845 722801</li>
-            <li><strong>Email:</strong> info@rhenvox.com</li>
+            <li><strong>Email:</strong> hello@rhenvox.com</li>
             <li><strong>Website:</strong> rhenvox.com</li>
           </ul>
         </div>
@@ -242,9 +243,9 @@ export default function TermsPage() {
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
-            <li><strong>Email:</strong> info@rhenvox.com</li>
+            <li><strong>Email:</strong> hello@rhenvox.com</li>
             <li><strong>Phone:</strong> +44 7845 722801</li>
-            <li><strong>Address:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
+            <li><strong>Registered Office:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>
           </ul>
         </div>
       </section>
