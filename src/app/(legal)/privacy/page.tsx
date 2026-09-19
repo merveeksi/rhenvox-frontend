@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-semibold mb-4">1. Who We Are</h2>
         <p className="mb-4">
           Rhenvox is a software company registered in England and Wales.
-          We are committed to protecting your privacy and handling your personal data in accordance with 
+          We are committed to protecting your privacy and handling your personal data in accordance with
           the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
@@ -85,7 +85,7 @@ export default function PrivacyPage() {
           <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of business assets</li>
         </ul>
         <p className="mb-4">
-          <strong>International Transfers:</strong> Your data may be processed in our Turkey office. 
+          <strong>International Transfers:</strong> Your data may be processed in our Turkey office.
           We ensure appropriate safeguards are in place for any international data transfers.
         </p>
       </section>
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
           <li>Resolve disputes and enforce our agreements</li>
         </ul>
         <p className="mb-4">
-          Typically, we retain business contact information for 7 years after the end of our business relationship, 
+          Typically, we retain business contact information for 7 years after the end of our business relationship,
           unless a longer retention period is required by law.
         </p>
       </section>
@@ -117,7 +117,7 @@ export default function PrivacyPage() {
           <li><strong>Withdraw Consent:</strong> Withdraw consent for consent-based processing</li>
         </ul>
         <p className="mb-4">
-          To exercise these rights, please contact us at info@rhenvox.com. 
+          To exercise these rights, please contact us at info@rhenvox.com.
           We will respond to your request within one month.
         </p>
       </section>
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">8. Data Security</h2>
         <p className="mb-4">
-          We implement appropriate technical and organizational measures to protect your personal data against 
+          We implement appropriate technical and organizational measures to protect your personal data against
           unauthorized access, alteration, disclosure, or destruction. These measures include:
         </p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
@@ -140,8 +140,8 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">9. Cookies and Tracking</h2>
         <p className="mb-4">
-          Our website uses cookies and similar technologies to improve functionality and analyze usage. 
-          You can control cookie settings through your browser preferences. For detailed information 
+          Our website uses cookies and similar technologies to improve functionality and analyze usage.
+          You can control cookie settings through your browser preferences. For detailed information
           about our cookie usage, please refer to our Cookie Policy.
         </p>
       </section>
@@ -149,17 +149,17 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">10. Third-Party Links</h2>
         <p className="mb-4">
-          Our website may contain links to third-party websites. We are not responsible for the privacy 
-          practices of these external sites. We encourage you to review their privacy policies before 
+          Our website may contain links to third-party websites. We are not responsible for the privacy
+          practices of these external sites. We encourage you to review their privacy policies before
           providing any personal information.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">11. Children's Privacy</h2>
+        <h2 className="text-2xl font-semibold mb-4">11. Children&apos;s Privacy</h2>
         <p className="mb-4">
-          Our services are not directed to individuals under 16 years of age. We do not knowingly 
-          collect personal data from children under 16. If we become aware that we have collected 
+          Our services are not directed to individuals under 16 years of age. We do not knowingly
+          collect personal data from children under 16. If we become aware that we have collected
           such data, we will take steps to delete it promptly.
         </p>
       </section>
@@ -167,9 +167,9 @@ export default function PrivacyPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">12. Changes to This Policy</h2>
         <p className="mb-4">
-          We may update this privacy policy from time to time to reflect changes in our practices 
-          or applicable laws. We will notify you of any significant changes by posting the updated 
-          policy on our website and updating the "Last Updated" date.
+          We may update this privacy policy from time to time to reflect changes in our practices
+          or applicable laws. We will notify you of any significant changes by posting the updated
+          policy on our website and updating the &quot;Last Updated&quot; date.
         </p>
       </section>
 
@@ -186,10 +186,10 @@ export default function PrivacyPage() {
           </ul>
         </div>
         <p className="mb-4">
-          You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) 
+          You also have the right to lodge a complaint with the Information Commissioner&apos;s Office (ICO)
           if you believe your data protection rights have been violated. Visit www.ico.org.uk for more information.
         </p>
       </section>
     </div>
   );
-} 
+}

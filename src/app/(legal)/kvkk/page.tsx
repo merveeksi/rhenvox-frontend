@@ -17,8 +17,8 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">1. Veri Sorumlusu</h2>
         <p className="mb-4">
-          İşbu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında, 
-          veri sorumlusu sıfatıyla Rhenvox tarafından, kişisel verilerinizin işlenmesine ilişkin 
+          İşbu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) kapsamında,
+          veri sorumlusu sıfatıyla Rhenvox tarafından, kişisel verilerinizin işlenmesine ilişkin
           bilgilendirmenizi sağlamak amacıyla hazırlanmıştır.
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
@@ -70,7 +70,7 @@ export default function KVKKPage() {
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">4. Kişisel Verilerin İşlenme Hukuki Sebepleri</h2>
-        <p className="mb-4">Kişisel verileriniz KVKK'nın 5. maddesinde belirtilen aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:</p>
+        <p className="mb-4">Kişisel verileriniz KVKK&apos;nın 5. maddesinde belirtilen aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li><strong>Açık Rıza:</strong> Belirli işleme faaliyetleri için açık rızanızın alınması</li>
           <li><strong>Sözleşmenin İfası:</strong> Tarafınızla akdedilen sözleşmenin ifası için zorunlu olması</li>
@@ -89,7 +89,7 @@ export default function KVKKPage() {
           <li><strong>Grup Şirketleri:</strong> İş süreçlerinin yürütülmesi amacıyla</li>
         </ul>
         <p className="mb-4">
-          <strong>Yurtdışı Aktarımlar:</strong> Verileriniz İngiltere ofisimizde işlenebilir. 
+          <strong>Yurtdışı Aktarımlar:</strong> Verileriniz İngiltere ofisimizde işlenebilir.
           Yurtdışı veri aktarımları için uygun güvenlik önlemleri alınmaktadır.
         </p>
       </section>
@@ -103,14 +103,14 @@ export default function KVKKPage() {
           <li>Uyuşmazlıkların çözülmesi ve anlaşmaların uygulanması için gerekli süre boyunca</li>
         </ul>
         <p className="mb-4">
-          Genel olarak, iş ilişkimizin sona ermesinden sonra 10 yıl süreyle iş iletişim bilgileri saklanmaktadır. 
+          Genel olarak, iş ilişkimizin sona ermesinden sonra 10 yıl süreyle iş iletişim bilgileri saklanmaktadır.
           Bu süre, ilgili mevzuatta öngörülen saklama yükümlülüklerine göre değişiklik gösterebilir.
         </p>
       </section>
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">7. KVKK Kapsamındaki Haklarınız</h2>
-        <p className="mb-4">KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+        <p className="mb-4">KVKK&apos;nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li><strong>Bilgi Talep Etme:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
           <li><strong>Bilgi Talep Etme:</strong> İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
@@ -122,7 +122,7 @@ export default function KVKKPage() {
           <li><strong>Tazminat:</strong> Zararın giderilmesini talep etme</li>
         </ul>
         <p className="mb-4">
-          Bu haklarınızı kullanmak için info@rhenvox.com adresine yazılı olarak başvurabilirsiniz. 
+          Bu haklarınızı kullanmak için info@rhenvox.com adresine yazılı olarak başvurabilirsiniz.
           Başvurunuz en geç 30 gün içinde yanıtlanacaktır.
         </p>
       </section>
@@ -145,8 +145,8 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">9. Çerezler (Cookies)</h2>
         <p className="mb-4">
-          Web sitemiz, işlevselliği geliştirmek ve kullanımı analiz etmek için çerezler kullanmaktadır. 
-          Çerez ayarlarını tarayıcı tercihleriniz üzerinden kontrol edebilirsiniz. 
+          Web sitemiz, işlevselliği geliştirmek ve kullanımı analiz etmek için çerezler kullanmaktadır.
+          Çerez ayarlarını tarayıcı tercihleriniz üzerinden kontrol edebilirsiniz.
           Çerez kullanımımız hakkında detaylı bilgi için Çerez Politikamızı inceleyebilirsiniz.
         </p>
       </section>
@@ -154,8 +154,8 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">10. Üçüncü Taraf Bağlantıları</h2>
         <p className="mb-4">
-          Web sitemiz üçüncü taraf web sitelerine bağlantılar içerebilir. 
-          Bu harici sitelerin gizlilik uygulamalarından sorumlu değiliz. 
+          Web sitemiz üçüncü taraf web sitelerine bağlantılar içerebilir.
+          Bu harici sitelerin gizlilik uygulamalarından sorumlu değiliz.
           Kişisel bilgi vermeden önce gizlilik politikalarını incelemenizi öneririz.
         </p>
       </section>
@@ -163,8 +163,8 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">11. Çocukların Gizliliği</h2>
         <p className="mb-4">
-          Hizmetlerimiz 18 yaş altındaki kişilere yönelik değildir. 
-          18 yaş altındaki kişilerden bilerek kişisel veri toplamıyoruz. 
+          Hizmetlerimiz 18 yaş altındaki kişilere yönelik değildir.
+          18 yaş altındaki kişilerden bilerek kişisel veri toplamıyoruz.
           Bu tür verileri topladığımızı fark edersek, derhal silme adımları atarız.
         </p>
       </section>
@@ -172,9 +172,9 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">12. Aydınlatma Metninde Değişiklikler</h2>
         <p className="mb-4">
-          Bu aydınlatma metnini zaman zaman uygulamalarımızdaki değişiklikleri veya yürürlükteki 
-          yasaları yansıtmak için güncelleyebiliriz. Önemli değişiklikler olduğunda, 
-          güncellenmiş politikayı web sitemizde yayınlayarak ve "Son Güncelleme" tarihini 
+          Bu aydınlatma metnini zaman zaman uygulamalarımızdaki değişiklikleri veya yürürlükteki
+          yasaları yansıtmak için güncelleyebiliriz. Önemli değişiklikler olduğunda,
+          güncellenmiş politikayı web sitemizde yayınlayarak ve &quot;Son Güncelleme&quot; tarihini
           değiştirerek size bildirimde bulunacağız.
         </p>
       </section>
@@ -182,7 +182,7 @@ export default function KVKKPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">13. İletişim</h2>
         <p className="mb-4">
-          Bu aydınlatma metni veya veri işleme uygulamalarımız hakkında sorularınız varsa, 
+          Bu aydınlatma metni veya veri işleme uygulamalarımız hakkında sorularınız varsa,
           bizimle iletişime geçin:
         </p>
         <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
@@ -194,8 +194,8 @@ export default function KVKKPage() {
           </ul>
         </div>
         <p className="mb-4">
-          Ayrıca, veri koruma haklarınızın ihlal edildiğini düşünüyorsanız, 
-          Kişisel Verileri Koruma Kurumu'na (KVKK) şikayette bulunma hakkınız bulunmaktadır. 
+          Ayrıca, veri koruma haklarınızın ihlal edildiğini düşünüyorsanız,
+          Kişisel Verileri Koruma Kurumu&apos;na (KVKK) şikayette bulunma hakkınız bulunmaktadır.
           Daha fazla bilgi için www.kvkk.gov.tr adresini ziyaret edebilirsiniz.
         </p>
       </section>
@@ -203,10 +203,10 @@ export default function KVKKPage() {
       <section className="rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-6">
         <h3 className="text-lg font-semibold mb-3">⚖️ Uygulanacak Hukuk</h3>
         <p className="text-sm text-rhenvox-muted">
-          Bu aydınlatma metni Türkiye Cumhuriyeti kanunlarına tabidir. 
+          Bu aydınlatma metni Türkiye Cumhuriyeti kanunlarına tabidir.
           Bu metin ile ilgili herhangi bir uyuşmazlık durumunda İstanbul mahkemeleri ve icra müdürlükleri yetkilidir.
         </p>
       </section>
     </div>
   );
-} 
+}

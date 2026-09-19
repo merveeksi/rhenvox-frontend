@@ -17,12 +17,12 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
         <p className="mb-4">
-          These Terms of Service ("Terms") constitute a legally binding agreement between you 
-          ("Client", "You") and Rhenvox ("Company", "We", "Us"), a company registered in England 
+          These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you
+          (&quot;Client&quot;, &quot;You&quot;) and Rhenvox (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), a company registered in England
           and Wales under company number 16423845, regarding your use of our services and website.
         </p>
         <p className="mb-4">
-          By accessing our website, engaging our services, or entering into a service agreement 
+          By accessing our website, engaging our services, or entering into a service agreement
           with us, you acknowledge that you have read, understood, and agree to be bound by these Terms.
         </p>
       </section>
@@ -57,7 +57,7 @@ export default function TermsPage() {
           <li><strong>Support and Maintenance:</strong> Ongoing technical support, system maintenance, and enhancement services when agreed in a Service Agreement</li>
         </ul>
         <p className="mb-4">
-          All services are provided according to individual service agreements that specify 
+          All services are provided according to individual service agreements that specify
           scope, deliverables, timelines, and pricing.
         </p>
       </section>
@@ -65,13 +65,13 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">4. Service Agreements</h2>
         <p className="mb-4">
-          Specific terms for each project will be detailed in separate service agreements, 
-          statements of work, or proposals ("Service Agreements"). In case of conflict between 
+          Specific terms for each project will be detailed in separate service agreements,
+          statements of work, or proposals (&quot;Service Agreements&quot;). In case of conflict between
           these Terms and a Service Agreement, the Service Agreement shall take precedence.
         </p>
         <h3 className="text-lg font-medium mb-3">4.1 Scope of Work</h3>
         <p className="mb-4">
-          Each Service Agreement will clearly define deliverables, timelines, milestones, 
+          Each Service Agreement will clearly define deliverables, timelines, milestones,
           and acceptance criteria. Changes to the scope require written agreement from both parties.
         </p>
         <h3 className="text-lg font-medium mb-3">4.2 Client Responsibilities</h3>
@@ -87,7 +87,7 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">5. Pricing and Payment</h2>
         <h3 className="text-lg font-medium mb-3">5.1 Fees</h3>
         <p className="mb-4">
-          Fees for services are specified in individual Service Agreements. 
+          Fees for services are specified in individual Service Agreements.
           All prices are quoted exclusive of VAT and other applicable taxes.
         </p>
         <h3 className="text-lg font-medium mb-3">5.2 Payment Terms</h3>
@@ -107,17 +107,17 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">6. Intellectual Property</h2>
         <h3 className="text-lg font-medium mb-3">6.1 Client IP</h3>
         <p className="mb-4">
-          You retain ownership of all intellectual property you provide to us. 
+          You retain ownership of all intellectual property you provide to us.
           You grant us a license to use such IP solely for providing the agreed services.
         </p>
         <h3 className="text-lg font-medium mb-3">6.2 Work Product</h3>
         <p className="mb-4">
-          Upon full payment, you will own the custom work product specifically created for you, 
+          Upon full payment, you will own the custom work product specifically created for you,
           subject to our retained rights in pre-existing IP, third-party components, and our methodologies.
         </p>
         <h3 className="text-lg font-medium mb-3">6.3 Rhenvox IP</h3>
         <p className="mb-4">
-          We retain ownership of our pre-existing intellectual property, methodologies, 
+          We retain ownership of our pre-existing intellectual property, methodologies,
           tools, and general knowledge gained through providing services.
         </p>
       </section>
@@ -125,7 +125,7 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">7. Confidentiality</h2>
         <p className="mb-4">
-          Both parties agree to maintain confidentiality of sensitive information disclosed 
+          Both parties agree to maintain confidentiality of sensitive information disclosed
           during the engagement. This obligation survives termination of our relationship.
         </p>
         <p className="mb-4">
@@ -137,12 +137,12 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">8. Warranties and Disclaimers</h2>
         <h3 className="text-lg font-medium mb-3">8.1 Professional Standards</h3>
         <p className="mb-4">
-          We warrant that services will be performed with reasonable care and skill, 
+          We warrant that services will be performed with reasonable care and skill,
           in accordance with industry best practices.
         </p>
         <h3 className="text-lg font-medium mb-3">8.2 Disclaimers</h3>
         <p className="mb-4">
-          Except as expressly stated, all services are provided "as is" without warranties 
+          Except as expressly stated, all services are provided &quot;as is&quot; without warranties
           of any kind. We do not guarantee specific business outcomes or results.
         </p>
       </section>
@@ -150,11 +150,11 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
         <p className="mb-4">
-          Our total liability to you, whether in contract, tort, or otherwise, 
+          Our total liability to you, whether in contract, tort, or otherwise,
           shall not exceed the total fees paid by you for the specific services giving rise to the claim.
         </p>
         <p className="mb-4">
-          We shall not be liable for any indirect, consequential, special, or punitive damages, 
+          We shall not be liable for any indirect, consequential, special, or punitive damages,
           including but not limited to loss of profits, data, or business opportunities.
         </p>
       </section>
@@ -163,12 +163,12 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibled mb-4">10. Termination</h2>
         <h3 className="text-lg font-medium mb-3">10.1 Termination for Convenience</h3>
         <p className="mb-4">
-          Either party may terminate ongoing services with 30 days written notice. 
+          Either party may terminate ongoing services with 30 days written notice.
           You remain liable for all work completed and expenses incurred up to the termination date.
         </p>
         <h3 className="text-lg font-medium mb-3">10.2 Termination for Cause</h3>
         <p className="mb-4">
-          Either party may terminate immediately for material breach that remains uncured 
+          Either party may terminate immediately for material breach that remains uncured
           after 15 days written notice.
         </p>
       </section>
@@ -176,8 +176,8 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">11. Force Majeure</h2>
         <p className="mb-4">
-          Neither party shall be liable for delays or failures in performance due to circumstances 
-          beyond their reasonable control, including but not limited to acts of God, government actions, 
+          Neither party shall be liable for delays or failures in performance due to circumstances
+          beyond their reasonable control, including but not limited to acts of God, government actions,
           war, terrorism, pandemic, or natural disasters.
         </p>
       </section>
@@ -185,7 +185,7 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">12. Data Protection</h2>
         <p className="mb-4">
-          Our data processing practices are governed by our Privacy Policy and applicable data protection laws. 
+          Our data processing practices are governed by our Privacy Policy and applicable data protection laws.
           Where we process personal data on your behalf, we will enter into appropriate data processing agreements.
         </p>
       </section>
@@ -194,12 +194,12 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">13. Website Terms</h2>
         <h3 className="text-lg font-medium mb-3">13.1 Permitted Use</h3>
         <p className="mb-4">
-          You may use our website for lawful purposes only. You may not use the site to transmit 
+          You may use our website for lawful purposes only. You may not use the site to transmit
           harmful, threatening, abusive, or otherwise objectionable content.
         </p>
         <h3 className="text-lg font-medium mb-3">13.2 Content</h3>
         <p className="mb-4">
-          All website content is our property or used with permission. 
+          All website content is our property or used with permission.
           You may not reproduce, distribute, or create derivative works without our express consent.
         </p>
       </section>
@@ -207,11 +207,11 @@ export default function TermsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">14. Governing Law and Jurisdiction</h2>
         <p className="mb-4">
-          These Terms are governed by English law. Any disputes will be subject to the 
+          These Terms are governed by English law. Any disputes will be subject to the
           exclusive jurisdiction of the English courts.
         </p>
         <p className="mb-4">
-          For clients in Turkey, Turkish law may apply to certain aspects of our relationship 
+          For clients in Turkey, Turkish law may apply to certain aspects of our relationship
           as specified in individual Service Agreements.
         </p>
       </section>
@@ -220,17 +220,17 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">15. General Provisions</h2>
         <h3 className="text-lg font-medium mb-3">15.1 Entire Agreement</h3>
         <p className="mb-4">
-          These Terms, together with any Service Agreements, constitute the entire agreement 
+          These Terms, together with any Service Agreements, constitute the entire agreement
           between the parties regarding the subject matter.
         </p>
         <h3 className="text-lg font-medium mb-3">15.2 Amendment</h3>
         <p className="mb-4">
-          We may update these Terms from time to time. Continued use of our services 
+          We may update these Terms from time to time. Continued use of our services
           after changes constitutes acceptance of the revised Terms.
         </p>
         <h3 className="text-lg font-medium mb-3">15.3 Severability</h3>
         <p className="mb-4">
-          If any provision of these Terms is found unenforceable, 
+          If any provision of these Terms is found unenforceable,
           the remainder shall continue in full force and effect.
         </p>
       </section>
@@ -252,10 +252,10 @@ export default function TermsPage() {
       <section className="rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-6">
         <h3 className="text-lg font-semibold mb-3">📋 Acknowledgment</h3>
         <p className="text-sm text-rhenvox-muted">
-          By engaging our services or using our website, you acknowledge that you have read, 
+          By engaging our services or using our website, you acknowledge that you have read,
           understood, and agree to be bound by these Terms of Service.
         </p>
       </section>
     </div>
   );
-} 
+}

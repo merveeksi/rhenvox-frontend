@@ -13,20 +13,26 @@ Corporate website for Rhenvox LTD.
 ## Local development
 
 ```bash
-bun install
+bun install --frozen-lockfile
 bun run bun-dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). `bun run dev` is the same Next.js dev server without the Bun runtime flag.
 
-## Build
+## Local production verification
 
 ```bash
-bun run bun-build
+bunx tsc --noEmit
+bun run lint
+bun run build
 bun run start
 ```
 
-`next.config.ts` uses `output: "standalone"` for container deploys.
+`bun run start` runs `next start` and is for local verification of the production build. Next.js warns that `next start` is not the standalone server.
+
+## Container
+
+`next.config.ts` sets `output: "standalone"`. The Dockerfile copies `.next/standalone` and `.next/static`, then starts the app with `node server.js`. That is the production container command, not `bun run start`.
 
 ## Public routes
 

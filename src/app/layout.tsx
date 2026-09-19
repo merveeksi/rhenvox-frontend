@@ -4,7 +4,13 @@ import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
 import { SkipLink } from "@/components/skip-link";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, SITE_URL, canonicalUrl } from "@/lib/seo";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SHARE_IMAGE_ALT,
+  SITE_URL,
+  canonicalUrl,
+} from "@/lib/seo";
 import type React from "react";
 
 const geistSans = Geist({
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   alternates: {
-    canonical: canonicalUrl("/"),
+    canonical: "/",
   },
   icons: {
     icon: [
@@ -45,6 +51,15 @@ export const metadata: Metadata = {
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     siteName: "Rhenvox",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: SHARE_IMAGE_ALT,
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -52,6 +67,14 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     creator: "@rhenvox",
     site: "@rhenvox",
+    images: [
+      {
+        url: "/twitter-image",
+        width: 1200,
+        height: 630,
+        alt: SHARE_IMAGE_ALT,
+      },
+    ],
   },
   other: {
     "msapplication-TileImage": "/images/apple-touch-icon.png",
