@@ -3,9 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
-import type React from "react"
-import "@/app/globals.css"
-import { CustomScrollbar } from "@/components/magicui/custom-scrollbar";
+import type React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rhenvox.com"),
-  title: "Rhenvox | Software Engineering & AI R&D",
-  description: "Premium software engineering, AI R&D, and UI/UX design services",
+  title: "Rhenvox | Software Company",
+  description: "Founder-led software company building web and mobile products, including backend/API work and practical AI integrations.",
   icons: {
     icon: [
       { url: "/images/favicon.ico", sizes: "any" },
@@ -40,8 +38,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rhenvox.com",
-    title: "Rhenvox | Software Engineering & AI R&D",
-    description: "Premium software engineering, AI R&D, and UI/UX design services",
+    title: "Rhenvox | Software Company",
+    description: "Founder-led software company building web and mobile products, including backend/API work and practical AI integrations.",
     siteName: "Rhenvox",
     images: [
       {
@@ -55,17 +53,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rhenvox | Software Engineering & AI R&D",
-    description: "Premium software engineering, AI R&D, and UI/UX design services",
+    title: "Rhenvox | Software Company",
+    description: "Founder-led software company building web and mobile products, including backend/API work and practical AI integrations.",
     images: ["https://rhenvox.com/images/rhenvox-logo.png"],
     creator: "@rhenvox",
     site: "@rhenvox",
   },
   other: {
-    'msapplication-TileImage': '/images/apple-touch-icon.png',
-    'msapplication-TileColor': '#7A30DC',
-    'theme-color': '#0A0025',
-    'light-theme-color': '#E4D5F8',
+    "msapplication-TileImage": "/images/apple-touch-icon.png",
+    "msapplication-TileColor": "#2F5580",
+    "theme-color": "#14161C",
+    "light-theme-color": "#F6F5F2",
   },
 };
 
@@ -80,10 +78,9 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider>
           <I18nProvider>
-            <CustomScrollbar />
             {children}
           </I18nProvider>
         </ThemeProvider>

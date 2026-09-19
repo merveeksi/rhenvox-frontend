@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 export default function KVKKPage() {
   return (
     <div className="space-y-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">KVKK Aydınlatma Metni</h1>
+      <div className="mb-10">
+        <h1 className="mb-3 text-3xl font-semibold tracking-tight text-rhenvox-text">KVKK Aydınlatma Metni</h1>
         <p className="text-rhenvox-muted">Son güncelleme: {new Date().toLocaleDateString('tr-TR', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       </div>
 
@@ -20,7 +20,7 @@ export default function KVKKPage() {
           veri sorumlusu sıfatıyla Rhenvox tarafından, kişisel verilerinizin işlenmesine ilişkin 
           bilgilendirmenizi sağlamak amacıyla hazırlanmıştır.
         </p>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Şirket Bilgileri:</h3>
           <ul className="space-y-1 text-sm">
             <li><strong>Şirket Adı:</strong> Rhenvox</li>
@@ -57,7 +57,7 @@ export default function KVKKPage() {
         <h2 className="text-2xl font-semibold mb-4">3. Kişisel Verilerin İşlenme Amaçları</h2>
         <p className="mb-4">Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Hizmet Sunumu:</strong> Yazılım geliştirme, yapay zeka araştırması ve tasarım hizmetlerinin sağlanması</li>
+          <li><strong>Hizmet Sunumu:</strong> Yazılım geliştirme ve ilgili ürün çalışmalarının sağlanması</li>
           <li><strong>İletişim Yönetimi:</strong> Sorularınıza yanıt vermek, destek sağlamak ve iş ilişkilerimizi yönetmek</li>
           <li><strong>Sözleşme Yönetimi:</strong> Sözleşmelerin müzakeresi, imzalanması ve yerine getirilmesi</li>
           <li><strong>İş Geliştirme:</strong> İhtiyaçlarınızı anlamak ve hizmetlerimizi geliştirmek</li>
@@ -184,7 +184,7 @@ export default function KVKKPage() {
           Bu aydınlatma metni veya veri işleme uygulamalarımız hakkında sorularınız varsa, 
           bizimle iletişime geçin:
         </p>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
             <li><strong>E-posta:</strong> info@rhenvox.com</li>
             <li><strong>Telefon:</strong> +44 7845 722801</li>
@@ -199,7 +199,7 @@ export default function KVKKPage() {
         </p>
       </section>
 
-      <section className="bg-rhenvox-surface/30 p-6 rounded-lg">
+      <section className="rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-6">
         <h3 className="text-lg font-semibold mb-3">⚖️ Uygulanacak Hukuk</h3>
         <p className="text-sm text-rhenvox-muted">
           Bu aydınlatma metni Türkiye Cumhuriyeti kanunlarına tabidir. 

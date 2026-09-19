@@ -8,19 +8,19 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="space-y-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
+      <div className="mb-10">
+        <h1 className="mb-3 text-3xl font-semibold tracking-tight text-rhenvox-text">Privacy Policy</h1>
         <p className="text-rhenvox-muted">Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       </div>
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">1. Who We Are</h2>
         <p className="mb-4">
-          Rhenvox is a software engineering and AI research company registered in England and Wales. 
+          Rhenvox is a software company registered in England and Wales.
           We are committed to protecting your privacy and handling your personal data in accordance with 
           the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
         </p>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Company Details:</h3>
           <ul className="space-y-1 text-sm">
             <li><strong>Company Name:</strong> Rhenvox</li>
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
         <p className="mb-4">We process your personal data for the following purposes:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Service Delivery:</strong> To provide software development, AI research, and design services</li>
+          <li><strong>Service Delivery:</strong> To provide software development and related product work</li>
           <li><strong>Communication:</strong> To respond to inquiries, provide support, and manage our business relationship</li>
           <li><strong>Contract Management:</strong> To negotiate, execute, and fulfill contractual obligations</li>
           <li><strong>Business Development:</strong> To understand your needs and improve our services</li>
@@ -177,7 +177,7 @@ export default function PrivacyPage() {
         <p className="mb-4">
           If you have any questions about this privacy policy or our data practices, please contact us:
         </p>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
             <li><strong>Email:</strong> info@rhenvox.com</li>
             <li><strong>Phone:</strong> +44 7845 722801</li>

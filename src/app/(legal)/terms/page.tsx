@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="space-y-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
+      <div className="mb-10">
+        <h1 className="mb-3 text-3xl font-semibold tracking-tight text-rhenvox-text">Terms of Service</h1>
         <p className="text-rhenvox-muted">Last updated: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       </div>
 
@@ -28,7 +28,7 @@ export default function TermsPage() {
 
       <section>
         <h2 className="text-2xl font-semibold mb-4">2. About Rhenvox</h2>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <h3 className="font-semibold mb-2">Company Information:</h3>
           <ul className="space-y-1 text-sm">
             <li><strong>Legal Name:</strong> Rhenvox</li>
@@ -40,8 +40,8 @@ export default function TermsPage() {
           </ul>
         </div>
         <p className="mb-4">
-          We specialize in premium software engineering, AI research and development, 
-          and UI/UX design services for startups and enterprises.
+          Rhenvox provides software development for web and mobile products, including
+          backend/API work and practical AI integrations where they are part of a product.
         </p>
       </section>
 
@@ -49,11 +49,11 @@ export default function TermsPage() {
         <h2 className="text-2xl font-semibold mb-4">3. Services</h2>
         <p className="mb-4">Rhenvox provides the following professional services:</p>
         <ul className="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>Software Engineering:</strong> Custom web and mobile application development, enterprise software solutions, API development and integration</li>
-          <li><strong>AI Research & Development:</strong> Machine learning solutions, predictive analytics, natural language processing, computer vision systems</li>
-          <li><strong>UI/UX Design:</strong> User experience design, interface design, design systems, user research and testing</li>
-          <li><strong>Consulting Services:</strong> Technical consulting, AI strategy, digital transformation advisory</li>
-          <li><strong>Support and Maintenance:</strong> Ongoing technical support, system maintenance, and enhancement services</li>
+          <li><strong>Software Development:</strong> Web applications, backend/API development, product development, integrations, and maintenance of existing products</li>
+          <li><strong>Mobile Development:</strong> React Native applications and API-connected iOS/Android product work</li>
+          <li><strong>AI Integrations:</strong> Practical AI features inside software products, such as API-based model integrations. This is not a machine-learning research service.</li>
+          <li><strong>Product and Technical Consulting:</strong> Architecture, technical planning, product implementation decisions, and modernization of existing software</li>
+          <li><strong>Support and Maintenance:</strong> Ongoing technical support, system maintenance, and enhancement services when agreed in a Service Agreement</li>
         </ul>
         <p className="mb-4">
           All services are provided according to individual service agreements that specify 
@@ -239,7 +239,7 @@ export default function TermsPage() {
         <p className="mb-4">
           For questions about these Terms or our services, please contact us:
         </p>
-        <div className="bg-rhenvox-surface/50 p-4 rounded-lg mb-4">
+        <div className="mb-4 rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-4">
           <ul className="space-y-1 text-sm">
             <li><strong>Email:</strong> info@rhenvox.com</li>
             <li><strong>Phone:</strong> +44 7845 722801</li>
@@ -248,7 +248,7 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <section className="bg-rhenvox-surface/30 p-6 rounded-lg">
+      <section className="rounded-lg border border-rhenvox-border bg-rhenvox-surface-muted p-6">
         <h3 className="text-lg font-semibold mb-3">📋 Acknowledgment</h3>
         <p className="text-sm text-rhenvox-muted">
           By engaging our services or using our website, you acknowledge that you have read, 

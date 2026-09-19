@@ -1,5 +1,14 @@
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes, ReactNode, forwardRef } from "react";
+import {
+  ButtonHTMLAttributes,
+  MouseEventHandler,
+  ReactNode,
+  forwardRef,
+} from "react";
+import Link from "next/link";
+
+const primaryClassName =
+  "inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-rhenvox-bg";
 
 interface ShimmerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   shimmerColor?: string;
@@ -9,50 +18,41 @@ interface ShimmerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   background?: string;
   className?: string;
   children: ReactNode;
+  href?: string;
 }
 
 export const ShimmerButton = forwardRef<HTMLButtonElement, ShimmerButtonProps>(
   (
     {
-      shimmerColor = "#ffffff",
-      shimmerSize = "0.1em",
-      shimmerDuration = "2s",
-      borderRadius = "1rem",
-      background = "linear-gradient(to right, #7A30DC, #68F9E5)",
       className,
       children,
+      href,
+      onClick,
+      shimmerColor: _shimmerColor,
+      shimmerSize: _shimmerSize,
+      borderRadius: _borderRadius,
+      shimmerDuration: _shimmerDuration,
+      background: _background,
       ...props
     },
     ref
   ) => {
-    return (
-      <button
-        ref={ref}
-        className={cn(
-          "relative inline-flex h-10 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-rhenvox-turquoise to-rhenvox-purple px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50",
-          className
-        )}
-        style={{
-          borderRadius,
-          background,
-        }}
-        {...props}
-      >
-        <div className="absolute inset-0 overflow-hidden rounded-md">
-          <div
-            className="absolute inset-0 animate-[shimmer_var(--duration)_infinite]"
-            style={{
-              "--color": shimmerColor,
-              "--size": shimmerSize,
-              "--duration": shimmerDuration,
-              background: `linear-gradient(to right, transparent, transparent, var(--color), transparent, transparent)`,
-              backgroundPosition: "0 0",
-              backgroundSize: "var(--size) 100%",
-              backgroundRepeat: "no-repeat",
-            } as any}
-          />
-        </div>
+    const sharedClassName = cn(primaryClassName, className);
 
+    if (href) {
+      return (
+        <Link
+          href={href}
+          className={sharedClassName}
+          onClick={onClick as unknown as MouseEventHandler<HTMLAnchorElement> | undefined}
+        >
+          {children}
+        </Link>
+      );
+    }
+
+    return (
+      <button ref={ref} className={sharedClassName} onClick={onClick} {...props}>
         {children}
       </button>
     );
