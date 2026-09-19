@@ -66,8 +66,9 @@ export function HomeSelectedWork() {
             <div className="relative h-36 w-full max-w-xs">
               <Image
                 src="/images/nurbilgi.logo.png"
-                alt="Nur Bilgi"
+                alt="Nur Bilgi logo"
                 fill
+                sizes="(max-width: 1024px) 12rem, 16rem"
                 className="object-contain"
               />
             </div>

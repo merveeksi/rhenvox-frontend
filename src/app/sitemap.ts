@@ -1,62 +1,52 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+import { canonicalUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://rhenvox.com'
-  
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
+      url: canonicalUrl("/"),
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: canonicalUrl("/work"),
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: canonicalUrl("/work/nur-bilgi"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: canonicalUrl("/services"),
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/work`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: canonicalUrl("/about"),
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/nur-bilgi`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: canonicalUrl("/contact"),
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: canonicalUrl("/privacy"),
+      changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: canonicalUrl("/terms"),
+      changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/kvkk`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: canonicalUrl("/kvkk"),
+      changeFrequency: "yearly",
       priority: 0.3,
     },
-  ]
+  ];
 }

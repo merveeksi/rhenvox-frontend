@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { ContactPage } from "@/components/contact/contact-page";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | Rhenvox",
+export const metadata = pageMetadata({
+  title: "Contact",
   description:
     "Contact Rhenvox about a product or technical project at hello@rhenvox.com.",
-};
+  path: "/contact",
+});
 
 export default function ContactRoute() {
   return <ContactPage />;

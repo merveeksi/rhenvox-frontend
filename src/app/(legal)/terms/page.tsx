@@ -1,9 +1,10 @@
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Rhenvox",
-  description: "Rhenvox Terms of Service and Conditions",
-};
+export const metadata = pageMetadata({
+  title: "Terms of Service",
+  description: "Terms of service for using the Rhenvox website and engaging Rhenvox LTD.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

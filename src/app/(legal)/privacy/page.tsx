@@ -1,9 +1,10 @@
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Rhenvox",
-  description: "Rhenvox Privacy Policy and Data Protection Information",
-};
+export const metadata = pageMetadata({
+  title: "Privacy Policy",
+  description: "Privacy policy for Rhenvox LTD, covering how personal data is handled.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

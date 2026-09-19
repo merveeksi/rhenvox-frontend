@@ -79,6 +79,7 @@ export function NurBilgiCaseStudy() {
                 src="/images/nurbilgi.logo.png"
                 alt="Nur Bilgi logo"
                 fill
+                sizes="9rem"
                 className="object-contain"
               />
             </div>

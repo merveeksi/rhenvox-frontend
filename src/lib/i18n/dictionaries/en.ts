@@ -7,7 +7,13 @@ export const en = {
     contact: "Contact",
     getInTouch: "Get in touch",
     toggleTheme: "Toggle theme",
-    toggleLanguage: "Toggle language"
+    toggleLanguage: "Toggle language",
+    skipToContent: "Skip to content",
+    primary: "Primary",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    switchToTurkish: "Switch to Turkish",
+    switchToEnglish: "Switch to English"
   },
   home: {
     hero: {

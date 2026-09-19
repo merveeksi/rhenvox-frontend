@@ -2,24 +2,19 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
 import ThemeSwitcher from "./ThemeSwitcher";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useI18n } from "@/lib/i18n";
-import { ShimmerButton } from "./magicui/shimmer-button";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const { t } = useI18n();
   const pathname = usePathname();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const navLinks = [
     { href: "/work", label: t("navbar.work") },
@@ -37,8 +32,11 @@ export function Navbar() {
     );
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-rhenvox-border bg-rhenvox-bg">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+    <header className="fixed top-0 z-50 w-full border-b border-rhenvox-border bg-rhenvox-bg">
+      <nav
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6"
+        aria-label={t("navbar.primary")}
+      >
         <Logo />
 
         <div className="hidden items-center gap-6 md:flex">
@@ -47,31 +45,32 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          {mounted && (
-            <>
-              <LanguageSwitcher />
-              <ThemeSwitcher />
-            </>
-          )}
-          <ShimmerButton href="/contact">
-            <span>{t("navbar.getInTouch")}</span>
-          </ShimmerButton>
+          <LanguageSwitcher />
+          <ThemeSwitcher />
+          <Button asChild>
+            <Link href="/contact">{t("navbar.getInTouch")}</Link>
+          </Button>
         </div>
 
         <div className="flex md:hidden">
           <button
-            onClick={() => mounted && setMobileMenuOpen(!mobileMenuOpen)}
+            type="button"
+            onClick={() => setMobileMenuOpen((open) => !open)}
             className="rounded-md p-2 text-rhenvox-text hover:bg-rhenvox-surface-muted"
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
             aria-expanded={mobileMenuOpen}
+            aria-controls={mobileMenuOpen ? "mobile-navigation" : undefined}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
-      </div>
+      </nav>
 
-      {mounted && mobileMenuOpen && (
-        <div className="border-t border-rhenvox-border bg-rhenvox-bg px-4 py-4 md:hidden">
+      {mobileMenuOpen ? (
+        <div
+          id="mobile-navigation"
+          className="border-t border-rhenvox-border bg-rhenvox-bg px-4 py-4 md:hidden"
+        >
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -86,13 +85,15 @@ export function Navbar() {
             <div className="mt-3 flex flex-wrap items-center gap-3 border-t border-rhenvox-border pt-4">
               <LanguageSwitcher />
               <ThemeSwitcher />
-              <ShimmerButton href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                <span>{t("navbar.getInTouch")}</span>
-              </ShimmerButton>
+              <Button asChild>
+                <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                  {t("navbar.getInTouch")}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
-      )}
-    </nav>
+      ) : null}
+    </header>
   );
 }

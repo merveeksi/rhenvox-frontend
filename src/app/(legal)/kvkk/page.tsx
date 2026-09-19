@@ -1,9 +1,10 @@
-import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "KVKK Aydınlatma Metni | Rhenvox",
-  description: "Rhenvox Kişisel Verilerin Korunması ve İşlenmesi Aydınlatma Metni",
-};
+export const metadata = pageMetadata({
+  title: "KVKK Aydınlatma Metni",
+  description: "Rhenvox LTD KVKK aydınlatma metni.",
+  path: "/kvkk",
+});
 
 export default function KVKKPage() {
   return (

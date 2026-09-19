@@ -7,7 +7,13 @@ export const tr = {
     contact: "İletişim",
     getInTouch: "İletişime geçin",
     toggleTheme: "Tema değiştir",
-    toggleLanguage: "Dil değiştir"
+    toggleLanguage: "Dil değiştir",
+    skipToContent: "İçeriğe geç",
+    primary: "Ana menü",
+    openMenu: "Menüyü aç",
+    closeMenu: "Menüyü kapat",
+    switchToTurkish: "Türkçe’ye geç",
+    switchToEnglish: "İngilizce’ye geç"
   },
   home: {
     hero: {

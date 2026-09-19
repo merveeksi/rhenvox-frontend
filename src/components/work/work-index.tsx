@@ -62,6 +62,7 @@ export function WorkIndex() {
                 src="/images/nurbilgi.logo.png"
                 alt="Nur Bilgi logo"
                 fill
+                sizes="12rem"
                 className="object-contain"
               />
             </div>
