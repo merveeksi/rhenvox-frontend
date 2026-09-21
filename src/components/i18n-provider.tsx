@@ -37,18 +37,22 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       if (savedLocale && (savedLocale === 'en' || savedLocale === 'tr')) {
         setLocaleState(savedLocale);
       }
-    } catch (error) {
-      console.error('Error loading locale from localStorage:', error);
+    } catch {
+      // localStorage may be unavailable
     }
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   // Set locale and save to localStorage
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
     try {
       localStorage.setItem('locale', newLocale);
-    } catch (error) {
-      console.error('Error saving locale to localStorage:', error);
+    } catch {
+      // localStorage may be unavailable
     }
   };
 

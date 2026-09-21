@@ -1,270 +1,234 @@
 export const en = {
   navbar: {
     home: "Home",
-    about: "About Us",
+    about: "About",
     services: "Services",
-    portfolio: "Portfolio",
-    blog: "Blog",
-    careers: "Careers",
+    work: "Work",
     contact: "Contact",
     getInTouch: "Get in touch",
     toggleTheme: "Toggle theme",
-    toggleLanguage: "Toggle language"
+    toggleLanguage: "Toggle language",
+    skipToContent: "Skip to content",
+    primary: "Primary",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    switchToTurkish: "Switch to Turkish",
+    switchToEnglish: "Switch to English"
   },
-  hero: {
-    title: "Software Engineering & AI Research",
-    subtitle: "Premium software solutions for startups and enterprises",
-    cta: "Let's talk about your project"
-  },
-  heroGradient: {
-    title: "Build, Scale, Innovate",
-    subtitle: "with Rhenvox",
-    description: "Premium software engineering, AI R&D, and UI/UX design services for ambitious companies.",
-    button: "Book a discovery call"
-  },
-  ourEdge: {
-    title: "Our Edge",
-    subtitle: "Leveraging cutting-edge technology and agile methodologies to deliver exceptional results",
-    softwareEngineering: {
-      title: "Software Engineering",
-      description: "Building scalable applications with clean architecture and modern practices."
+  home: {
+    hero: {
+      eyebrow: "Software products, built with care.",
+      title: "We build web and mobile products that are made to ship.",
+      description: "Rhenvox handles product implementation across web, mobile, and backend/API work. Practical AI features can sit inside a product when they are useful — not as a research offering.",
+      primaryCta: "Discuss a project",
+      secondaryCta: "View our work",
+      line: "Web · Mobile · Backend · Product integrations"
     },
-    aiResearch: {
-      title: "AI Research & Development",
-      description: "Creating intelligent solutions through machine learning and deep learning."
+    work: {
+      title: "Selected work",
+      subtitle: "Public work Rhenvox can show today.",
+      name: "Nur Bilgi",
+      description: "Web product for Islamic knowledge, including a Q&A assistant, Quran, prayer times, and related tools.",
+      role: "Rhenvox built the live web product and a React Native application connected to the same platform.",
+      mobileNote: "Mobile application built with React Native and connected to the Nur Bilgi platform.",
+      visit: "Visit nurbilgi.com",
+      more: "More on the work page",
+      tagWeb: "Web application",
+      tagMobile: "Mobile",
+      tagBackend: "Backend/API"
     },
-    uiuxDesign: {
-      title: "UI/UX Design",
-      description: "Crafting beautiful, intuitive interfaces that delight users."
+    capabilities: {
+      title: "What we build",
+      webTitle: "Web products",
+      webBody: "Customer-facing web applications, internal tools, and other product interfaces connected to a backend.",
+      mobileTitle: "Mobile products",
+      mobileBody: "React Native applications for iOS and Android, connected to product APIs, including release and iteration work.",
+      backendTitle: "Backend & APIs",
+      backendBody: "Application backends, APIs, authentication, integrations, and the data flows behind a product.",
+      aiTitle: "AI integrations",
+      aiBody: "Practical AI features inside a product: API-based model integrations and workflow help where they are useful. This is not a research service."
+    },
+    process: {
+      title: "How we work",
+      understandTitle: "Understand",
+      understandBody: "Clarify the problem, users, scope, and technical constraints.",
+      planTitle: "Plan",
+      planBody: "Define the product structure, implementation path, and priorities.",
+      buildTitle: "Build",
+      buildBody: "Implement in small, testable increments with clear technical ownership.",
+      shipTitle: "Ship & improve",
+      shipBody: "Release, observe real usage, and iterate where needed."
+    },
+    about: {
+      title: "About Rhenvox",
+      body: "Rhenvox LTD is a founder-led software company registered in the UK and operated from Türkiye, focused on building and shipping practical digital products.",
+      link: "More about Rhenvox"
+    },
+    cta: {
+      title: "Have a product to build?",
+      body: "If you have a web, mobile, or API project, get in touch. Rhenvox can look at the work and say whether it is a fit.",
+      primary: "Discuss a project"
     }
   },
-  latestProjects: {
-    title: "Latest Projects",
-    subtitle: "Explore our recent client success stories",
-    projectDescription: "A brief description of this amazing project and the results achieved."
-  },
-  techStack: {
-    title: "Our Tech Stack",
-    subtitle: "We use the latest technologies to build scalable, maintainable software"
-  },
-  cta: {
-    title: "Ready to transform your business?",
-    subtitle: "Let's unlock your next big product together",
-    button: "Book a free 30-minute consultation"
-  },
   footer: {
-    copyright: "© 2023 Rhenvox. All rights reserved.",
-    privacyPolicy: "Privacy Policy",
-    termsOfService: "Terms of Service",
+    copyright: "Rhenvox. All rights reserved.",
+    privacyPolicy: "Privacy Notice",
+    termsOfService: "Website Terms",
     kvkk: "KVKK",
     pages: "Pages",
     legal: "Legal",
-    social: "Social"
+    social: "Social",
+    description: "Founder-led software company. Web, mobile, and API development."
   },
-  // About page translations
   about: {
-    pageTitle: "About Us",
-    heroTitle: "Who We Are",
-    heroSubtitle: "A team of passionate engineers and designers building the future",
-    mission: {
-      title: "Our Mission",
-      description: "To empower businesses with innovative technology solutions that drive growth and deliver exceptional user experiences."
-    },
-    values: {
-      title: "Our Values",
-      innovation: {
-        title: "Innovation",
-        description: "We constantly push boundaries and explore new technologies."
-      },
-      excellence: {
-        title: "Excellence",
-        description: "We strive for the highest quality in everything we do."
-      },
-      collaboration: {
-        title: "Collaboration",
-        description: "We believe great products are built by great teams working together."
-      },
-      integrity: {
-        title: "Integrity",
-        description: "We are honest, transparent, and accountable in all our actions."
-      }
-    },
-    team: {
-      title: "Meet Our Team",
-      subtitle: "The talented people behind our success"
-    },
-    story: {
-      title: "Our Story",
-      description: "Founded in 2020, Rhenvox has grown from a small startup to a leading software development company. We've helped numerous businesses transform their digital presence and create innovative solutions."
-    }
+    eyebrow: "About",
+    title: "A small software company focused on shipping real products.",
+    subtitle: "Rhenvox LTD is founder-led, registered in the United Kingdom, and operated from Türkiye.",
+    storyTitle: "The company",
+    story: "The company was incorporated in 2025. Rhenvox is a founder-led software company focused on web, mobile and backend product development.",
+    howTitle: "How Rhenvox works",
+    p1Title: "Build around the product",
+    p1Body: "Technical choices should serve the product rather than follow whatever is currently fashionable.",
+    p2Title: "Keep scope clear",
+    p2Body: "Define what needs to ship. Avoid extra complexity that does not help the product.",
+    p3Title: "Work across the stack",
+    p3Body: "When web, mobile, and backend belong to the same product, those decisions are considered together.",
+    p4Title: "Use AI selectively",
+    p4Body: "Use AI where it creates a useful product capability, not simply because it is expected.",
+    factsTitle: "Company facts",
+    factCompany: "Company",
+    factCompanyValue: "Rhenvox LTD",
+    factIncorporated: "Incorporated",
+    factIncorporatedValue: "2025",
+    factRegistered: "Registered",
+    factRegisteredValue: "United Kingdom",
+    factOperated: "Operated from",
+    factOperatedValue: "Türkiye",
+    ctaWork: "View our work",
+    ctaDiscuss: "Discuss a project"
   },
-  // Services page translations
   services: {
-    pageTitle: "Our Services",
-    heroTitle: "What We Offer",
-    heroSubtitle: "Comprehensive technology solutions tailored to your needs",
-    categories: {
-      software: {
-        title: "Software Engineering",
-        description: "End-to-end development of custom software applications",
-        services: [
-          "Web Application Development",
-          "Mobile App Development",
-          "Enterprise Software Solutions",
-          "API Development & Integration",
-          "Migration & Modernization",
-          "DevOps & CI/CD Implementation"
-        ]
-      },
-      ai: {
-        title: "AI & Machine Learning",
-        description: "Cutting-edge AI solutions to enhance your business",
-        services: [
-          "Predictive Analytics",
-          "Natural Language Processing",
-          "Computer Vision",
-          "Recommendation Systems",
-          "Intelligent Automation",
-          "AI Strategy Consulting"
-        ]
-      },
-      design: {
-        title: "UI/UX Design",
-        description: "Creating meaningful and delightful user experiences",
-        services: [
-          "User Research & Testing",
-          "UX Strategy & Design",
-          "UI Design & Prototyping",
-          "Design Systems",
-          "Web & Mobile Design",
-          "User Experience Audits"
-        ]
-      }
-    },
-    process: {
-      title: "Our Process",
-      discovery: "Discovery",
-      planning: "Planning",
-      design: "Design",
-      development: "Development",
-      testing: "Testing",
-      deployment: "Deployment",
-      support: "Support"
-    }
+    eyebrow: "Services",
+    title: "Software product development across web, mobile and backend.",
+    subtitle: "Rhenvox works on implementation of digital products and selected integrations.",
+    webTitle: "Web products",
+    webBody: "Web work is product implementation: applications people sign into and use, connected to a backend, including work on products that already exist.",
+    web1: "Customer-facing web applications",
+    web2: "Product dashboards",
+    web3: "Authenticated application flows",
+    web4: "Backend-connected interfaces",
+    web5: "Frontend and backend integration on an existing product",
+    mobileTitle: "Mobile products",
+    mobileBody: "Mobile work is React Native product implementation for iOS and Android, connected to the same APIs as the rest of the product.",
+    mobile1: "React Native applications",
+    mobile2: "iOS and Android product implementation",
+    mobile3: "API-connected mobile products",
+    mobile4: "Authentication flows",
+    mobile5: "Notifications and third-party integrations where the product needs them",
+    mobile6: "Release and iteration support",
+    backendTitle: "Backend and APIs",
+    backendBody: "Backend work covers the application services that web and mobile products depend on.",
+    backend1: "Application APIs",
+    backend2: "Authentication",
+    backend3: "Data flows between product surfaces",
+    backend4: "Third-party product integrations",
+    backend5: "Shared backend systems for web and mobile",
+    aiTitle: "AI integrations",
+    aiBody: "Rhenvox can add practical AI features to products when they solve a clear product problem — for example through LLM/API integrations, structured workflows and contextual user-facing features. AI is treated as a product capability rather than a standalone research offering.",
+    ai1: "LLM and API integrations",
+    ai2: "Structured product workflows",
+    ai3: "Contextual product features",
+    ai4: "AI-assisted interactions",
+    engageTitle: "How projects usually start",
+    engageIntro: "Work usually starts with a short written exchange.",
+    engage1: "Scope the problem",
+    engage2: "Review the current product and technical context",
+    engage3: "Define implementation boundaries",
+    engage4: "Start with a clear first milestone",
+    ctaTitle: "Have a product or technical problem to discuss?",
+    ctaPrimary: "Discuss a project",
+    ctaSecondary: "View our work"
   },
-  // Portfolio page translations
   portfolio: {
-    pageTitle: "Our Portfolio",
-    heroTitle: "Our Work",
-    heroSubtitle: "Showcasing our best projects and success stories",
-    viewWork: "View our work",
-    categories: {
-      all: "All Projects",
-      web: "Web Applications",
-      mobile: "Mobile Apps",
-      ai: "AI & ML",
-      design: "UI/UX Design"
-    },
-    projectDetails: {
-      client: "Client",
-      duration: "Duration",
-      technologies: "Technologies",
-      challenge: "The Challenge",
-      solution: "Our Solution",
-      results: "Results",
-      viewLive: "View Live Project",
-      nextProject: "Next Project"
-    }
+    pageTitle: "Work",
+    heroTitle: "Work",
+    heroSubtitle: "Selected products built by Rhenvox",
+    viewWork: "View work"
   },
-  // Blog page translations
-  blog: {
-    pageTitle: "Blog",
-    heroTitle: "Latest Insights",
-    heroSubtitle: "Thoughts, news, and ideas from our team",
-    categories: {
-      all: "All Posts",
-      technology: "Technology",
-      design: "Design",
-      business: "Business",
-      ai: "AI & ML",
-      development: "Development"
-    },
-    readMore: "Read more",
-    minuteRead: "min read",
-    searchPlaceholder: "Search articles...",
-    relatedPosts: "Related Posts",
-    sharePost: "Share this post",
-    authorBy: "By"
+  workPage: {
+    eyebrow: "Work",
+    title: "Products built for real use.",
+    subtitle: "Selected product work from Rhenvox. This page is limited to work that can be shown publicly.",
+    viewCaseStudy: "View case study",
+    visitNurBilgi: "Visit Nur Bilgi",
+    discuss: "Discuss a project",
+    product: "Product",
+    type: "Type",
+    typeValue: "Web + Mobile",
+    scope: "Scope",
+    scopeValue: "Product development / web / mobile / backend integration",
+    platform: "Platform",
+    platformValue: "Web, React Native",
+    status: "Status",
+    statusValue: "Live web product",
+    summary: "A live web product at nurbilgi.com, with a React Native application connected to the same platform.",
+    ctaBody: "If you are planning a web, mobile, or API product, Rhenvox can review the scope and see whether it is a fit."
   },
-  // Careers page translations
-  careers: {
-    pageTitle: "Careers",
-    heroTitle: "Join Our Team",
-    heroSubtitle: "Build your career with us and work on exciting projects",
-    whyJoinUs: {
-      title: "Why Join Rhenvox?",
-      culture: {
-        title: "Innovative Culture",
-        description: "Work in an environment that encourages creativity and new ideas."
-      },
-      growth: {
-        title: "Growth Opportunities",
-        description: "Continuous learning and development paths for your career."
-      },
-      impact: {
-        title: "Meaningful Impact",
-        description: "Work on projects that make a difference for clients and users."
-      },
-      balance: {
-        title: "Work-Life Balance",
-        description: "Flexible work arrangements and focus on wellbeing."
-      }
-    },
-    openPositions: {
-      title: "Open Positions",
-      noPositions: "No open positions at the moment. Check back later!",
-      applyNow: "Apply Now",
-      location: "Location",
-      type: "Type",
-      department: "Department",
-      requirements: "Requirements",
-      responsibilities: "Responsibilities"
-    },
-    team: {
-      title: "Life at Rhenvox",
-      subtitle: "Get a glimpse of our workplace and culture"
-    }
+  nurBilgi: {
+    back: "Back to work",
+    title: "Nur Bilgi",
+    description: "A web and mobile knowledge product that brings together question-and-answer tools, Quran content, prayer information and related utilities.",
+    visit: "Visit Nur Bilgi",
+    discuss: "Discuss a project",
+    tagWeb: "Web",
+    tagMobile: "Mobile",
+    tagBackend: "Backend/API",
+    overviewTitle: "Overview",
+    overview: "Nur Bilgi is a knowledge product for Islamic reference material and related tools. The public web product is live at nurbilgi.com. Rhenvox built the web application, a React Native mobile application connected to the same platform, and the .NET API work behind them.",
+    scopeTitle: "What Rhenvox built",
+    scopeWeb: "Web application development",
+    scopeMobile: "Mobile application development with React Native",
+    scopeBackend: "Backend/API integration on .NET",
+    architectureTitle: "Technical implementation",
+    architecture: "The web and mobile applications connect to the same Nur Bilgi backend. TypeScript is used on the web and mobile applications.",
+    archWebLabel: "Web",
+    archWebValue: "Next.js",
+    archMobileLabel: "Mobile",
+    archMobileValue: "React Native",
+    archBackendLabel: "Backend",
+    archBackendValue: ".NET API",
+    capabilitiesTitle: "Selected capabilities",
+    capQa: "Knowledge and Q&A functionality",
+    capQuran: "Quran-related content",
+    capPrayer: "Prayer-time tools",
+    capRelated: "Related utilities on the same product",
+    liveTitle: "Current product",
+    liveBody: "The web product is live at nurbilgi.com. A React Native mobile application is connected to the same Nur Bilgi platform and backend.",
+    ctaTitle: "Building something similar?",
+    ctaBody: "If you are planning a web, mobile, or API product, Rhenvox can review the scope and see whether it is a fit."
   },
-  // Contact page translations
   contact: {
-    pageTitle: "Contact Us",
-    heroTitle: "Get in Touch",
-    heroSubtitle: "We'd love to hear from you and discuss how we can help",
-    form: {
-      name: "Your name",
-      email: "Email address",
-      subject: "Subject",
-      message: "Your message",
-      submit: "Send Message",
-      success: "Thank you! Your message has been sent.",
-      error: "Oops! Something went wrong. Please try again."
-    },
-    info: {
-      title: "Contact Information",
-      email: "Email",
-      phone: "Phone",
-      address: "Address",
-      hours: "Working Hours",
-      hoursValue: "Monday - Friday, 9:00 AM - 6:00 PM"
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-      question1: "What services do you offer?",
-      answer1: "We offer a wide range of services including software engineering, AI development, and UI/UX design. Check our Services page for more details.",
-      question2: "How does your project process work?",
-      answer2: "Our process typically involves discovery, planning, design, development, testing, deployment, and ongoing support. We tailor this approach to meet your specific needs.",
-      question3: "What is your typical timeline for projects?",
-      answer3: "Project timelines vary based on scope and complexity. A simple website might take 4-6 weeks, while a complex application could take several months. We'll provide a detailed timeline during our initial consultation."
-    }
+    eyebrow: "Contact",
+    title: "Tell us what you are building.",
+    subtitle: "Share the product, problem or technical scope you are working on. Rhenvox can review it and tell you whether it is a fit.",
+    emailTitle: "Email",
+    emailCta: "Email Rhenvox",
+    emailLead: "A useful first message usually covers:",
+    q1: "What are you building?",
+    q2: "What already exists?",
+    q3: "What do you need help with?",
+    q4: "Is there a target date?",
+    otherTitle: "Phone and WhatsApp",
+    phoneLabel: "Phone",
+    whatsappLabel: "WhatsApp",
+    officeTitle: "Registered office",
+    officeNote: "Company registration address.",
+    address1: "71-75 Shelton Street",
+    address2: "Covent Garden, London",
+    address3: "United Kingdom, WC2H 9JQ",
+    companyNumberLabel: "Company number",
+    companyNumberValue: "16423845",
+    turkeyTitle: "Operated from Türkiye",
+    turkeyBody: "Day-to-day work is based in Türkiye."
   }
-}; 
+};

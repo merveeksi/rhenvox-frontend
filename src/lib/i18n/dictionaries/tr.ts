@@ -1,271 +1,234 @@
 export const tr = {
   navbar: {
     home: "Ana Sayfa",
-    about: "Hakkımızda",
-    services: "Hizmetlerimiz",
-    portfolio: "Portfolyo",
-    blog: "Blog",
-    careers: "Kariyer",
+    about: "Hakkında",
+    services: "Hizmetler",
+    work: "İşler",
     contact: "İletişim",
-    getInTouch: "Bize ulaşın",
+    getInTouch: "İletişime geçin",
     toggleTheme: "Tema değiştir",
-    toggleLanguage: "Dil değiştir"
+    toggleLanguage: "Dil değiştir",
+    skipToContent: "İçeriğe geç",
+    primary: "Ana menü",
+    openMenu: "Menüyü aç",
+    closeMenu: "Menüyü kapat",
+    switchToTurkish: "Türkçe’ye geç",
+    switchToEnglish: "İngilizce’ye geç"
   },
-  hero: {
-    title: "Yazılım Mühendisliği ve Yapay Zeka Araştırmaları",
-    subtitle: "Startuplar ve kurumsal şirketler için premium yazılım çözümleri",
-    cta: "Projenizi konuşalım"
-  },
-  heroGradient: {
-    title: "İnşa et, Ölçeklendir, İnovasyon",
-    subtitle: "Rhenvox ile",
-    description: "İddialı şirketler için premium yazılım mühendisliği, yapay zeka AR-GE ve UI/UX tasarım hizmetleri.",
-    button: "Ücretsiz 30 dakikalık danışmanlık randevusu alın",
-    button2: "Keşif görüşmesi planlayın"
-  },
-  ourEdge: {
-    title: "Farkımız",
-    subtitle: "En yeni teknolojileri ve çevik metodolojileri kullanarak istisnai sonuçlar elde ediyoruz",
-    softwareEngineering: {
-      title: "Yazılım Mühendisliği",
-      description: "Temiz mimari ve modern uygulamalarla ölçeklenebilir uygulamalar oluşturuyoruz."
+  home: {
+    hero: {
+      eyebrow: "Özenle geliştirilen yazılım ürünleri.",
+      title: "Web ve mobil ürünleri, yayına çıkacak şekilde geliştiriyoruz.",
+      description: "Rhenvox web, mobil ve backend/API işlerini kapsayan ürün uygulamasını üstlenir. İşe yaradığı yerde pratik yapay zeka özellikleri ürünün içinde yer alabilir; bu bir araştırma hizmeti değildir.",
+      primaryCta: "Projeyi konuşun",
+      secondaryCta: "İşleri görün",
+      line: "Web · Mobil · Backend · Ürün entegrasyonları"
     },
-    aiResearch: {
-      title: "Yapay Zeka Araştırma ve Geliştirme",
-      description: "Makine öğrenimi ve derin öğrenme yoluyla akıllı çözümler üretiyoruz."
+    work: {
+      title: "Seçili işler",
+      subtitle: "Rhenvox’un bugün kamuya gösterebildiği iş.",
+      name: "Nur Bilgi",
+      description: "İslami bilgi için web ürünü: soru-cevap asistanı, Kur’an, namaz vakitleri ve ilgili araçlar.",
+      role: "Rhenvox canlı web ürününü ve aynı platforma bağlı bir React Native uygulamasını geliştirdi.",
+      mobileNote: "Nur Bilgi platformuna bağlı, React Native ile geliştirilmiş mobil uygulama.",
+      visit: "nurbilgi.com’u ziyaret edin",
+      more: "İşler sayfasında daha fazla",
+      tagWeb: "Web uygulaması",
+      tagMobile: "Mobil",
+      tagBackend: "Backend/API"
     },
-    uiuxDesign: {
-      title: "UI/UX Tasarımı",
-      description: "Kullanıcıları memnun eden güzel, sezgisel arayüzler tasarlıyoruz."
+    capabilities: {
+      title: "Neler geliştiriyoruz",
+      webTitle: "Web ürünleri",
+      webBody: "Müşteriye dönük web uygulamaları, iç araçlar ve backend’e bağlı diğer ürün arayüzleri.",
+      mobileTitle: "Mobil ürünler",
+      mobileBody: "iOS ve Android için React Native uygulamaları; ürün API’lerine bağlı, yayın ve iterasyon çalışması dahil.",
+      backendTitle: "Backend ve API’ler",
+      backendBody: "Uygulama backend’leri, API’ler, kimlik doğrulama, entegrasyonlar ve ürünün arkasındaki veri akışları.",
+      aiTitle: "Yapay zeka entegrasyonları",
+      aiBody: "Ürünün içindeki pratik yapay zeka özellikleri: işe yaradığı yerde API tabanlı model entegrasyonları ve iş akışı desteği. Bu bir araştırma hizmeti değildir."
+    },
+    process: {
+      title: "Nasıl çalışıyoruz",
+      understandTitle: "Anlamak",
+      understandBody: "Sorunu, kullanıcıları, kapsamı ve teknik kısıtları netleştirmek.",
+      planTitle: "Planlamak",
+      planBody: "Ürün yapısını, uygulama yolunu ve öncelikleri tanımlamak.",
+      buildTitle: "Geliştirmek",
+      buildBody: "Küçük, test edilebilir adımlarla, net teknik sahiplikle uygulamak.",
+      shipTitle: "Yayınlamak ve iyileştirmek",
+      shipBody: "Yayına almak, gerçek kullanımı izlemek ve gerektiğinde iterasyon yapmak."
+    },
+    about: {
+      title: "Rhenvox hakkında",
+      body: "Rhenvox LTD, Birleşik Krallık’ta tescilli, Türkiye’den faaliyet gösteren, pratik dijital ürünler geliştirip yayına alan kurucu yönetimli bir yazılım şirketidir.",
+      link: "Rhenvox hakkında daha fazla"
+    },
+    cta: {
+      title: "Geliştirilecek bir ürününüz mü var?",
+      body: "Web, mobil veya API projeniz varsa yazın. Rhenvox işe bakıp uygun olup olmadığını söyleyebilir.",
+      primary: "Projeyi konuşun"
     }
   },
-  latestProjects: {
-    title: "Son Projelerimiz",
-    subtitle: "Son müşteri başarı hikayelerimizi keşfedin",
-    projectDescription: "Bu harika projenin kısa bir açıklaması ve elde edilen sonuçlar."
-  },
-  techStack: {
-    title: "Teknoloji Yelpazemiz",
-    subtitle: "Ölçeklenebilir, sürdürülebilir yazılımlar oluşturmak için en son teknolojileri kullanıyoruz"
-  },
-  cta: {
-    title: "İşinizi dönüştürmeye hazır mısınız?",
-    subtitle: "Bir sonraki büyük ürününüzü birlikte hayata geçirelim",
-    button: "Ücretsiz 30 dakikalık danışmanlık randevusu alın"
-  },
   footer: {
-    copyright: "© 2023 Rhenvox. Tüm hakları saklıdır.",
-    privacyPolicy: "Gizlilik Politikası",
-    termsOfService: "Kullanım Şartları",
+    copyright: "Rhenvox. Tüm hakları saklıdır.",
+    privacyPolicy: "Gizlilik Bildirimi",
+    termsOfService: "Site Kullanım Şartları",
     kvkk: "KVKK Aydınlatma Metni",
     pages: "Sayfalar",
     legal: "Yasal",
-    social: "Sosyal Medya"
+    social: "Sosyal Medya",
+    description: "Kurucu yönetimli yazılım şirketi. Web, mobil ve API geliştirme."
   },
-  // About page translations
   about: {
-    pageTitle: "Hakkımızda",
-    heroTitle: "Biz Kimiz",
-    heroSubtitle: "Geleceği inşa eden tutkulu mühendisler ve tasarımcılardan oluşan bir ekip",
-    mission: {
-      title: "Misyonumuz",
-      description: "İşletmeleri, büyümeyi teşvik eden ve olağanüstü kullanıcı deneyimleri sunan yenilikçi teknoloji çözümleriyle güçlendirmek."
-    },
-    values: {
-      title: "Değerlerimiz",
-      innovation: {
-        title: "İnovasyon",
-        description: "Sürekli olarak sınırları zorluyoruz ve yeni teknolojileri keşfediyoruz."
-      },
-      excellence: {
-        title: "Mükemmellik",
-        description: "Yaptığımız her şeyde en yüksek kaliteyi hedefliyoruz."
-      },
-      collaboration: {
-        title: "İşbirliği",
-        description: "Harika ürünlerin, birlikte çalışan harika ekipler tarafından oluşturulduğuna inanıyoruz."
-      },
-      integrity: {
-        title: "Dürüstlük",
-        description: "Tüm eylemlerimizde dürüst, şeffaf ve sorumluyuz."
-      }
-    },
-    team: {
-      title: "Ekibimizle Tanışın",
-      subtitle: "Başarımızın arkasındaki yetenekli insanlar"
-    },
-    story: {
-      title: "Hikayemiz",
-      description: "2020 yılında kurulan Rhenvox, küçük bir startup'tan lider bir yazılım geliştirme şirketine dönüştü. Çok sayıda işletmenin dijital varlığını dönüştürmesine ve yenilikçi çözümler oluşturmasına yardımcı olduk."
-    }
+    eyebrow: "Hakkında",
+    title: "Gerçek ürünleri yayına almaya odaklanan küçük bir yazılım şirketi.",
+    subtitle: "Rhenvox LTD kurucu yönetimli bir şirkettir; Birleşik Krallık’ta tescillidir ve Türkiye’den faaliyet gösterir.",
+    storyTitle: "Şirket",
+    story: "Şirket 2025’te kuruldu. Rhenvox, web, mobil ve backend ürün geliştirmeye odaklanan kurucu yönetimli bir yazılım şirketidir.",
+    howTitle: "Rhenvox nasıl çalışır",
+    p1Title: "Ürünün etrafında kurmak",
+    p1Body: "Teknik tercihler, o anın moda teknolojisini değil ürünü desteklemelidir.",
+    p2Title: "Kapsamı net tutmak",
+    p2Body: "Yayına çıkması gereken iş tanımlanır. Ürüne yardım etmeyen karmaşıklıktan kaçınılır.",
+    p3Title: "Yığın genelinde çalışmak",
+    p3Body: "Web, mobil ve backend aynı ürüne aitse bu kararlar birlikte ele alınır.",
+    p4Title: "Yapay zekayı seçerek kullanmak",
+    p4Body: "Yapay zeka, beklenen bir şey olduğu için değil, işe yarar bir ürün yeteneği oluşturduğu yerde kullanılır.",
+    factsTitle: "Şirket bilgileri",
+    factCompany: "Şirket",
+    factCompanyValue: "Rhenvox LTD",
+    factIncorporated: "Kuruluş",
+    factIncorporatedValue: "2025",
+    factRegistered: "Tescil",
+    factRegisteredValue: "Birleşik Krallık",
+    factOperated: "Faaliyet yeri",
+    factOperatedValue: "Türkiye",
+    ctaWork: "İşleri görün",
+    ctaDiscuss: "Projeyi konuşun"
   },
-  // Services page translations
   services: {
-    pageTitle: "Hizmetlerimiz",
-    heroTitle: "Neler Sunuyoruz",
-    heroSubtitle: "İhtiyaçlarınıza göre özelleştirilmiş kapsamlı teknoloji çözümleri",
-    categories: {
-      software: {
-        title: "Yazılım Mühendisliği",
-        description: "Özel yazılım uygulamalarının uçtan uca geliştirilmesi",
-        services: [
-          "Web Uygulaması Geliştirme",
-          "Mobil Uygulama Geliştirme",
-          "Kurumsal Yazılım Çözümleri",
-          "API Geliştirme ve Entegrasyon",
-          "Migrasyon ve Modernizasyon",
-          "DevOps ve CI/CD Implementasyonu"
-        ]
-      },
-      ai: {
-        title: "Yapay Zeka ve Makine Öğrenimi",
-        description: "İşinizi geliştiren en son teknoloji yapay zeka çözümleri",
-        services: [
-          "Öngörücü Analitik",
-          "Doğal Dil İşleme",
-          "Bilgisayarlı Görü",
-          "Öneri Sistemleri",
-          "Akıllı Otomasyon",
-          "Yapay Zeka Strateji Danışmanlığı"
-        ]
-      },
-      design: {
-        title: "UI/UX Tasarımı",
-        description: "Anlamlı ve keyifli kullanıcı deneyimleri oluşturma",
-        services: [
-          "Kullanıcı Araştırması ve Testi",
-          "UX Stratejisi ve Tasarımı",
-          "UI Tasarımı ve Prototipleme",
-          "Tasarım Sistemleri",
-          "Web ve Mobil Tasarım",
-          "Kullanıcı Deneyimi Denetimleri"
-        ]
-      }
-    },
-    process: {
-      title: "Sürecimiz",
-      discovery: "Keşif",
-      planning: "Planlama",
-      design: "Tasarım",
-      development: "Geliştirme",
-      testing: "Test",
-      deployment: "Dağıtım",
-      support: "Destek"
-    }
+    eyebrow: "Hizmetler",
+    title: "Web, mobil ve backend kapsamında yazılım ürünü geliştirme.",
+    subtitle: "Rhenvox dijital ürünlerin uygulanması ve seçili entegrasyonlar üzerinde çalışır.",
+    webTitle: "Web ürünleri",
+    webBody: "Web işi ürün uygulamasıdır: insanların giriş yapıp kullandığı, bir backend’e bağlı uygulamalar; halihazırda var olan ürünler üzerindeki çalışma dahil.",
+    web1: "Kullanıcıya dönük web uygulamaları",
+    web2: "Ürün panelleri",
+    web3: "Kimlik doğrulamalı uygulama akışları",
+    web4: "Backend’e bağlı arayüzler",
+    web5: "Mevcut bir üründe frontend ve backend entegrasyonu",
+    mobileTitle: "Mobil ürünler",
+    mobileBody: "Mobil iş, ürünün geri kalanıyla aynı API’lere bağlı React Native ürün uygulamasıdır; iOS ve Android bu kapsamdadır.",
+    mobile1: "React Native uygulamaları",
+    mobile2: "iOS ve Android ürün uygulaması",
+    mobile3: "API bağlantılı mobil ürünler",
+    mobile4: "Kimlik doğrulama akışları",
+    mobile5: "Ürünün ihtiyaç duyduğu yerde bildirimler ve üçüncü taraf entegrasyonlar",
+    mobile6: "Yayın ve iterasyon desteği",
+    backendTitle: "Backend ve API’ler",
+    backendBody: "Backend işi, web ve mobil ürünlerin dayandığı uygulama servislerini kapsar.",
+    backend1: "Uygulama API’leri",
+    backend2: "Kimlik doğrulama",
+    backend3: "Ürün yüzeyleri arasındaki veri akışları",
+    backend4: "Üçüncü taraf ürün entegrasyonları",
+    backend5: "Web ve mobil için ortak backend sistemleri",
+    aiTitle: "Yapay zeka entegrasyonları",
+    aiBody: "Rhenvox, net bir ürün sorununu çözdüğünde ürüne pratik yapay zeka özellikleri ekleyebilir — örneğin LLM/API entegrasyonları, yapılandırılmış iş akışları ve bağlama duyarlı kullanıcı özellikleri. Yapay zeka, bağımsız bir araştırma teklifi olarak değil, bir ürün yeteneği olarak ele alınır.",
+    ai1: "LLM ve API entegrasyonları",
+    ai2: "Yapılandırılmış ürün iş akışları",
+    ai3: "Bağlama duyarlı ürün özellikleri",
+    ai4: "Yapay zeka destekli etkileşimler",
+    engageTitle: "Projeler genellikle nasıl başlar",
+    engageIntro: "İş genellikle kısa bir yazılı yazışmayla başlar.",
+    engage1: "Sorunu kapsamına almak",
+    engage2: "Mevcut ürünü ve teknik bağlamı incelemek",
+    engage3: "Uygulama sınırlarını tanımlamak",
+    engage4: "Net bir ilk kilometre taşıyla başlamak",
+    ctaTitle: "Konuşmak istediğiniz bir ürün veya teknik sorun mu var?",
+    ctaPrimary: "Projeyi konuşun",
+    ctaSecondary: "İşleri görün"
   },
-  // Portfolio page translations
   portfolio: {
-    pageTitle: "Portfolyomuz",
-    heroTitle: "Çalışmalarımız",
-    heroSubtitle: "En iyi projelerimiz ve başarı hikayelerimizi sergiliyoruz",
-    viewWork: "Çalışmalarımızı görün",
-    categories: {
-      all: "Tüm Projeler",
-      web: "Web Uygulamaları",
-      mobile: "Mobil Uygulamalar",
-      ai: "Yapay Zeka",
-      design: "UI/UX Tasarım"
-    },
-    projectDetails: {
-      client: "Müşteri",
-      duration: "Süre",
-      technologies: "Teknolojiler",
-      challenge: "Zorluk",
-      solution: "Çözümümüz",
-      results: "Sonuçlar",
-      viewLive: "Canlı Projeyi Görüntüle",
-      nextProject: "Sonraki Proje"
-    }
+    pageTitle: "İşler",
+    heroTitle: "İşler",
+    heroSubtitle: "Rhenvox’un geliştirdiği seçili ürünler",
+    viewWork: "İşleri görün"
   },
-  // Blog page translations
-  blog: {
-    pageTitle: "Blog",
-    heroTitle: "Son İçgörüler",
-    heroSubtitle: "Ekibimizden düşünceler, haberler ve fikirler",
-    categories: {
-      all: "Tüm Yazılar",
-      technology: "Teknoloji",
-      design: "Tasarım",
-      business: "İş Dünyası",
-      ai: "Yapay Zeka",
-      development: "Geliştirme"
-    },
-    readMore: "Devamını oku",
-    minuteRead: "dk okuma",
-    searchPlaceholder: "Makalelerde ara...",
-    relatedPosts: "İlgili Yazılar",
-    sharePost: "Bu yazıyı paylaş",
-    authorBy: "Yazar:"
+  workPage: {
+    eyebrow: "İşler",
+    title: "Gerçek kullanım için geliştirilen ürünler.",
+    subtitle: "Rhenvox’un seçili ürün işleri. Bu sayfa kamuya gösterilebilen işle sınırlıdır.",
+    viewCaseStudy: "Projeyi inceleyin",
+    visitNurBilgi: "Nur Bilgi’yi ziyaret edin",
+    discuss: "Projeyi konuşun",
+    product: "Ürün",
+    type: "Tür",
+    typeValue: "Web + Mobil",
+    scope: "Kapsam",
+    scopeValue: "Ürün geliştirme / web / mobil / backend entegrasyonu",
+    platform: "Platform",
+    platformValue: "Web, React Native",
+    status: "Durum",
+    statusValue: "Canlı web ürünü",
+    summary: "nurbilgi.com adresindeki canlı web ürünü ve aynı platforma bağlı bir React Native uygulaması.",
+    ctaBody: "Web, mobil veya API ürünü planlıyorsanız Rhenvox kapsamı inceler ve uygun olup olmadığını söyleyebilir."
   },
-  // Careers page translations
-  careers: {
-    pageTitle: "Kariyer",
-    heroTitle: "Ekibimize Katılın",
-    heroSubtitle: "Kariyerinizi bizimle inşa edin ve heyecan verici projelerde çalışın",
-    whyJoinUs: {
-      title: "Neden Rhenvox?",
-      culture: {
-        title: "Yenilikçi Kültür",
-        description: "Yaratıcılığı ve yeni fikirleri teşvik eden bir ortamda çalışın."
-      },
-      growth: {
-        title: "Büyüme Fırsatları",
-        description: "Kariyeriniz için sürekli öğrenme ve gelişim yolları."
-      },
-      impact: {
-        title: "Anlamlı Etki",
-        description: "Müşteriler ve kullanıcılar için fark yaratan projelerde çalışın."
-      },
-      balance: {
-        title: "İş-Yaşam Dengesi",
-        description: "Esnek çalışma düzenlemeleri ve sağlığa odaklanma."
-      }
-    },
-    openPositions: {
-      title: "Açık Pozisyonlar",
-      noPositions: "Şu anda açık pozisyon bulunmamaktadır. Daha sonra tekrar kontrol edin!",
-      applyNow: "Şimdi Başvur",
-      location: "Konum",
-      type: "Tür",
-      department: "Departman",
-      requirements: "Gereksinimler",
-      responsibilities: "Sorumluluklar"
-    },
-    team: {
-      title: "Rhenvox'ta Yaşam",
-      subtitle: "İş yerimize ve kültürümüze bir bakış atın"
-    }
+  nurBilgi: {
+    back: "İşlere dön",
+    title: "Nur Bilgi",
+    description: "Soru-cevap araçlarını, Kur’an içeriğini, namaz bilgilerini ve ilgili yardımcıları bir araya getiren bir web ve mobil bilgi ürünü.",
+    visit: "Nur Bilgi’yi ziyaret edin",
+    discuss: "Projeyi konuşun",
+    tagWeb: "Web",
+    tagMobile: "Mobil",
+    tagBackend: "Backend/API",
+    overviewTitle: "Genel bakış",
+    overview: "Nur Bilgi, İslami başvuru içeriği ve ilgili araçlar için bir bilgi ürünüdür. Kamuya açık web ürünü nurbilgi.com adresinde yayındadır. Rhenvox web uygulamasını, aynı platforma bağlı React Native mobil uygulamasını ve bunların arkasındaki .NET API çalışmasını geliştirdi.",
+    scopeTitle: "Rhenvox’un geliştirdiği kısım",
+    scopeWeb: "Web uygulaması geliştirme",
+    scopeMobile: "React Native ile mobil uygulama geliştirme",
+    scopeBackend: ".NET üzerinde backend/API entegrasyonu",
+    architectureTitle: "Teknik uygulama",
+    architecture: "Web ve mobil uygulamalar aynı Nur Bilgi backend’ine bağlanır. Web ve mobil uygulamalarda TypeScript kullanılır.",
+    archWebLabel: "Web",
+    archWebValue: "Next.js",
+    archMobileLabel: "Mobil",
+    archMobileValue: "React Native",
+    archBackendLabel: "Backend",
+    archBackendValue: ".NET API",
+    capabilitiesTitle: "Seçili yetenekler",
+    capQa: "Bilgi ve soru-cevap işlevi",
+    capQuran: "Kur’an ile ilgili içerik",
+    capPrayer: "Namaz vakti araçları",
+    capRelated: "Aynı üründeki ilgili yardımcılar",
+    liveTitle: "Mevcut ürün",
+    liveBody: "Web ürünü nurbilgi.com adresinde yayındadır. Aynı Nur Bilgi platformuna ve backend’ine bağlı bir React Native mobil uygulama vardır.",
+    ctaTitle: "Benzer bir ürün mü geliştiriyorsunuz?",
+    ctaBody: "Web, mobil veya API ürünü planlıyorsanız Rhenvox kapsamı inceler ve uygun olup olmadığını söyleyebilir."
   },
-  // Contact page translations
   contact: {
-    pageTitle: "İletişim",
-    heroTitle: "Bize Ulaşın",
-    heroSubtitle: "Sizden haber almak ve nasıl yardımcı olabileceğimizi tartışmak isteriz",
-    form: {
-      name: "Adınız",
-      email: "E-posta adresiniz",
-      subject: "Konu",
-      message: "Mesajınız",
-      submit: "Mesaj Gönder",
-      success: "Teşekkürler! Mesajınız gönderildi.",
-      error: "Hata! Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
-    },
-    info: {
-      title: "İletişim Bilgileri",
-      email: "E-posta",
-      phone: "Telefon",
-      address: "Adres",
-      hours: "Çalışma Saatleri",
-      hoursValue: "Pazartesi - Cuma, 09:00 - 18:00"
-    },
-    faq: {
-      title: "Sık Sorulan Sorular",
-      question1: "Hangi hizmetleri sunuyorsunuz?",
-      answer1: "Yazılım mühendisliği, yapay zeka geliştirme ve UI/UX tasarımı dahil olmak üzere geniş bir yelpazede hizmet sunuyoruz. Daha fazla ayrıntı için Hizmetlerimiz sayfasını kontrol edin.",
-      question2: "Proje süreciniz nasıl işliyor?",
-      answer2: "Sürecimiz genellikle keşif, planlama, tasarım, geliştirme, test, dağıtım ve sürekli destek içerir. Bu yaklaşımı özel ihtiyaçlarınıza göre uyarlıyoruz.",
-      question3: "Projeler için tipik zaman çizelgeniz nedir?",
-      answer3: "Proje süreleri kapsam ve karmaşıklığa bağlı olarak değişir. Basit bir web sitesi 4-6 hafta sürebilirken, karmaşık bir uygulama birkaç ay sürebilir. İlk danışmanlık sırasında detaylı bir zaman çizelgesi sunacağız."
-    }
+    eyebrow: "İletişim",
+    title: "Ne geliştirdiğinizi yazın.",
+    subtitle: "Üzerinde çalıştığınız ürünü, sorunu veya teknik kapsamı paylaşın. Rhenvox inceleyip uygun olup olmadığını söyleyebilir.",
+    emailTitle: "E-posta",
+    emailCta: "Rhenvox’a e-posta yazın",
+    emailLead: "İlk mesajda genelde şunlar yeter:",
+    q1: "Neyi geliştiriyorsunuz?",
+    q2: "Şu anda ne var?",
+    q3: "Hangi konuda yardım istiyorsunuz?",
+    q4: "Hedef bir tarih var mı?",
+    otherTitle: "Telefon ve WhatsApp",
+    phoneLabel: "Telefon",
+    whatsappLabel: "WhatsApp",
+    officeTitle: "Tescilli ofis",
+    officeNote: "Şirket tescil adresi.",
+    address1: "71-75 Shelton Street",
+    address2: "Covent Garden, London",
+    address3: "United Kingdom, WC2H 9JQ",
+    companyNumberLabel: "Şirket numarası",
+    companyNumberValue: "16423845",
+    turkeyTitle: "Türkiye’den faaliyet",
+    turkeyBody: "Günlük iş Türkiye’den yürütülür."
   }
-}; 
+};

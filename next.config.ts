@@ -1,22 +1,25 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Docker için ekliyoruz
-  output: 'standalone', 
-
-  images: {
-    domains: ['ui.shadcn.com', 'images.unsplash.com'], // Her iki dosyadan gelen domainleri birleştir
-    remotePatterns: [ // mjs dosyasından alındı
+  output: "standalone",
+  async redirects() {
+    return [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '**',
+        source: "/portfolio",
+        destination: "/work",
+        permanent: true,
       },
-    ],
-  },
-
-  eslint: { // mjs dosyasından alındı
-    ignoreDuringBuilds: true, // Eğer ESLint hatalarının build'i durdurmasını istemiyorsanız
+      {
+        source: "/blog",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/careers",
+        destination: "/",
+        permanent: true,
+      },
+    ];
   },
 };
 

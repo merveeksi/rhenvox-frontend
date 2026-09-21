@@ -9,12 +9,12 @@ export default function LegalLayout({
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-28 px-4 md:px-8 max-w-3xl mx-auto">
-        <div className="prose prose-invert max-w-none">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-rhenvox-bg px-4 pb-16 pt-24 md:px-6">
+        <div className="legal-doc mx-auto max-w-prose text-[0.95rem] leading-relaxed text-rhenvox-text">
           {children}
         </div>
       </main>
       <Footer />
     </>
   );
-} 
+}
