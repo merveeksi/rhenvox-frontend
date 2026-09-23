@@ -44,11 +44,11 @@ export function HeroGlobe({ className }: { className?: string }) {
         dark: dark ? 1 : 0,
         diffuse: dark ? 1.35 : 1.28,
         mapSamples: 16000,
-        mapBrightness: dark ? 6.4 : 3.4,
+        mapBrightness: dark ? 4.6 : 3.1,
         mapBaseBrightness: dark ? 0.05 : 0.16,
-        baseColor: dark ? [0.16, 0.22, 0.32] : [0.88, 0.9, 0.93],
-        markerColor: dark ? [0.72, 0.84, 0.98] : [0.18, 0.34, 0.54],
-        glowColor: dark ? [0.36, 0.55, 0.8] : [0.74, 0.81, 0.9],
+        baseColor: dark ? [0.11, 0.125, 0.15] : [0.86, 0.87, 0.89],
+        markerColor: dark ? [0.78, 0.8, 0.84] : [0.22, 0.28, 0.36],
+        glowColor: dark ? [0.16, 0.18, 0.22] : [0.72, 0.75, 0.78],
         markers: MARKERS,
         scale: 1.02,
         onRender: (state) => {
@@ -74,26 +74,21 @@ export function HeroGlobe({ className }: { className?: string }) {
   return (
     <div className={cn("rv-globe", className)} aria-hidden="true">
       <svg className="rv-globe-orbits" viewBox="0 0 100 100" fill="none">
-        <g className="rv-globe-spin">
-          <ellipse
-            cx="50"
-            cy="50"
-            rx="46"
-            ry="15.5"
-            transform="rotate(-21 50 50)"
-            stroke="currentColor"
-            strokeWidth="0.35"
-          />
+        <defs>
+          <mask id="rv-orbit-back" maskUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="black" />
+            <rect x="-30" y="-30" width="160" height="82" fill="white" transform="rotate(-21 50 50)" />
+          </mask>
+          <mask id="rv-orbit-front" maskUnits="userSpaceOnUse">
+            <rect width="100" height="100" fill="black" />
+            <rect x="-30" y="48" width="160" height="84" fill="white" transform="rotate(-21 50 50)" />
+          </mask>
+        </defs>
+        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.28" opacity="0.45" />
+        <g mask="url(#rv-orbit-back)">
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
         </g>
-        <circle cx="50" cy="50" r="39" stroke="currentColor" strokeWidth="0.35" />
-        <circle
-          cx="50"
-          cy="50"
-          r="32.5"
-          stroke="currentColor"
-          strokeWidth="0.3"
-          strokeDasharray="0.45 1.7"
-        />
       </svg>
       <canvas
         ref={canvasRef}
@@ -115,6 +110,12 @@ export function HeroGlobe({ className }: { className?: string }) {
           phiRef.current += delta / 560;
         }}
       />
+      <svg className="rv-globe-orbit-front" viewBox="0 0 100 100" fill="none">
+        <g mask="url(#rv-orbit-front)">
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
+        </g>
+      </svg>
     </div>
   );
 }
