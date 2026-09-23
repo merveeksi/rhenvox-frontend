@@ -771,20 +771,20 @@
 }
 
 .rv-globe-orbits .rv-orbit-rail {
-  stroke: color-mix(in srgb, var(--rhenvox-muted) 72%, var(--rhenvox-text));
-  stroke-width: 0.42;
-  opacity: 0.72;
+  stroke: rgba(186, 180, 170, 0.8);
+  stroke-width: 2px;
+  opacity: 1;
 }
 
 .rv-globe-orbit-front .rv-orbit-rail {
-  stroke: color-mix(in srgb, var(--rhenvox-text) 62%, var(--rhenvox-muted));
-  stroke-width: 0.5;
-  opacity: 0.95;
+  stroke: #f3f1ec;
+  stroke-width: 2.75px;
+  opacity: 1;
 }
 
 .rv-orbit-glint {
   stroke: var(--rhenvox-accent);
-  stroke-width: 0.7;
+  stroke-width: 3px;
   stroke-linecap: round;
   stroke-dasharray: 14 191;
   opacity: 0.9;

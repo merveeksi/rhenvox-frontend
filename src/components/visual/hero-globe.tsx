@@ -48,7 +48,7 @@ export function HeroGlobe({ className }: { className?: string }) {
         mapBaseBrightness: dark ? 0.008 : 0.1,
         baseColor: dark ? [0.122, 0.122, 0.12] : [0.76, 0.75, 0.73],
         markerColor: dark ? [0.54, 0.545, 0.56] : [0.4, 0.43, 0.47],
-        glowColor: dark ? [0.012, 0.012, 0.014] : [0.8, 0.81, 0.83],
+        glowColor: dark ? [0, 0, 0] : [0.8, 0.81, 0.83],
         markers: MARKERS,
         scale: 1.02,
         onRender: (state) => {
@@ -80,16 +80,7 @@ export function HeroGlobe({ className }: { className?: string }) {
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-back-clip)">
-          <ellipse
-            className="rv-orbit-rail"
-            cx="50"
-            cy="50"
-            rx="54"
-            ry="24"
-            transform="rotate(-21 50 50)"
-            stroke="rgba(167, 163, 155, 0.7)"
-            strokeWidth="0.46"
-          />
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
           <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
         </g>
       </svg>
@@ -122,15 +113,7 @@ export function HeroGlobe({ className }: { className?: string }) {
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-front-clip)">
-          <ellipse
-            className="rv-orbit-rail"
-            cx="50"
-            cy="50"
-            rx="54"
-            ry="24"
-            transform="rotate(-21 50 50)"
-            style={{ stroke: "#f3f1ec", strokeWidth: "0.72", opacity: 0.92 }}
-          />
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
           <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
         </g>
       </svg>
