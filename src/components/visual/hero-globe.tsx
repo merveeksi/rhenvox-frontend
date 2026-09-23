@@ -7,16 +7,13 @@ import { cn } from "@/lib/utils";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
 const MARKERS: NonNullable<COBEOptions["markers"]> = [
-  { location: [51.5074, -0.1278], size: 0.055 },
-  { location: [41.0082, 28.9784], size: 0.048 },
-  { location: [40.7128, -74.006], size: 0.028 },
-  { location: [35.6762, 139.6503], size: 0.028 },
-  { location: [-23.5505, -46.6333], size: 0.028 },
+  { location: [51.5074, -0.1278], size: 0.09 },
+  { location: [41.0082, 28.9784], size: 0.085 },
 ];
 
 export function HeroGlobe({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const phiRef = useRef(0.55);
+  const phiRef = useRef(4.5);
   const pointerX = useRef<number | null>(null);
   const { resolvedTheme } = useTheme();
   const reduced = usePrefersReducedMotion();
@@ -40,20 +37,20 @@ export function HeroGlobe({ className }: { className?: string }) {
         width: width * 2,
         height: width * 2,
         phi: phiRef.current,
-        theta: 0.26,
+        theta: 0.18,
         dark: dark ? 1 : 0,
-        diffuse: dark ? 0.78 : 1.05,
+        diffuse: dark ? 0.7 : 1.15,
         mapSamples: 16000,
-        mapBrightness: dark ? 1.55 : 2.1,
-        mapBaseBrightness: dark ? 0.008 : 0.1,
-        baseColor: dark ? [0.122, 0.122, 0.12] : [0.76, 0.75, 0.73],
-        markerColor: dark ? [0.54, 0.545, 0.56] : [0.4, 0.43, 0.47],
-        glowColor: dark ? [0, 0, 0] : [0.8, 0.81, 0.83],
+        mapBrightness: dark ? 6.4 : 3.1,
+        mapBaseBrightness: dark ? 0 : 0.12,
+        baseColor: dark ? [0.16, 0.18, 0.22] : [0.86, 0.87, 0.89],
+        markerColor: dark ? [1, 1, 1] : [0.18, 0.32, 0.52],
+        glowColor: dark ? [0.04, 0.055, 0.08] : [0.72, 0.75, 0.78],
         markers: MARKERS,
         scale: 1.02,
         onRender: (state) => {
           if (!reduced && pointerX.current === null) {
-            phiRef.current += 0.0016;
+            phiRef.current += 0.0022;
           }
           state.phi = phiRef.current;
           state.width = width * 2;
@@ -80,32 +77,29 @@ export function HeroGlobe({ className }: { className?: string }) {
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-back-clip)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="46" ry="15" transform="rotate(-21 50 50)" />
         </g>
       </svg>
-      <div className="rv-globe-sphere">
-        <canvas
-          ref={canvasRef}
-          className="rv-globe-canvas"
-          onPointerDown={(event) => {
-            pointerX.current = event.clientX;
-            event.currentTarget.setPointerCapture(event.pointerId);
-          }}
-          onPointerUp={() => {
-            pointerX.current = null;
-          }}
-          onPointerCancel={() => {
-            pointerX.current = null;
-          }}
-          onPointerMove={(event) => {
-            if (pointerX.current === null) return;
-            const delta = event.clientX - pointerX.current;
-            pointerX.current = event.clientX;
-            phiRef.current += delta / 560;
-          }}
-        />
-      </div>
+      <canvas
+        ref={canvasRef}
+        className="rv-globe-canvas"
+        onPointerDown={(event) => {
+          pointerX.current = event.clientX;
+          event.currentTarget.setPointerCapture(event.pointerId);
+        }}
+        onPointerUp={() => {
+          pointerX.current = null;
+        }}
+        onPointerCancel={() => {
+          pointerX.current = null;
+        }}
+        onPointerMove={(event) => {
+          if (pointerX.current === null) return;
+          const delta = event.clientX - pointerX.current;
+          pointerX.current = event.clientX;
+          phiRef.current += delta / 560;
+        }}
+      />
       <svg className="rv-globe-orbit-front" viewBox="0 0 100 100" fill="none">
         <defs>
           <clipPath id="rv-orbit-front-clip" clipPathUnits="userSpaceOnUse">
@@ -113,8 +107,7 @@ export function HeroGlobe({ className }: { className?: string }) {
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-front-clip)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="46" ry="15" transform="rotate(-21 50 50)" />
         </g>
       </svg>
     </div>

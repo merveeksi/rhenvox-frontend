@@ -18,15 +18,15 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#121417",
-          color: "#F3F1EC",
+          backgroundColor: "#14161C",
+          color: "#EEECE7",
         }}
       >
         <div
           style={{
             width: "64px",
             height: "4px",
-            backgroundColor: "#8C7358",
+            backgroundColor: "#6B91C2",
             marginBottom: "36px",
           }}
         />
@@ -44,7 +44,7 @@ export default function OpenGraphImage() {
           style={{
             marginTop: "20px",
             fontSize: "28px",
-            color: "#A7A39B",
+            color: "#9A9BA3",
             maxWidth: "760px",
             lineHeight: 1.35,
           }}

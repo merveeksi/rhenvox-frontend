@@ -48,19 +48,17 @@ export function StarScrollbar() {
 
   return (
     <div className="pointer-events-none fixed inset-y-0 right-0 z-40 hidden w-12 lg:block" aria-hidden="true">
-      <div className="absolute bottom-8 right-[18px] top-8 w-px bg-rhenvox-border/80" />
       <div
         className="absolute right-1 flex w-10 flex-col items-center"
-        style={{ top: `calc(2rem + ${progress} * (100vh - 11rem))` }}
+        style={{ top: `calc(8.25rem + ${progress} * (100vh - 11rem))` }}
       >
-        <div className="mb-1 h-24 w-px bg-rhenvox-border" />
-        <span className="relative text-rhenvox-muted">
-          <Star size={18} />
-          <span className="absolute -left-2 top-3 text-rhenvox-tertiary">
-            <Star size={7} />
+        <span className="relative text-rhenvox-accent">
+          <Star size={22} />
+          <span className="absolute -left-2 top-3 text-rhenvox-accent/70">
+            <Star size={8} />
           </span>
-          <span className="absolute -right-1.5 top-1 text-rhenvox-tertiary">
-            <Star size={5} />
+          <span className="absolute -right-1.5 top-1 text-rhenvox-accent/55">
+            <Star size={6} />
           </span>
         </span>
       </div>
