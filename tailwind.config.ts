@@ -77,6 +77,7 @@ export default {
       },
       boxShadow: {
         subtle: "0 1px 2px rgba(16, 18, 22, 0.06)",
+        lift: "0 22px 50px -28px rgba(16, 18, 22, 0.45)",
       },
     },
   },

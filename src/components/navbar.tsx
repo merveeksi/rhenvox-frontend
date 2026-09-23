@@ -32,7 +32,7 @@ export function Navbar() {
     );
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-rhenvox-border bg-rhenvox-bg">
+    <header className="fixed top-0 z-50 w-full border-b border-rhenvox-border/80 bg-rhenvox-bg/80 backdrop-blur-md">
       <nav
         className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6"
         aria-label={t("navbar.primary")}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import { Reveal } from "@/components/visual/reveal";
 import { HomeSection } from "./section";
 
 export function HomeProcess() {
@@ -15,17 +16,25 @@ export function HomeProcess() {
 
   return (
     <HomeSection className="bg-rhenvox-surface">
-      <h2 className="mb-8 text-2xl font-semibold tracking-tight text-rhenvox-text md:text-3xl">
-        {t("home.process.title")}
-      </h2>
-      <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        {steps.map((step) => (
+      <Reveal>
+        <h2 className="mb-10 text-2xl font-semibold tracking-tight text-rhenvox-text md:text-3xl">
+          {t("home.process.title")}
+        </h2>
+      </Reveal>
+      <ol className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {steps.map((step, index) => (
           <li key={step.index}>
-            <p className="mb-2 font-mono text-xs text-rhenvox-muted">{step.index}</p>
-            <h3 className="mb-2 text-base font-medium text-rhenvox-text">{step.title}</h3>
-            <p className="max-w-prose text-sm leading-relaxed text-rhenvox-muted">
-              {step.body}
-            </p>
+            <Reveal delay={index * 70}>
+              <div className="rv-card rv-card-hover h-full p-6 md:p-7">
+                <p className="mb-4 font-mono text-sm tracking-[0.18em] text-rhenvox-accent">
+                  {step.index}
+                </p>
+                <h3 className="mb-2 text-lg font-medium text-rhenvox-text">{step.title}</h3>
+                <p className="max-w-prose text-sm leading-relaxed text-rhenvox-muted">
+                  {step.body}
+                </p>
+              </div>
+            </Reveal>
           </li>
         ))}
       </ol>

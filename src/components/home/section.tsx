@@ -11,7 +11,7 @@ export function HomeSection({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("px-4 py-16 md:px-6 md:py-20", className)}>
+    <section id={id} className={cn("px-4 py-20 md:px-6 md:py-28", className)}>
       <div className="mx-auto max-w-6xl">{children}</div>
     </section>
   );

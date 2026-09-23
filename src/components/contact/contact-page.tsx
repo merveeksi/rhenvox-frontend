@@ -7,7 +7,7 @@ export function ContactPage() {
   const { t } = useI18n();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+    <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
       <header className="mb-12 max-w-2xl md:mb-16">
         <p className="rv-kicker mb-3">{t("contact.eyebrow")}</p>
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-rhenvox-text md:text-4xl">
@@ -18,7 +18,7 @@ export function ContactPage() {
         </p>
       </header>
 
-      <section className="mb-12 md:mb-14">
+      <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("contact.emailTitle")}
         </h2>
@@ -44,7 +44,7 @@ export function ContactPage() {
         </Button>
       </section>
 
-      <section className="mb-12 md:mb-14">
+      <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("contact.otherTitle")}
         </h2>
@@ -76,7 +76,7 @@ export function ContactPage() {
         </dl>
       </section>
 
-      <section className="mb-12 md:mb-14">
+      <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("contact.officeTitle")}
         </h2>
@@ -93,7 +93,7 @@ export function ContactPage() {
         </p>
       </section>
 
-      <section>
+      <section className="rv-card p-6 md:p-8">
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("contact.turkeyTitle")}
         </h2>

@@ -10,7 +10,7 @@ export function WorkIndex() {
   const { t } = useI18n();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+    <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
       <header className="mb-12 max-w-2xl">
         <p className="rv-kicker mb-3">{t("workPage.eyebrow")}</p>
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-rhenvox-text md:text-4xl">
@@ -21,7 +21,7 @@ export function WorkIndex() {
         </p>
       </header>
 
-      <article className="rv-card overflow-hidden">
+      <article className="rv-card rv-card-hover overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col justify-center p-6 md:p-8">
             <h2 className="mb-4 text-2xl font-semibold tracking-tight text-rhenvox-text">
@@ -56,7 +56,8 @@ export function WorkIndex() {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center border-t border-rhenvox-border bg-rhenvox-surface-muted p-10 lg:border-l lg:border-t-0">
+          <div className="relative flex items-center justify-center overflow-hidden border-t border-rhenvox-border bg-rhenvox-surface-muted p-10 lg:border-l lg:border-t-0">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--rhenvox-accent)_14%,transparent),transparent_70%)]" />
             <div className="relative h-32 w-full max-w-[12rem]">
               <Image
                 src="/images/nurbilgi.logo.png"

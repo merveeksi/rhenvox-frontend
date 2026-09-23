@@ -73,7 +73,7 @@ export function NurBilgiCaseStudy() {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center rounded-lg border border-rhenvox-border bg-rhenvox-surface p-6">
+          <div className="rv-card flex items-center justify-center p-6">
             <div className="relative h-24 w-full max-w-[9rem]">
               <Image
                 src="/images/nurbilgi.logo.png"

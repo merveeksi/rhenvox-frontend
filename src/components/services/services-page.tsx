@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
+import { Reveal } from "@/components/visual/reveal";
 
 function ServiceArea({
   title,
@@ -14,19 +15,21 @@ function ServiceArea({
   items: string[];
 }) {
   return (
-    <section className="mb-12 md:mb-14">
-      <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
-        {title}
-      </h2>
-      <p className="mb-4 max-w-prose text-base leading-relaxed text-rhenvox-muted">
-        {body}
-      </p>
-      <ul className="max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-rhenvox-muted">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </section>
+    <Reveal>
+      <section className="rv-card rv-card-hover mb-6 p-6 md:mb-8 md:p-8">
+        <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
+          {title}
+        </h2>
+        <p className="mb-4 max-w-prose text-base leading-relaxed text-rhenvox-muted">
+          {body}
+        </p>
+        <ul className="max-w-prose list-disc space-y-2 pl-5 text-base leading-relaxed text-rhenvox-muted">
+          {items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+    </Reveal>
   );
 }
 
@@ -34,7 +37,7 @@ export function ServicesPage() {
   const { t } = useI18n();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+    <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
       <header className="mb-12 max-w-2xl md:mb-16">
         <p className="rv-kicker mb-3">{t("services.eyebrow")}</p>
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-rhenvox-text md:text-4xl">
@@ -93,20 +96,22 @@ export function ServicesPage() {
         ]}
       />
 
-      <section className="mb-12 md:mb-14">
-        <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
-          {t("services.engageTitle")}
-        </h2>
-        <p className="mb-4 max-w-prose text-base leading-relaxed text-rhenvox-muted">
-          {t("services.engageIntro")}
-        </p>
-        <ol className="max-w-prose list-decimal space-y-2 pl-5 text-base leading-relaxed text-rhenvox-muted">
-          <li>{t("services.engage1")}</li>
-          <li>{t("services.engage2")}</li>
-          <li>{t("services.engage3")}</li>
-          <li>{t("services.engage4")}</li>
-        </ol>
-      </section>
+      <Reveal>
+        <section className="rv-card mb-6 p-6 md:mb-8 md:p-8">
+          <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
+            {t("services.engageTitle")}
+          </h2>
+          <p className="mb-4 max-w-prose text-base leading-relaxed text-rhenvox-muted">
+            {t("services.engageIntro")}
+          </p>
+          <ol className="max-w-prose list-decimal space-y-2 pl-5 text-base leading-relaxed text-rhenvox-muted">
+            <li>{t("services.engage1")}</li>
+            <li>{t("services.engage2")}</li>
+            <li>{t("services.engage3")}</li>
+            <li>{t("services.engage4")}</li>
+          </ol>
+        </section>
+      </Reveal>
 
       <section className="border-t border-rhenvox-border pt-10">
         <h2 className="mb-6 text-xl font-semibold tracking-tight text-rhenvox-text">

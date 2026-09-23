@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
 import { SkipLink } from "@/components/skip-link";
+import { StarScrollbar } from "@/components/visual/star-scrollbar";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
@@ -94,6 +95,7 @@ export default function RootLayout({
         <ThemeProvider>
           <I18nProvider>
             <SkipLink />
+            <StarScrollbar />
             {children}
           </I18nProvider>
         </ThemeProvider>

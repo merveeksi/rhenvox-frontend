@@ -22,7 +22,7 @@ export function AboutPage() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+    <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
       <header className="mb-12 max-w-2xl md:mb-16">
         <p className="rv-kicker mb-3">{t("about.eyebrow")}</p>
         <h1 className="mb-4 text-3xl font-semibold tracking-tight text-rhenvox-text md:text-4xl">
@@ -46,9 +46,9 @@ export function AboutPage() {
         <h2 className="mb-6 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("about.howTitle")}
         </h2>
-        <div className="max-w-prose divide-y divide-rhenvox-border border-y border-rhenvox-border">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {principles.map((item) => (
-            <div key={item.title} className="py-5">
+            <div key={item.title} className="rv-card h-full p-5 md:p-6">
               <h3 className="mb-2 text-base font-medium text-rhenvox-text">
                 {item.title}
               </h3>
@@ -64,9 +64,9 @@ export function AboutPage() {
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
           {t("about.factsTitle")}
         </h2>
-        <dl className="grid max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+        <dl className="grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
           {facts.map((item) => (
-            <div key={item.label}>
+            <div key={item.label} className="rv-card p-5">
               <dt className="rv-kicker mb-1">{item.label}</dt>
               <dd className="break-words text-sm text-rhenvox-text">{item.value}</dd>
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/lib/i18n";
+import { Reveal } from "@/components/visual/reveal";
 import { HomeSection } from "./section";
 
 export function HomeCapabilities() {
@@ -14,21 +15,25 @@ export function HomeCapabilities() {
   ];
 
   return (
-    <HomeSection>
-      <h2 className="mb-8 text-2xl font-semibold tracking-tight text-rhenvox-text md:text-3xl">
-        {t("home.capabilities.title")}
-      </h2>
-      <div className="divide-y divide-rhenvox-border border-y border-rhenvox-border">
-        {items.map((item) => (
-          <div
-            key={item.title}
-            className="grid grid-cols-1 gap-2 py-5 md:grid-cols-[14rem_minmax(0,1fr)] md:gap-8"
-          >
-            <h3 className="text-base font-medium text-rhenvox-text">{item.title}</h3>
-            <p className="max-w-prose text-sm leading-relaxed text-rhenvox-muted md:text-base">
-              {item.body}
-            </p>
-          </div>
+    <HomeSection className="rv-atmosphere">
+      <Reveal>
+        <h2 className="mb-10 text-2xl font-semibold tracking-tight text-rhenvox-text md:text-3xl">
+          {t("home.capabilities.title")}
+        </h2>
+      </Reveal>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {items.map((item, index) => (
+          <Reveal key={item.title} delay={index * 70}>
+            <article className="rv-card rv-card-hover h-full p-6 md:p-7">
+              <p className="mb-3 font-mono text-xs text-rhenvox-muted">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h3 className="mb-3 text-lg font-medium text-rhenvox-text">{item.title}</h3>
+              <p className="max-w-prose text-sm leading-relaxed text-rhenvox-muted md:text-base">
+                {item.body}
+              </p>
+            </article>
+          </Reveal>
         ))}
       </div>
     </HomeSection>
