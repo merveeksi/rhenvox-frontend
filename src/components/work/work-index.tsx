@@ -2,81 +2,90 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { ProjectMeta } from "./project-meta";
+import { Reveal } from "@/components/visual/reveal";
 
 export function WorkIndex() {
   const { t } = useI18n();
 
+  const facts = [
+    { label: t("workPage.product"), value: "Nur Bilgi" },
+    { label: t("workPage.type"), value: t("workPage.typeValue") },
+    { label: t("workPage.scope"), value: t("workPage.scopeValue") },
+    { label: t("workPage.platform"), value: t("workPage.platformValue") },
+    { label: t("workPage.status"), value: t("workPage.statusValue") },
+  ];
+
   return (
-    <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
-      <header className="mb-12 max-w-2xl">
-        <p className="rv-kicker mb-3">{t("workPage.eyebrow")}</p>
-        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-rhenvox-text md:text-4xl">
-          {t("workPage.title")}
-        </h1>
-        <p className="max-w-prose text-base leading-relaxed text-rhenvox-muted md:text-lg">
-          {t("workPage.subtitle")}
-        </p>
+    <div className="rv-index">
+      <header className="rv-index-hero">
+        <div className="rv-index-frame">
+          <Reveal>
+            <p className="rv-index-kicker">{t("workPage.eyebrow")}</p>
+            <h1 className="rv-index-title">{t("workPage.title")}</h1>
+            <p className="rv-index-lead">{t("workPage.subtitle")}</p>
+          </Reveal>
+        </div>
       </header>
 
-      <article className="rv-card rv-card-hover overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center p-6 md:p-8">
-            <h2 className="mb-4 text-2xl font-semibold tracking-tight text-rhenvox-text">
-              Nur Bilgi
-            </h2>
-            <p className="mb-6 max-w-prose text-sm leading-relaxed text-rhenvox-muted md:text-base">
-              {t("workPage.summary")}
-            </p>
-            <div className="mb-8">
-              <ProjectMeta
-                items={[
-                  { label: t("workPage.product"), value: "Nur Bilgi" },
-                  { label: t("workPage.type"), value: t("workPage.typeValue") },
-                  { label: t("workPage.scope"), value: t("workPage.scopeValue") },
-                  { label: t("workPage.platform"), value: t("workPage.platformValue") },
-                  { label: t("workPage.status"), value: t("workPage.statusValue") },
-                ]}
-              />
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild>
-                <Link href="/work/nur-bilgi">{t("workPage.viewCaseStudy")}</Link>
-              </Button>
-              <Button variant="outline" asChild>
-                <a
-                  href="https://nurbilgi.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("workPage.visitNurBilgi")}
-                </a>
-              </Button>
-            </div>
-          </div>
-          <div className="relative flex items-center justify-center overflow-hidden border-t border-rhenvox-border bg-rhenvox-surface-muted p-10 lg:border-l lg:border-t-0">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--rhenvox-accent)_14%,transparent),transparent_70%)]" />
-            <div className="relative h-32 w-full max-w-[12rem]">
-              <Image
-                src="/images/nurbilgi.logo.png"
-                alt="Nur Bilgi logo"
-                fill
-                sizes="12rem"
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </article>
+      <section className="rv-index-body" aria-labelledby="work-project-title">
+        <div className="rv-index-frame">
+          <Reveal delay={70}>
+            <article className="rv-index-feature">
+              <div className="rv-index-copy">
+                <p className="rv-index-num">01</p>
+                <h2 id="work-project-title" className="rv-index-name">
+                  Nur Bilgi
+                </h2>
+                <p className="rv-index-summary">{t("workPage.summary")}</p>
+                <dl className="rv-index-facts">
+                  {facts.map((fact) => (
+                    <div key={fact.label}>
+                      <dt>{fact.label}</dt>
+                      <dd>{fact.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <div className="rv-index-actions">
+                  <Link href="/work/nur-bilgi" className="rv-work-primary">
+                    {t("workPage.viewCaseStudy")}
+                  </Link>
+                  <a
+                    href="https://nurbilgi.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rv-work-secondary"
+                  >
+                    {t("workPage.visitNurBilgi")}
+                    <ExternalLink aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
 
-      <p className="mt-12 max-w-prose text-sm leading-relaxed text-rhenvox-muted">
-        {t("workPage.ctaBody")}{" "}
-        <Link href="/contact" className="text-rhenvox-accent hover:underline">
-          {t("workPage.discuss")}
-        </Link>
-      </p>
+              <div className="rv-index-stage">
+                <div className="rv-index-stage-grid" aria-hidden="true" />
+                <div className="rv-index-frame-mark" aria-hidden="true" />
+                <div className="rv-index-plate">
+                  <Image
+                    src="/images/nurbilgi.logo.png"
+                    alt="Nur Bilgi logo"
+                    fill
+                    priority
+                    sizes="(max-width: 800px) 70vw, 280px"
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </article>
+          </Reveal>
+
+          <p className="rv-index-close">
+            {t("workPage.ctaBody")}{" "}
+            <Link href="/contact">{t("workPage.discuss")}</Link>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

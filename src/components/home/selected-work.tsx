@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/visual/reveal";
-import { HomeSection } from "./section";
 
 export function HomeSelectedWork() {
   const { t } = useI18n();
@@ -17,70 +16,75 @@ export function HomeSelectedWork() {
   ];
 
   return (
-    <HomeSection className="bg-rhenvox-surface">
-      <Reveal>
-        <div className="mb-10 max-w-2xl">
-          <h2 className="mb-3 text-2xl font-semibold tracking-tight text-rhenvox-text md:text-3xl">
-            {t("home.work.title")}
-          </h2>
-          <p className="max-w-prose text-base leading-relaxed text-rhenvox-muted">
-            {t("home.work.subtitle")}
-          </p>
-        </div>
-      </Reveal>
-
-      <Reveal delay={80}>
-        <article className="rv-card rv-card-hover overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex flex-col justify-center p-6 md:p-8 lg:p-10">
-              <h3 className="mb-3 text-xl font-semibold tracking-tight text-rhenvox-text">
-                {t("home.work.name")}
-              </h3>
-              <p className="mb-4 max-w-prose text-sm leading-relaxed text-rhenvox-muted md:text-base">
-                {t("home.work.description")}
-              </p>
-              <p className="mb-3 max-w-prose text-sm leading-relaxed text-rhenvox-muted">
-                {t("home.work.role")}
-              </p>
-              <p className="mb-5 max-w-prose text-sm leading-relaxed text-rhenvox-muted">
-                {t("home.work.mobileNote")}
-              </p>
-              <div className="mb-6 flex flex-wrap gap-2">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-md border border-rhenvox-border bg-rhenvox-bg/40 px-2 py-0.5 font-mono text-xs text-rhenvox-muted"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button asChild>
-                  <a href="https://nurbilgi.com" target="_blank" rel="noopener noreferrer">
-                    {t("home.work.visit")}
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link href="/work">{t("home.work.more")}</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative flex min-h-52 items-center justify-center overflow-hidden border-t border-rhenvox-border bg-rhenvox-surface-muted p-8 lg:border-l lg:border-t-0">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--rhenvox-accent)_16%,transparent),transparent_70%)]" />
-              <div className="relative h-36 w-full max-w-xs">
-                <Image
-                  src="/images/nurbilgi.logo.png"
-                  alt="Nur Bilgi logo"
-                  fill
-                  sizes="(max-width: 1024px) 12rem, 16rem"
-                  className="object-contain"
-                />
-              </div>
-            </div>
+    <section className="rv-work" aria-labelledby="selected-work-title">
+      <div className="rv-work-frame">
+        <Reveal>
+          <div className="rv-work-intro">
+            <h2 id="selected-work-title" className="rv-work-kicker">
+              <span className="rv-work-num">01</span>
+              <span className="rv-work-dash" aria-hidden="true" />
+              {t("home.work.title")}
+            </h2>
+            <p className="rv-work-sub">{t("home.work.subtitle")}</p>
           </div>
-        </article>
-      </Reveal>
-    </HomeSection>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <article className="rv-work-feature">
+            <div className="rv-work-copy">
+              <h3 className="rv-work-name">{t("home.work.name")}</h3>
+              <p className="rv-work-lead">{t("home.work.description")}</p>
+              <div className="rv-work-notes">
+                <p>{t("home.work.role")}</p>
+                <p>{t("home.work.mobileNote")}</p>
+              </div>
+              <ul className="rv-work-meta">
+                {tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+              <div className="rv-work-actions">
+                <Link href="/work/nur-bilgi" className="rv-work-primary">
+                  {t("workPage.viewCaseStudy")}
+                </Link>
+                <a
+                  href="https://nurbilgi.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rv-work-secondary"
+                >
+                  {t("home.work.visit")}
+                  <ExternalLink aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+
+            <div className="rv-work-stage">
+              <div className="rv-work-stage-grid" aria-hidden="true" />
+              <div className="rv-work-mark" aria-hidden="true">
+                01
+              </div>
+              <div className="rv-nb-frame" aria-hidden="true" />
+              <div className="rv-work-stage-inner">
+                <div className="rv-nb-plate">
+                  <Image
+                    src="/images/nurbilgi.logo.png"
+                    alt="Nur Bilgi logo"
+                    fill
+                    sizes="(max-width: 640px) 70vw, 280px"
+                    className="object-contain"
+                  />
+                </div>
+                <ul className="rv-nb-index" aria-hidden="true">
+                  {tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
+        </Reveal>
+      </div>
+    </section>
   );
 }

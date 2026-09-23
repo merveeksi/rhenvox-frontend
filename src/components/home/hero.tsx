@@ -2,48 +2,95 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { useI18n } from "@/lib/i18n";
+import type { CSSProperties } from "react";
+import { useI18n, type Locale } from "@/lib/i18n";
 
 const HeroGlobe = dynamic(
   () => import("@/components/visual/hero-globe").then((module) => module.HeroGlobe),
   {
     ssr: false,
-    loading: () => <div className="mx-auto aspect-square w-full max-w-[34rem]" aria-hidden="true" />,
+    loading: () => <div className="rv-globe" aria-hidden="true" />,
   }
 );
 
-export function HomeHero() {
-  const { t } = useI18n();
+const HERO_LINES: Record<Locale, readonly string[]> = {
+  en: ["We build web", "and mobile products", "that are made to ship."],
+  tr: ["Web ve mobil ürünleri,", "yayına çıkacak şekilde", "geliştiriyoruz."],
+};
+
+function heroLines(title: string, locale: Locale) {
+  const lines = HERO_LINES[locale];
+  return lines.join(" ") === title ? lines : null;
+}
+
+function CapabilityLine({ text, style }: { text: string; style?: CSSProperties }) {
+  const parts = text
+    .split("·")
+    .map((part) => part.trim())
+    .filter(Boolean);
 
   return (
-    <section className="rv-atmosphere relative overflow-hidden px-4 pb-16 pt-24 md:px-6 md:pb-24 md:pt-28">
-      <div className="rv-glow-spot -right-24 top-8 opacity-80" />
-      <div className="relative z-[1] mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,26rem)] lg:gap-16">
-        <div>
-          <p className="rv-kicker rv-enter mb-4">{t("home.hero.eyebrow")}</p>
-          <h1 className="rv-enter mb-5 text-3xl font-semibold tracking-tight text-rhenvox-text sm:text-4xl md:text-[2.85rem] md:leading-tight [animation-delay:80ms]">
-            {t("home.hero.title")}
+    <p className="rv-hero-meta rv-enter" style={style}>
+      <span className="rv-hero-meta-mark" aria-hidden="true" />
+      {parts.map((part, index) => (
+        <span key={part} className="rv-hero-meta-item">
+          {index > 0 ? <span className="rv-hero-meta-sep">·</span> : null}
+          {part}
+        </span>
+      ))}
+    </p>
+  );
+}
+
+export function HomeHero() {
+  const { t, locale } = useI18n();
+  const title = t("home.hero.title");
+  const lines = heroLines(title, locale);
+
+  return (
+    <section className="rv-hero" aria-labelledby="home-hero-title">
+      <div className="rv-hero-bg" aria-hidden="true">
+        <div className="rv-hero-glow" />
+        <div className="rv-hero-grid" />
+        <div className="rv-hero-vignette" />
+        <div className="rv-hero-noise" />
+      </div>
+
+      <div className="rv-hero-frame">
+        <div className="rv-hero-copy">
+          <p className="rv-hero-eyebrow rv-enter">
+            <span className="rv-hero-eyebrow-rule" aria-hidden="true" />
+            {t("home.hero.eyebrow")}
+          </p>
+          <h1 id="home-hero-title" className="rv-hero-title rv-enter [animation-delay:80ms]">
+            {lines
+              ? lines.map((line) => (
+                  <span key={line} className="rv-hero-title-line">
+                    {line}
+                  </span>
+                ))
+              : title}
           </h1>
-          <p className="rv-enter mb-8 max-w-prose text-base leading-relaxed text-rhenvox-muted md:text-lg [animation-delay:140ms]">
-            {t("home.hero.description")}
-          </p>
-          <div className="rv-enter mb-10 flex flex-col gap-3 sm:flex-row [animation-delay:220ms]">
-            <Button size="lg" asChild>
-              <Link href="/contact">{t("home.hero.primaryCta")}</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/work">{t("home.hero.secondaryCta")}</Link>
-            </Button>
+          <p className="rv-hero-lead rv-enter [animation-delay:160ms]">{t("home.hero.description")}</p>
+          <div className="rv-hero-actions rv-enter [animation-delay:240ms]">
+            <Link href="/contact" className="rv-hero-primary">
+              {t("home.hero.primaryCta")}
+            </Link>
+            <Link href="/work" className="rv-hero-secondary">
+              {t("home.hero.secondaryCta")}
+            </Link>
           </div>
-          <p className="rv-enter font-mono text-xs text-rhenvox-muted [animation-delay:300ms]">
-            {t("home.hero.line")}
-          </p>
+          <CapabilityLine text={t("home.hero.line")} style={{ animationDelay: "320ms" }} />
         </div>
-        <div className="rv-enter relative [animation-delay:180ms]">
-          <HeroGlobe />
+
+        <div className="rv-hero-visual">
+          <div className="rv-enter-scale">
+            <HeroGlobe />
+          </div>
         </div>
       </div>
+
+      <div className="rv-hero-seam" aria-hidden="true" />
     </section>
   );
 }

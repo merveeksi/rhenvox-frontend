@@ -25,7 +25,7 @@ export default function ThemeSwitcher() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="rounded-md p-2 text-rhenvox-muted transition-colors hover:bg-rhenvox-surface-muted hover:text-rhenvox-text"
+      className="rounded-md p-2 text-rhenvox-muted transition-colors hover:text-rhenvox-text"
       aria-label={t("navbar.toggleTheme")}
     >
       {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
