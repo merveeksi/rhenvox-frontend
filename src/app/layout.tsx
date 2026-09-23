@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
@@ -22,6 +22,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin", "latin-ext"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -79,8 +86,8 @@ export const metadata: Metadata = {
   },
   other: {
     "msapplication-TileImage": "/images/apple-touch-icon.png",
-    "msapplication-TileColor": "#2F5580",
-    "theme-color": "#14161C",
+    "msapplication-TileColor": "#121417",
+    "theme-color": "#121417",
   },
 };
 
@@ -91,7 +98,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} font-sans antialiased`}>
         <ThemeProvider>
           <I18nProvider>
             <SkipLink />

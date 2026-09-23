@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-newsreader)", "Iowan Old Style", "Palatino Linotype", "Palatino", "Georgia", "serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       colors: {
@@ -21,6 +22,7 @@ export default {
           text: "var(--rhenvox-text)",
           foreground: "var(--rhenvox-text)",
           muted: "var(--rhenvox-muted)",
+          tertiary: "var(--rhenvox-tertiary)",
           border: "var(--rhenvox-border)",
           accent: "var(--rhenvox-accent)",
           "accent-foreground": "var(--rhenvox-accent-foreground)",
