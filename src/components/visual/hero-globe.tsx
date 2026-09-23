@@ -75,19 +75,13 @@ export function HeroGlobe({ className }: { className?: string }) {
     <div className={cn("rv-globe", className)} aria-hidden="true">
       <svg className="rv-globe-orbits" viewBox="0 0 100 100" fill="none">
         <defs>
-          <mask id="rv-orbit-back" maskUnits="userSpaceOnUse">
-            <rect width="100" height="100" fill="black" />
-            <rect x="-30" y="-30" width="160" height="82" fill="white" transform="rotate(-21 50 50)" />
-          </mask>
-          <mask id="rv-orbit-front" maskUnits="userSpaceOnUse">
-            <rect width="100" height="100" fill="black" />
-            <rect x="-30" y="48" width="160" height="84" fill="white" transform="rotate(-21 50 50)" />
-          </mask>
+          <clipPath id="rv-orbit-back-clip" clipPathUnits="userSpaceOnUse">
+            <rect x="-30" y="-30" width="160" height="80" transform="rotate(-21 50 50)" />
+          </clipPath>
         </defs>
-        <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="0.28" opacity="0.45" />
-        <g mask="url(#rv-orbit-back)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
+        <g clipPath="url(#rv-orbit-back-clip)">
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
         </g>
       </svg>
       <canvas
@@ -111,9 +105,14 @@ export function HeroGlobe({ className }: { className?: string }) {
         }}
       />
       <svg className="rv-globe-orbit-front" viewBox="0 0 100 100" fill="none">
-        <g mask="url(#rv-orbit-front)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="44" ry="14.5" transform="rotate(-21 50 50)" />
+        <defs>
+          <clipPath id="rv-orbit-front-clip" clipPathUnits="userSpaceOnUse">
+            <rect x="-30" y="50" width="160" height="80" transform="rotate(-21 50 50)" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#rv-orbit-front-clip)">
+          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
         </g>
       </svg>
     </div>

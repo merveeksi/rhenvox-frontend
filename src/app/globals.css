@@ -741,7 +741,10 @@
 .rv-globe-orbits,
 .rv-globe-orbit-front {
   position: absolute;
-  inset: -6%;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  overflow: visible;
   color: var(--rv-globe-stroke);
   pointer-events: none;
 }
@@ -751,7 +754,7 @@
 }
 
 .rv-globe-orbit-front {
-  z-index: 2;
+  z-index: 3;
 }
 
 .rv-orbit-rail,
@@ -761,13 +764,15 @@
 }
 
 .rv-globe-orbits .rv-orbit-rail {
-  stroke-width: 0.28;
-  opacity: 0.42;
+  stroke: color-mix(in srgb, var(--rhenvox-muted) 72%, var(--rhenvox-text));
+  stroke-width: 0.42;
+  opacity: 0.72;
 }
 
 .rv-globe-orbit-front .rv-orbit-rail {
-  stroke-width: 0.42;
-  opacity: 0.92;
+  stroke: color-mix(in srgb, var(--rhenvox-text) 62%, var(--rhenvox-muted));
+  stroke-width: 0.5;
+  opacity: 0.95;
 }
 
 .rv-orbit-glint {
