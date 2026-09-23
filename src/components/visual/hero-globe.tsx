@@ -48,7 +48,7 @@ export function HeroGlobe({ className }: { className?: string }) {
         mapBaseBrightness: dark ? 0.008 : 0.1,
         baseColor: dark ? [0.122, 0.122, 0.12] : [0.76, 0.75, 0.73],
         markerColor: dark ? [0.54, 0.545, 0.56] : [0.4, 0.43, 0.47],
-        glowColor: dark ? [0.036, 0.038, 0.042] : [0.8, 0.81, 0.83],
+        glowColor: dark ? [0.012, 0.012, 0.014] : [0.8, 0.81, 0.83],
         markers: MARKERS,
         scale: 1.02,
         onRender: (state) => {
@@ -76,43 +76,62 @@ export function HeroGlobe({ className }: { className?: string }) {
       <svg className="rv-globe-orbits" viewBox="0 0 100 100" fill="none">
         <defs>
           <clipPath id="rv-orbit-back-clip" clipPathUnits="userSpaceOnUse">
-            <rect x="-30" y="-30" width="160" height="80" transform="rotate(-21 50 50)" />
+            <rect x="-40" y="-40" width="180" height="90" transform="rotate(-21 50 50)" />
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-back-clip)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
+          <ellipse
+            className="rv-orbit-rail"
+            cx="50"
+            cy="50"
+            rx="54"
+            ry="24"
+            transform="rotate(-21 50 50)"
+            stroke="rgba(167, 163, 155, 0.7)"
+            strokeWidth="0.46"
+          />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
         </g>
       </svg>
-      <canvas
-        ref={canvasRef}
-        className="rv-globe-canvas"
-        onPointerDown={(event) => {
-          pointerX.current = event.clientX;
-          event.currentTarget.setPointerCapture(event.pointerId);
-        }}
-        onPointerUp={() => {
-          pointerX.current = null;
-        }}
-        onPointerCancel={() => {
-          pointerX.current = null;
-        }}
-        onPointerMove={(event) => {
-          if (pointerX.current === null) return;
-          const delta = event.clientX - pointerX.current;
-          pointerX.current = event.clientX;
-          phiRef.current += delta / 560;
-        }}
-      />
+      <div className="rv-globe-sphere">
+        <canvas
+          ref={canvasRef}
+          className="rv-globe-canvas"
+          onPointerDown={(event) => {
+            pointerX.current = event.clientX;
+            event.currentTarget.setPointerCapture(event.pointerId);
+          }}
+          onPointerUp={() => {
+            pointerX.current = null;
+          }}
+          onPointerCancel={() => {
+            pointerX.current = null;
+          }}
+          onPointerMove={(event) => {
+            if (pointerX.current === null) return;
+            const delta = event.clientX - pointerX.current;
+            pointerX.current = event.clientX;
+            phiRef.current += delta / 560;
+          }}
+        />
+      </div>
       <svg className="rv-globe-orbit-front" viewBox="0 0 100 100" fill="none">
         <defs>
           <clipPath id="rv-orbit-front-clip" clipPathUnits="userSpaceOnUse">
-            <rect x="-30" y="50" width="160" height="80" transform="rotate(-21 50 50)" />
+            <rect x="-40" y="50" width="180" height="90" transform="rotate(-21 50 50)" />
           </clipPath>
         </defs>
         <g clipPath="url(#rv-orbit-front-clip)">
-          <ellipse className="rv-orbit-rail" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
-          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="52" ry="20" transform="rotate(-21 50 50)" />
+          <ellipse
+            className="rv-orbit-rail"
+            cx="50"
+            cy="50"
+            rx="54"
+            ry="24"
+            transform="rotate(-21 50 50)"
+            style={{ stroke: "#f3f1ec", strokeWidth: "0.72", opacity: 0.92 }}
+          />
+          <ellipse className="rv-orbit-glint" cx="50" cy="50" rx="54" ry="24" transform="rotate(-21 50 50)" />
         </g>
       </svg>
     </div>
