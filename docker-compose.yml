@@ -1,5 +1,8 @@
+name: rhenvox-frontend
+
 services:
   web:
+    container_name: rhenvox-frontend
     build:
       context: .
       dockerfile: Dockerfile
