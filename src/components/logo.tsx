@@ -9,12 +9,21 @@ export function Logo() {
     <Link href={href("/")} className="rv-logo" aria-label="Rhenvox">
       <Image
         src="/images/rhenvox-wordmark-clean.png"
-        alt="Rhenvox"
+        alt=""
         width={960}
         height={296}
         priority
-        sizes="180px"
-        className="rv-logo-img"
+        sizes="280px"
+        className="rv-logo-img rv-logo-for-dark"
+      />
+      <Image
+        src="/images/rhenvox-wordmark-ink.png"
+        alt=""
+        width={960}
+        height={296}
+        priority
+        sizes="280px"
+        className="rv-logo-img rv-logo-for-light"
       />
     </Link>
   );

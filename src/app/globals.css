@@ -3,44 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --rhenvox-bg: #f6f5f2;
-  --rhenvox-surface: #ffffff;
-  --rhenvox-surface-muted: #eeece8;
+  --rhenvox-bg: #e4e0d8;
+  --rhenvox-surface: #ebe7e0;
+  --rhenvox-surface-muted: #ddd8d0;
   --rhenvox-text: #16181d;
-  --rhenvox-muted: #5c6068;
-  --rhenvox-border: #dddcd6;
+  --rhenvox-muted: #4e535b;
+  --rhenvox-border: #cfc9bf;
   --rhenvox-accent: #2f5580;
   --rhenvox-accent-foreground: #f7f8fa;
-  --rv-hero-base: #efece6;
-  --rv-hero-glow: rgba(47, 85, 128, 0.2);
-  --rv-hero-grid: rgba(22, 24, 29, 0.06);
-  --rv-hero-grid-fine: rgba(22, 24, 29, 0.035);
-  --rv-hero-lead: #454b54;
-  --rv-globe-fill: #d7dde6;
-  --rv-globe-shade: #b4bcc8;
-  --rv-globe-stroke: rgba(47, 85, 128, 0.32);
-  --rv-work-stage: #e4e0d8;
-  --rv-close-base: #ebe6de;
-  --rv-footer: #e3ddd3;
+  --rv-hero-base: #ddd8cf;
+  --rv-hero-glow: rgba(47, 85, 128, 0.14);
+  --rv-hero-grid: rgba(22, 24, 29, 0.055);
+  --rv-hero-grid-fine: rgba(22, 24, 29, 0.03);
+  --rv-hero-lead: #3f454d;
+  --rv-globe-fill: #c5ced8;
+  --rv-globe-shade: #aeb8c4;
+  --rv-globe-stroke: rgba(47, 85, 128, 0.38);
+  --rv-work-stage: #d4cfc6;
+  --rv-close-base: #d7d2c9;
+  --rv-footer: #cfc9bf;
 
-  --background: 40 14% 96%;
+  --background: 40 16% 87%;
   --foreground: 222 14% 10%;
-  --card: 0 0% 100%;
+  --card: 40 18% 91%;
   --card-foreground: 222 14% 10%;
-  --popover: 0 0% 100%;
+  --popover: 40 18% 91%;
   --popover-foreground: 222 14% 10%;
   --primary: 214 46% 34%;
   --primary-foreground: 210 20% 98%;
-  --secondary: 40 10% 93%;
+  --secondary: 40 14% 86%;
   --secondary-foreground: 222 14% 10%;
-  --muted: 40 10% 93%;
-  --muted-foreground: 220 6% 38%;
-  --accent: 40 10% 93%;
+  --muted: 40 14% 86%;
+  --muted-foreground: 220 8% 32%;
+  --accent: 40 14% 86%;
   --accent-foreground: 222 14% 10%;
   --destructive: 0 72% 45%;
   --destructive-foreground: 0 0% 98%;
-  --border: 40 8% 85%;
-  --input: 40 8% 85%;
+  --border: 36 12% 78%;
+  --input: 36 12% 78%;
   --ring: 214 46% 34%;
   --radius: 0.5rem;
   --chart-1: 214 46% 34%;
@@ -51,44 +51,44 @@
 }
 
 .light {
-  --rhenvox-bg: #f6f5f2;
-  --rhenvox-surface: #ffffff;
-  --rhenvox-surface-muted: #eeece8;
+  --rhenvox-bg: #e4e0d8;
+  --rhenvox-surface: #ebe7e0;
+  --rhenvox-surface-muted: #ddd8d0;
   --rhenvox-text: #16181d;
-  --rhenvox-muted: #5c6068;
-  --rhenvox-border: #dddcd6;
+  --rhenvox-muted: #4e535b;
+  --rhenvox-border: #cfc9bf;
   --rhenvox-accent: #2f5580;
   --rhenvox-accent-foreground: #f7f8fa;
-  --rv-hero-base: #efece6;
-  --rv-hero-glow: rgba(47, 85, 128, 0.2);
-  --rv-hero-grid: rgba(22, 24, 29, 0.06);
-  --rv-hero-grid-fine: rgba(22, 24, 29, 0.035);
-  --rv-hero-lead: #454b54;
-  --rv-globe-fill: #d7dde6;
-  --rv-globe-shade: #b4bcc8;
-  --rv-globe-stroke: rgba(47, 85, 128, 0.32);
-  --rv-work-stage: #e4e0d8;
-  --rv-close-base: #ebe6de;
-  --rv-footer: #e3ddd3;
+  --rv-hero-base: #ddd8cf;
+  --rv-hero-glow: rgba(47, 85, 128, 0.14);
+  --rv-hero-grid: rgba(22, 24, 29, 0.055);
+  --rv-hero-grid-fine: rgba(22, 24, 29, 0.03);
+  --rv-hero-lead: #3f454d;
+  --rv-globe-fill: #c5ced8;
+  --rv-globe-shade: #aeb8c4;
+  --rv-globe-stroke: rgba(47, 85, 128, 0.38);
+  --rv-work-stage: #d4cfc6;
+  --rv-close-base: #d7d2c9;
+  --rv-footer: #cfc9bf;
 
-  --background: 40 14% 96%;
+  --background: 40 16% 87%;
   --foreground: 222 14% 10%;
-  --card: 0 0% 100%;
+  --card: 40 18% 91%;
   --card-foreground: 222 14% 10%;
-  --popover: 0 0% 100%;
+  --popover: 40 18% 91%;
   --popover-foreground: 222 14% 10%;
   --primary: 214 46% 34%;
   --primary-foreground: 210 20% 98%;
-  --secondary: 40 10% 93%;
+  --secondary: 40 14% 86%;
   --secondary-foreground: 222 14% 10%;
-  --muted: 40 10% 93%;
-  --muted-foreground: 220 6% 38%;
-  --accent: 40 10% 93%;
+  --muted: 40 14% 86%;
+  --muted-foreground: 220 8% 32%;
+  --accent: 40 14% 86%;
   --accent-foreground: 222 14% 10%;
   --destructive: 0 72% 45%;
   --destructive-foreground: 0 0% 98%;
-  --border: 40 8% 85%;
-  --input: 40 8% 85%;
+  --border: 36 12% 78%;
+  --input: 36 12% 78%;
   --ring: 214 46% 34%;
 }
 
@@ -397,8 +397,20 @@
 }
 
 .rv-logo-img {
-  height: 2.15rem;
+  height: 2.5rem;
   width: auto;
+}
+
+.rv-logo-for-light {
+  display: none;
+}
+
+html.light .rv-logo-for-dark {
+  display: none;
+}
+
+html.light .rv-logo-for-light {
+  display: block;
 }
 
 .rv-store-links {
@@ -476,9 +488,6 @@
   }
 }
 
-html.light .rv-logo-img {
-  filter: brightness(0);
-}
 
 .rv-header-tools {
   display: flex;
