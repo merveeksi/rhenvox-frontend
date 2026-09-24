@@ -8,10 +8,10 @@ export function Logo() {
   return (
     <Link href={href("/")} className="rv-logo" aria-label="Rhenvox">
       <Image
-        src="/images/rhenvox-wordmark.png"
+        src="/images/rhenvox-wordmark-clean.png"
         alt="Rhenvox"
         width={960}
-        height={299}
+        height={296}
         priority
         sizes="180px"
         className="rv-logo-img"

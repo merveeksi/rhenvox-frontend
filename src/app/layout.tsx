@@ -42,12 +42,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon.ico", sizes: "any" },
-      { url: "/images/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/rhenvox-icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/rhenvox-icon-16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: "/images/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/rhenvox-apple-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -83,7 +82,7 @@ export const metadata: Metadata = {
     ],
   },
   other: {
-    "msapplication-TileImage": "/images/apple-touch-icon.png",
+    "msapplication-TileImage": "/images/rhenvox-apple-icon.png",
     "msapplication-TileColor": "#2F5580",
     "theme-color": "#14161C",
   },
