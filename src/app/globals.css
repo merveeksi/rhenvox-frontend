@@ -394,11 +394,14 @@
   display: flex;
   align-items: center;
   flex: 0 0 auto;
+  background: transparent;
+  line-height: 0;
 }
 
 .rv-logo-img {
   height: 1.7rem;
   width: auto;
+  background: transparent;
 }
 
 .rv-logo-for-light {
