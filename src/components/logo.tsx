@@ -10,19 +10,19 @@ export function Logo() {
       <Image
         src="/images/rhenvox-name.png"
         alt=""
-        width={580}
-        height={204}
+        width={640}
+        height={157}
         priority
-        sizes="160px"
+        sizes="220px"
         className="rv-logo-img rv-logo-for-dark"
       />
       <Image
         src="/images/rhenvox-name-ink.png"
         alt=""
-        width={580}
-        height={204}
+        width={640}
+        height={157}
         priority
-        sizes="160px"
+        sizes="220px"
         className="rv-logo-img rv-logo-for-light"
       />
     </Link>
