@@ -2023,9 +2023,16 @@ html.light .rv-logo-for-light {
 }
 
 .rv-footer-social svg {
-  width: 0.95rem;
-  height: 0.95rem;
-  fill: currentColor;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.rv-footer-social .rv-social-x {
+  fill: #fff;
+}
+
+html.light .rv-footer-social .rv-social-x {
+  fill: #000;
 }
 
 .rv-footer-label {
