@@ -1970,8 +1970,29 @@ html.light .rv-logo-img {
 }
 
 .rv-footer-mail:hover,
-.rv-footer-nav a:hover {
+.rv-footer-nav a:hover,
+.rv-footer-social a:hover,
+.rv-social-links a:hover {
   color: var(--rhenvox-accent);
+}
+
+.rv-footer-social ul,
+.rv-social-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rv-footer-social a,
+.rv-social-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  color: var(--rhenvox-text);
+  font-size: 0.95rem;
 }
 
 .rv-footer-label {

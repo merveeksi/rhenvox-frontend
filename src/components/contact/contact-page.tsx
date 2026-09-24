@@ -2,6 +2,7 @@
 
 import { FormEvent } from "react";
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/social-links";
 import { useI18n } from "@/lib/i18n";
 
 export function ContactPage() {
@@ -144,6 +145,13 @@ export function ContactPage() {
             </dd>
           </div>
         </dl>
+      </section>
+
+      <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">
+        <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
+          {t("footer.social")}
+        </h2>
+        <SocialLinks />
       </section>
 
       <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">

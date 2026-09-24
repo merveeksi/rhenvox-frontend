@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/social-links";
 import { useI18n } from "@/lib/i18n";
 
 export function AboutPage() {
@@ -49,14 +50,7 @@ export function AboutPage() {
         <div className="rv-card max-w-prose p-5 md:p-6">
           <p className="mb-2 text-base font-medium text-rhenvox-text">{t("about.founderName")}</p>
           <p className="mb-4 text-base leading-relaxed text-rhenvox-muted">{t("about.founderBody")}</p>
-          <a
-            href="https://www.linkedin.com/in/merve-eksi-66375995/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base text-rhenvox-text underline decoration-rhenvox-border underline-offset-4 hover:text-rhenvox-accent"
-          >
-            {t("about.founderLink")}
-          </a>
+          <SocialLinks />
         </div>
       </section>
 

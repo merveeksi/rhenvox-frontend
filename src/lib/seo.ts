@@ -69,6 +69,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title: brandedTitle,
       description,
+      creator: "@merveeksi6117",
       images: [
         {
           url: "/twitter-image",

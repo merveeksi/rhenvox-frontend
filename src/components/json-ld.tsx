@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/seo";
+import { SOCIAL_LINKS } from "@/lib/social";
 
 const organization = {
   "@context": "https://schema.org",
@@ -6,6 +7,8 @@ const organization = {
   name: "Rhenvox",
   legalName: "Rhenvox LTD",
   url: SITE_URL,
+  email: "hello@rhenvox.com",
+  sameAs: SOCIAL_LINKS.map((item) => item.href),
 };
 
 export function OrganizationJsonLd() {

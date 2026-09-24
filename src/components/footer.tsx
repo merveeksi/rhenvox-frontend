@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
+import { SocialLinks } from "@/components/social-links";
 
 export function Footer() {
   const { t, href } = useI18n();
@@ -32,6 +33,7 @@ export function Footer() {
             <a className="rv-footer-mail" href="mailto:hello@rhenvox.com">
               hello@rhenvox.com
             </a>
+            <SocialLinks className="rv-footer-social" />
           </div>
 
           <nav className="rv-footer-nav" aria-label={t("footer.pages")}>

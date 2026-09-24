@@ -89,7 +89,6 @@ export const en = {
     founderTitle: "Founder",
     founderName: "Merve Ekşi",
     founderBody: "Merve Ekşi founded Rhenvox LTD in the United Kingdom in May 2025 and runs the company from Türkiye. She leads the product work, including Nur Bilgi, across web, mobile, and backend.",
-    founderLink: "LinkedIn",
     howTitle: "How Rhenvox works",
     p1Title: "Build around the product",
     p1Body: "Technical choices should serve the product rather than follow whatever is currently fashionable.",

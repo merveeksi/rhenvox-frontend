@@ -72,6 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
+    creator: "@merveeksi6117",
     images: [
       {
         url: "/twitter-image",

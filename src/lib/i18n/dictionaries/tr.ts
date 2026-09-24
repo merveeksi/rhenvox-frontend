@@ -89,7 +89,6 @@ export const tr = {
     founderTitle: "Kurucu",
     founderName: "Merve Ekşi",
     founderBody: "Merve Ekşi, Rhenvox LTD’yi Mayıs 2025’te Birleşik Krallık’ta kurdu ve şirketi Türkiye’den yönetiyor. Nur Bilgi dahil ürün işini web, mobil ve backend tarafında yürütüyor.",
-    founderLink: "LinkedIn",
     howTitle: "Rhenvox nasıl çalışır",
     p1Title: "Ürünün etrafında kurmak",
     p1Body: "Teknik tercihler, o anın moda teknolojisini değil ürünü desteklemelidir.",
