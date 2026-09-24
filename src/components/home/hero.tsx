@@ -73,7 +73,7 @@ export function HomeHero() {
           </h1>
           <p className="rv-hero-lead rv-enter [animation-delay:160ms]">{t("home.hero.description")}</p>
           <div className="rv-hero-actions rv-enter [animation-delay:240ms]">
-            <Link href="/contact" className="rv-hero-primary">
+            <Link href="/contact#quote" className="rv-hero-primary">
               {t("home.hero.primaryCta")}
             </Link>
             <Link href="/work" className="rv-hero-secondary">

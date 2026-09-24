@@ -46,9 +46,11 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-semibold mb-4">3. Information We Receive</h2>
         <h3 className="text-lg font-medium mb-3">3.1 Direct business enquiries</h3>
         <p className="mb-4">
-          The current website does not include a contact form, user accounts, or a newsletter signup.
-          If you contact Rhenvox by email, telephone, or WhatsApp, we may receive information you choose to send, such as
-          your name, email address, telephone number, company name, and the content of your message.
+          The website includes a quote section. It does not store the message. Choosing send opens your own email
+          application, addressed to hello@rhenvox.com, with the details you entered. The site does not include user
+          accounts or a newsletter signup. If you contact Rhenvox by email, telephone, or WhatsApp, we may receive
+          information you choose to send, such as your name, email address, telephone number, company name, and the
+          content of your message.
         </p>
         <p className="mb-4">
           Those communications are handled by the relevant email, telephone, or messaging provider.

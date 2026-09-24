@@ -57,6 +57,18 @@ export function HomeSelectedWork() {
                   <ExternalLink aria-hidden="true" />
                 </a>
               </div>
+              <ul className="rv-store-links">
+                <li>
+                  <a href="https://apps.apple.com/us/app/nur-bilgi-quran-hadith-dua/id6755481228" target="_blank" rel="noopener noreferrer">
+                    {t("nurBilgi.appStore")}
+                  </a>
+                </li>
+                <li>
+                  <a href="https://play.google.com/store/apps/details?id=com.nurbilgi.app" target="_blank" rel="noopener noreferrer">
+                    {t("nurBilgi.playStore")}
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <div className="rv-work-stage">
@@ -82,6 +94,26 @@ export function HomeSelectedWork() {
                 </ul>
               </div>
             </div>
+          </article>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <article className="rv-work-extra">
+            <div>
+              <p className="rv-work-num">02</p>
+              <h3 className="rv-work-name">CoGuide</h3>
+              <p className="rv-work-lead">{t("workPage.coguidSummary")}</p>
+              <a
+                href="https://coguid.com/tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rv-work-secondary"
+              >
+                {t("workPage.visitCoguid")}
+                <ExternalLink aria-hidden="true" />
+              </a>
+            </div>
+            <p className="rv-shot-pending">{t("workPage.imagePending")}</p>
           </article>
         </Reveal>
       </div>

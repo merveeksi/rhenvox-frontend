@@ -80,6 +80,26 @@ export function WorkIndex() {
             </article>
           </Reveal>
 
+          <Reveal delay={110}>
+            <article className="rv-work-extra">
+              <div>
+                <p className="rv-work-num">02</p>
+                <h2 className="rv-work-name">CoGuide</h2>
+                <p className="rv-work-lead">{t("workPage.coguidSummary")}</p>
+                <a
+                  href="https://coguid.com/tr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rv-work-secondary"
+                >
+                  {t("workPage.visitCoguid")}
+                  <ExternalLink aria-hidden="true" />
+                </a>
+              </div>
+              <p className="rv-shot-pending">{t("workPage.imagePending")}</p>
+            </article>
+          </Reveal>
+
           <p className="rv-index-close">
             {t("workPage.ctaBody")}{" "}
             <Link href="/contact">{t("workPage.discuss")}</Link>

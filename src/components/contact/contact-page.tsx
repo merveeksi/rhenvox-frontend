@@ -1,10 +1,23 @@
 "use client";
 
+import { FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 
 export function ContactPage() {
   const { t } = useI18n();
+
+  const submitQuote = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const product = String(data.get("product") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+    const body = [`Name: ${name}`, `Email: ${email}`, `Build: ${product}`, "", message].join("\n");
+    const href = `mailto:hello@rhenvox.com?subject=${encodeURIComponent("Quote request")}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  };
 
   return (
     <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
@@ -17,6 +30,63 @@ export function ContactPage() {
           {t("contact.subtitle")}
         </p>
       </header>
+
+      <section id="quote" className="rv-card mb-8 scroll-mt-24 p-6 md:mb-10 md:p-8">
+        <h2 className="mb-3 text-xl font-semibold tracking-tight text-rhenvox-text">
+          {t("contact.quoteTitle")}
+        </h2>
+        <p className="mb-6 max-w-prose text-base leading-relaxed text-rhenvox-muted">
+          {t("contact.quoteBody")}
+        </p>
+        <form className="grid max-w-xl gap-4" onSubmit={submitQuote}>
+          <label className="grid gap-1.5 text-sm text-rhenvox-text">
+            {t("contact.quoteName")}
+            <input
+              name="name"
+              type="text"
+              required
+              autoComplete="name"
+              className="h-11 rounded-md border border-rhenvox-border bg-transparent px-3 text-base text-rhenvox-text"
+            />
+          </label>
+          <label className="grid gap-1.5 text-sm text-rhenvox-text">
+            {t("contact.quoteEmail")}
+            <input
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              className="h-11 rounded-md border border-rhenvox-border bg-transparent px-3 text-base text-rhenvox-text"
+            />
+          </label>
+          <fieldset className="grid gap-2">
+            <legend className="mb-1 text-sm text-rhenvox-text">{t("contact.quoteProduct")}</legend>
+            {[
+              ["web", t("contact.quoteWeb")],
+              ["mobile", t("contact.quoteMobile")],
+              ["both", t("contact.quoteBoth")],
+            ].map(([value, label]) => (
+              <label key={value} className="flex items-center gap-2 text-base text-rhenvox-text">
+                <input type="radio" name="product" value={value} required defaultChecked={value === "both"} />
+                {label}
+              </label>
+            ))}
+          </fieldset>
+          <label className="grid gap-1.5 text-sm text-rhenvox-text">
+            {t("contact.quoteMessage")}
+            <textarea
+              name="message"
+              required
+              rows={5}
+              className="rounded-md border border-rhenvox-border bg-transparent px-3 py-2 text-base leading-relaxed text-rhenvox-text"
+            />
+          </label>
+          <div>
+            <Button type="submit">{t("contact.quoteSubmit")}</Button>
+          </div>
+          <p className="text-sm leading-relaxed text-rhenvox-muted">{t("contact.quoteNote")}</p>
+        </form>
+      </section>
 
       <section className="rv-card mb-8 p-6 md:mb-10 md:p-8">
         <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">

@@ -69,13 +69,31 @@ export function NurBilgiCaseStudy() {
                     {t("nurBilgi.visit")}
                     <ExternalLink aria-hidden="true" />
                   </a>
-                  <Link href="/contact" className="rv-work-secondary">
+                  <a
+                    href="https://apps.apple.com/us/app/nur-bilgi-quran-hadith-dua/id6755481228"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rv-work-secondary"
+                  >
+                    {t("nurBilgi.appStore")}
+                    <ExternalLink aria-hidden="true" />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.nurbilgi.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rv-work-secondary"
+                  >
+                    {t("nurBilgi.playStore")}
+                    <ExternalLink aria-hidden="true" />
+                  </a>
+                  <Link href="/contact#quote" className="rv-work-secondary">
                     {t("nurBilgi.discuss")}
                   </Link>
                 </div>
               </div>
 
-              <div className="rv-case-stage">
+              <div className="rv-case-stage rv-case-stage-pending">
                 <div className="rv-case-stage-grid" aria-hidden="true" />
                 <div className="rv-case-frame-mark" aria-hidden="true" />
                 <div className="rv-case-plate">
@@ -88,6 +106,7 @@ export function NurBilgiCaseStudy() {
                     className="object-contain"
                   />
                 </div>
+                <p className="rv-shot-pending rv-shot-pending-overlay">{t("nurBilgi.imagePending")}</p>
               </div>
             </div>
           </Reveal>
@@ -201,7 +220,7 @@ export function NurBilgiCaseStudy() {
             </h2>
             <p>{t("nurBilgi.ctaBody")}</p>
             <div className="rv-case-actions">
-              <Link href="/contact" className="rv-work-primary">
+              <Link href="/contact#quote" className="rv-work-primary">
                 {t("nurBilgi.discuss")}
               </Link>
               <Link href="/work" className="rv-case-return">

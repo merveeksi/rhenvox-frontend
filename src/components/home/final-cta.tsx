@@ -17,7 +17,7 @@ export function HomeFinalCta() {
           </h2>
           <p className="rv-close-body">{t("home.cta.body")}</p>
           <div className="rv-close-actions">
-            <Link href="/contact" className="rv-work-primary">
+            <Link href="/contact#quote" className="rv-work-primary">
               {t("home.cta.primary")}
             </Link>
             <a className="rv-close-mail" href="mailto:hello@rhenvox.com">

@@ -48,9 +48,10 @@ export default function KVKKPage() {
         <h2 className="text-2xl font-semibold mb-4">3. İşlenen Kişisel Veriler</h2>
         <h3 className="text-lg font-medium mb-3">3.1 Doğrudan iş iletişimi</h3>
         <p className="mb-4">
-          Mevcut web sitesinde iletişim formu, üye hesabı veya bülten kaydı bulunmamaktadır.
-          Rhenvox ile e-posta, telefon veya WhatsApp üzerinden iletişime geçerseniz, göndermeyi tercih ettiğiniz bilgiler
-          alınabilir. Örneğin ad, soyad, e-posta adresi, telefon numarası, şirket adı ve mesaj içeriği.
+          Web sitesinde bir fiyat teklifi bölümü vardır. Site bu mesajı saklamaz. Gönder’e basınca kendi e-posta
+          uygulamanız açılır ve yazdığınız bilgiler hello@rhenvox.com adresine gider. Sitede üye hesabı veya bülten
+          kaydı yoktur. Rhenvox ile e-posta, telefon veya WhatsApp üzerinden iletişime geçerseniz, göndermeyi tercih
+          ettiğiniz bilgiler alınabilir. Örneğin ad, soyad, e-posta adresi, telefon numarası, şirket adı ve mesaj içeriği.
         </p>
         <p className="mb-4">
           Bu yazışmalar ilgili e-posta, telefon veya mesajlaşma sağlayıcısı üzerinden iletilir.
