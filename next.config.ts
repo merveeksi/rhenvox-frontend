@@ -6,17 +6,17 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/portfolio",
-        destination: "/work",
+        destination: "/en/work",
         permanent: true,
       },
       {
         source: "/blog",
-        destination: "/",
+        destination: "/en",
         permanent: true,
       },
       {
         source: "/careers",
-        destination: "/",
+        destination: "/en",
         permanent: true,
       },
     ];

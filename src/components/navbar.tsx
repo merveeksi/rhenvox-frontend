@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -30,8 +30,8 @@ export function Navbar() {
     { href: "/contact", label: t("navbar.contact") },
   ];
 
-  const linkClass = (href: string) =>
-    cn("rv-nav-link", pathname === href && "is-active");
+  const linkClass = (path: string) =>
+    cn("rv-nav-link", pathname === href(path) && "is-active");
 
   return (
     <header className={cn("rv-header", scrolled && "is-scrolled", mobileMenuOpen && "is-open")}>
@@ -41,7 +41,7 @@ export function Navbar() {
         <div className="hidden items-center gap-5 md:flex lg:gap-7">
           <div className="flex items-center gap-6 lg:gap-7">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={linkClass(link.href)}>
+              <Link key={link.href} href={href(link.href)} className={linkClass(link.href)}>
                 {link.label}
               </Link>
             ))}
@@ -50,7 +50,7 @@ export function Navbar() {
             <LanguageSwitcher />
             <ThemeSwitcher />
           </div>
-          <Link href="/contact" className="rv-nav-cta">
+          <Link href={href("/contact")} className="rv-nav-cta">
             {t("navbar.getInTouch")}
           </Link>
         </div>
@@ -75,7 +75,7 @@ export function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={href(link.href)}
                 className={cn(linkClass(link.href), "py-2.5")}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -85,7 +85,7 @@ export function Navbar() {
             <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-rhenvox-border/70 pt-4">
               <LanguageSwitcher />
               <ThemeSwitcher />
-              <Link href="/contact" className="rv-nav-cta" onClick={() => setMobileMenuOpen(false)}>
+              <Link href={href("/contact")} className="rv-nav-cta" onClick={() => setMobileMenuOpen(false)}>
                 {t("navbar.getInTouch")}
               </Link>
             </div>

@@ -1,7 +1,7 @@
 import { ContactPage } from "@/components/contact/contact-page";
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "Contact",
   description:
     "Contact Rhenvox about a product or technical project at hello@rhenvox.com.",

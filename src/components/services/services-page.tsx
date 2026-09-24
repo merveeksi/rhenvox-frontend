@@ -34,7 +34,7 @@ function ServiceArea({
 }
 
 export function ServicesPage() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   return (
     <div className="rv-atmosphere mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
@@ -119,10 +119,10 @@ export function ServicesPage() {
         </h2>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild>
-            <Link href="/contact">{t("services.ctaPrimary")}</Link>
+            <Link href={href("/contact")}>{t("services.ctaPrimary")}</Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/work">{t("services.ctaSecondary")}</Link>
+            <Link href={href("/work")}>{t("services.ctaSecondary")}</Link>
           </Button>
         </div>
       </section>

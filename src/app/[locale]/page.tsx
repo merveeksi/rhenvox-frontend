@@ -7,9 +7,9 @@ import { HomeProcess } from "@/components/home/process";
 import { HomeAbout } from "@/components/home/about-rhenvox";
 import { HomeFinalCta } from "@/components/home/final-cta";
 import { OrganizationJsonLd } from "@/components/json-ld";
-import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, pageMetadata } from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
   path: "/",

@@ -1,52 +1,35 @@
 import type { MetadataRoute } from "next";
+import { LOCALES, localize } from "@/lib/i18n/routing";
 import { canonicalUrl } from "@/lib/seo";
 
+const paths = [
+  "/",
+  "/work",
+  "/work/nur-bilgi",
+  "/services",
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/kvkk",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: canonicalUrl("/"),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: canonicalUrl("/work"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: canonicalUrl("/work/nur-bilgi"),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: canonicalUrl("/services"),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: canonicalUrl("/about"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: canonicalUrl("/contact"),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: canonicalUrl("/privacy"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: canonicalUrl("/terms"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: canonicalUrl("/kvkk"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+  return LOCALES.flatMap((locale) =>
+    paths.map((path) => {
+      const localized = localize(path, locale);
+      return {
+        url: canonicalUrl(localized),
+        changeFrequency:
+          path === "/" ? "weekly" : path === "/privacy" || path === "/terms" || path === "/kvkk" ? "yearly" : "monthly",
+        priority: path === "/" ? 1 : path === "/services" ? 0.9 : 0.7,
+        alternates: {
+          languages: {
+            en: canonicalUrl(localize(path, "en")),
+            tr: canonicalUrl(localize(path, "tr")),
+          },
+        },
+      } satisfies MetadataRoute.Sitemap[number];
+    }),
+  );
 }

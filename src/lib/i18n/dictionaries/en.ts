@@ -251,5 +251,9 @@ export const en = {
     companyNumberValue: "16423845",
     turkeyTitle: "Operated from Türkiye",
     turkeyBody: "Day-to-day work is based in Türkiye."
+  },
+  legal: {
+    writtenInEnglish: "This text is written in English.",
+    writtenInTurkish: "This text is written in Turkish."
   }
 };

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const year = new Date().getFullYear();
 
   const pages = [
@@ -25,7 +25,7 @@ export function Footer() {
       <div className="rv-footer-frame">
         <div className="rv-footer-main">
           <div className="rv-footer-brand">
-            <Link href="/" className="rv-footer-mark">
+            <Link href={href("/")} className="rv-footer-mark">
               Rhenvox
             </Link>
             <p className="rv-footer-desc">{t("footer.description")}</p>
@@ -39,7 +39,7 @@ export function Footer() {
             <ul>
               {pages.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={href(link.href)}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -50,7 +50,7 @@ export function Footer() {
             <ul>
               {legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={href(link.href)}>{link.label}</Link>
                 </li>
               ))}
             </ul>

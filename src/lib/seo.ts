@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localize, type Locale } from "@/lib/i18n/routing";
 
 export const SITE_URL = "https://rhenvox.com";
 
@@ -22,27 +23,37 @@ export function pageMetadata({
   title,
   description,
   path,
+  locale = "en",
 }: {
   title: string;
   description: string;
   path: string;
+  locale?: Locale;
 }): Metadata {
   const url = canonicalUrl(path);
-  const brandedTitle = path === "/" ? title : `${title} | Rhenvox`;
+  const isHome = path === `/${locale}`;
+  const brandedTitle = isHome ? title : `${title} | Rhenvox`;
+  const enPath = localize(path, "en");
+  const trPath = localize(path, "tr");
 
   return {
-    title: path === "/" ? { absolute: title } : title,
+    title: isHome ? { absolute: title } : title,
     description,
     alternates: {
-      // Relative path resolved against metadataBase (Next serializes "/" as origin without a trailing slash).
       canonical: path,
+      languages: {
+        en: enPath,
+        tr: trPath,
+        "x-default": enPath,
+      },
     },
     openGraph: {
       title: brandedTitle,
       description,
       url,
       siteName: "Rhenvox",
-      locale: "en_US",
+      locale: locale === "tr" ? "tr_TR" : "en_GB",
+      alternateLocale: locale === "tr" ? ["en_GB"] : ["tr_TR"],
       type: "website",
       images: [
         {
@@ -67,5 +78,25 @@ export function pageMetadata({
         },
       ],
     },
+  };
+}
+
+export function localizedMetadata(input: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  return async function generateMetadata({
+    params,
+  }: {
+    params: Promise<{ locale: string }>;
+  }): Promise<Metadata> {
+    const { locale: raw } = await params;
+    const locale: Locale = raw === "tr" ? "tr" : "en";
+    return pageMetadata({
+      ...input,
+      locale,
+      path: localize(input.path, locale),
+    });
   };
 }

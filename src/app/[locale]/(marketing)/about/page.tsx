@@ -1,7 +1,7 @@
 import { AboutPage } from "@/components/about/about-page";
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "About",
   description:
     "Rhenvox LTD is a founder-led software company registered in the United Kingdom and operated from Türkiye.",

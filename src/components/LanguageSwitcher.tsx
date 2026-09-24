@@ -1,19 +1,19 @@
 "use client";
 
-import { useI18n, Locale } from "@/lib/i18n";
+import { usePathname, useRouter } from "next/navigation";
+import { useI18n } from "@/lib/i18n";
+import { localize } from "@/lib/i18n/routing";
 
 export default function LanguageSwitcher() {
-  const { locale, setLocale, t } = useI18n();
-
-  const toggleLanguage = () => {
-    const newLocale: Locale = locale === "en" ? "tr" : "en";
-    setLocale(newLocale);
-  };
+  const { locale, t } = useI18n();
+  const pathname = usePathname();
+  const router = useRouter();
+  const next = locale === "en" ? "tr" : "en";
 
   return (
     <button
       type="button"
-      onClick={toggleLanguage}
+      onClick={() => router.push(localize(pathname || "/", next))}
       className="rounded-md px-2 py-1.5 font-mono text-[0.68rem] tracking-[0.16em] text-rhenvox-muted transition-colors hover:text-rhenvox-text"
       aria-label={locale === "en" ? t("navbar.switchToTurkish") : t("navbar.switchToEnglish")}
     >

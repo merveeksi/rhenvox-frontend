@@ -1,6 +1,6 @@
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "KVKK Aydınlatma Metni",
   description: "Rhenvox LTD kurumsal internet sitesi ve doğrudan iş iletişimi için KVKK aydınlatma metni.",
   path: "/kvkk",

@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/visual/reveal";
 
 export function WorkIndex() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const facts = [
     { label: t("workPage.product"), value: "Nur Bilgi" },
@@ -48,7 +48,7 @@ export function WorkIndex() {
                   ))}
                 </dl>
                 <div className="rv-index-actions">
-                  <Link href="/work/nur-bilgi" className="rv-work-primary">
+                  <Link href={href("/work/nur-bilgi")} className="rv-work-primary">
                     {t("workPage.viewCaseStudy")}
                   </Link>
                   <a
@@ -102,7 +102,7 @@ export function WorkIndex() {
 
           <p className="rv-index-close">
             {t("workPage.ctaBody")}{" "}
-            <Link href="/contact">{t("workPage.discuss")}</Link>
+            <Link href={href("/contact#quote")}>{t("workPage.discuss")}</Link>
           </p>
         </div>
       </section>

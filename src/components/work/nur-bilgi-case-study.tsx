@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/visual/reveal";
 
 export function NurBilgiCaseStudy() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const surfaces = [
     t("nurBilgi.tagWeb"),
@@ -47,7 +47,7 @@ export function NurBilgiCaseStudy() {
         <div className="rv-case-frame">
           <Reveal>
             <p className="rv-case-back">
-              <Link href="/work">{t("nurBilgi.back")}</Link>
+              <Link href={href("/work")}>{t("nurBilgi.back")}</Link>
             </p>
             <div className="rv-case-hero-layout">
               <div className="rv-case-hero-copy">
@@ -87,7 +87,7 @@ export function NurBilgiCaseStudy() {
                     {t("nurBilgi.playStore")}
                     <ExternalLink aria-hidden="true" />
                   </a>
-                  <Link href="/contact#quote" className="rv-work-secondary">
+                  <Link href={href("/contact#quote")} className="rv-work-secondary">
                     {t("nurBilgi.discuss")}
                   </Link>
                 </div>
@@ -220,10 +220,10 @@ export function NurBilgiCaseStudy() {
             </h2>
             <p>{t("nurBilgi.ctaBody")}</p>
             <div className="rv-case-actions">
-              <Link href="/contact#quote" className="rv-work-primary">
+              <Link href={href("/contact#quote")} className="rv-work-primary">
                 {t("nurBilgi.discuss")}
               </Link>
-              <Link href="/work" className="rv-case-return">
+              <Link href={href("/work")} className="rv-case-return">
                 {t("nurBilgi.back")}
               </Link>
             </div>

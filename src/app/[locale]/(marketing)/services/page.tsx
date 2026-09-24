@@ -1,7 +1,7 @@
 import { ServicesPage } from "@/components/services/services-page";
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "Services",
   description:
     "Software product development across web, mobile and backend/API, including practical AI integrations inside products.",

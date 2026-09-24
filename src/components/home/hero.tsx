@@ -43,7 +43,7 @@ function CapabilityLine({ text, style }: { text: string; style?: CSSProperties }
 }
 
 export function HomeHero() {
-  const { t, locale } = useI18n();
+  const { t, locale, href } = useI18n();
   const title = t("home.hero.title");
   const lines = heroLines(title, locale);
 
@@ -73,10 +73,10 @@ export function HomeHero() {
           </h1>
           <p className="rv-hero-lead rv-enter [animation-delay:160ms]">{t("home.hero.description")}</p>
           <div className="rv-hero-actions rv-enter [animation-delay:240ms]">
-            <Link href="/contact#quote" className="rv-hero-primary">
+            <Link href={href("/contact#quote")} className="rv-hero-primary">
               {t("home.hero.primaryCta")}
             </Link>
-            <Link href="/work" className="rv-hero-secondary">
+            <Link href={href("/work")} className="rv-hero-secondary">
               {t("home.hero.secondaryCta")}
             </Link>
           </div>

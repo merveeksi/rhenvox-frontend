@@ -7,7 +7,7 @@ import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/visual/reveal";
 
 export function HomeSelectedWork() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const tags = [
     t("home.work.tagWeb"),
@@ -44,7 +44,7 @@ export function HomeSelectedWork() {
                 ))}
               </ul>
               <div className="rv-work-actions">
-                <Link href="/work/nur-bilgi" className="rv-work-primary">
+                <Link href={href("/work/nur-bilgi")} className="rv-work-primary">
                   {t("workPage.viewCaseStudy")}
                 </Link>
                 <a

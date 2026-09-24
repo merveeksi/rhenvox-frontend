@@ -1,6 +1,6 @@
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "Website Terms",
   description: "Terms governing use of the Rhenvox LTD corporate website.",
   path: "/terms",

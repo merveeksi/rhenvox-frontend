@@ -251,5 +251,9 @@ export const tr = {
     companyNumberValue: "16423845",
     turkeyTitle: "Türkiye’den faaliyet",
     turkeyBody: "Günlük iş Türkiye’den yürütülür."
+  },
+  legal: {
+    writtenInEnglish: "Bu metin İngilizce hazırlandı.",
+    writtenInTurkish: "Bu metin Türkçe hazırlandı."
   }
 };

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { LegalLanguageNote } from "@/components/legal/language-note";
 
 export default function LegalLayout({
   children,
@@ -11,6 +12,7 @@ export default function LegalLayout({
       <Navbar />
       <main id="main-content" tabIndex={-1} className="min-h-screen bg-rhenvox-bg px-4 pb-16 pt-24 md:px-6">
         <div className="legal-doc mx-auto max-w-prose text-[0.95rem] leading-relaxed text-rhenvox-text">
+          <LegalLanguageNote />
           {children}
         </div>
       </main>

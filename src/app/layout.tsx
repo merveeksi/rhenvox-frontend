@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/theme-provider";
@@ -32,7 +33,12 @@ export const metadata: Metadata = {
   },
   description: DEFAULT_DESCRIPTION,
   alternates: {
-    canonical: "/",
+    canonical: "/en",
+    languages: {
+      en: "/en",
+      tr: "/tr",
+      "x-default": "/en",
+    },
   },
   icons: {
     icon: [
@@ -47,8 +53,8 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: canonicalUrl("/"),
+    locale: "en_GB",
+    url: canonicalUrl("/en"),
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     siteName: "Rhenvox",
@@ -66,8 +72,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    creator: "@rhenvox",
-    site: "@rhenvox",
     images: [
       {
         url: "/twitter-image",
@@ -84,16 +88,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerList = await headers();
+  const locale = headerList.get("x-locale") === "tr" ? "tr" : "en";
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider>
-          <I18nProvider>
+          <I18nProvider locale={locale}>
             <SkipLink />
             <StarScrollbar />
             {children}

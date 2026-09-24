@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 
 export function AboutPage() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const principles = [
     { title: t("about.p1Title"), body: t("about.p1Body") },
@@ -95,10 +95,10 @@ export function AboutPage() {
       <section className="border-t border-rhenvox-border pt-10">
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild>
-            <Link href="/work">{t("about.ctaWork")}</Link>
+            <Link href={href("/work")}>{t("about.ctaWork")}</Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/contact#quote">{t("about.ctaDiscuss")}</Link>
+            <Link href={href("/contact#quote")}>{t("about.ctaDiscuss")}</Link>
           </Button>
         </div>
       </section>

@@ -5,7 +5,7 @@ import { useI18n } from "@/lib/i18n";
 import { Reveal } from "@/components/visual/reveal";
 
 export function HomeAbout() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   const facts = [
     { label: t("about.factCompany"), value: t("about.factCompanyValue") },
@@ -24,7 +24,7 @@ export function HomeAbout() {
             </h2>
             <div className="rv-about-copy">
               <p className="rv-about-body">{t("home.about.body")}</p>
-              <Link href="/about" className="rv-about-link">
+              <Link href={href("/about")} className="rv-about-link">
                 {t("home.about.link")}
               </Link>
             </div>

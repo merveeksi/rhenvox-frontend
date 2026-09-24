@@ -1,6 +1,6 @@
-import { pageMetadata } from "@/lib/seo";
+import { localizedMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata({
+export const generateMetadata = localizedMetadata({
   title: "Privacy Notice",
   description: "Privacy notice for the Rhenvox LTD corporate website and direct business enquiries.",
   path: "/privacy",
