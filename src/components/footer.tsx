@@ -33,7 +33,7 @@ export function Footer() {
             <a className="rv-footer-mail" href="mailto:hello@rhenvox.com">
               hello@rhenvox.com
             </a>
-            <SocialLinks className="rv-footer-social" />
+            <SocialLinks className="rv-footer-social" icons />
           </div>
 
           <nav className="rv-footer-nav" aria-label={t("footer.pages")}>

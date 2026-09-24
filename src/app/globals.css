@@ -1998,6 +1998,10 @@ html.light .rv-logo-for-light {
   list-style: none;
 }
 
+.rv-footer-social ul {
+  gap: 0.4rem;
+}
+
 .rv-footer-social a,
 .rv-social-links a {
   display: inline-flex;
@@ -2005,6 +2009,23 @@ html.light .rv-logo-for-light {
   min-height: 2.25rem;
   color: var(--rhenvox-text);
   font-size: 0.95rem;
+}
+
+.rv-footer-social a {
+  justify-content: center;
+  width: 2.25rem;
+  border: 1px solid color-mix(in srgb, var(--rhenvox-border) 85%, transparent);
+  border-radius: 0.5rem;
+}
+
+.rv-footer-social a:hover {
+  border-color: color-mix(in srgb, var(--rhenvox-accent) 70%, var(--rhenvox-border));
+}
+
+.rv-footer-social svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
 }
 
 .rv-footer-label {
