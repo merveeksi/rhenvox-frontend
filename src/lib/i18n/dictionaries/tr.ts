@@ -88,6 +88,7 @@ export const tr = {
     story: "Şirket 2025’te kuruldu. Rhenvox web, mobil ve backend ürünleri geliştirir.",
     founderTitle: "Kurucu",
     founderName: "Merve Ekşi",
+    founderAlt: "Rhenvox kurucusu Merve Ekşi’nin portresi",
     founderBody: "Merve Ekşi, Rhenvox LTD’yi Mayıs 2025’te Birleşik Krallık’ta kurdu ve şirketi Türkiye’den yönetiyor. Nur Bilgi dahil ürün işini web, mobil ve backend tarafında yürütüyor.",
     howTitle: "Rhenvox nasıl çalışır",
     p1Title: "Ürünün etrafında kurmak",

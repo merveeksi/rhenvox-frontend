@@ -38,9 +38,11 @@ function SocialIcon({ id }: { id: SocialId }) {
 export function SocialLinks({
   className = "rv-social-links",
   icons = false,
+  external = false,
 }: {
   className?: string;
   icons?: boolean;
+  external?: boolean;
 }) {
   const { t } = useI18n();
 
@@ -50,7 +52,18 @@ export function SocialLinks({
         {SOCIAL_LINKS.map((item) => (
           <li key={item.href}>
             <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.label}>
-              {icons ? <SocialIcon id={item.id} /> : item.label}
+              {icons ? (
+                <SocialIcon id={item.id} />
+              ) : (
+                <>
+                  {item.label}
+                  {external ? (
+                    <span aria-hidden="true" className="rv-external-mark">
+                      ↗
+                    </span>
+                  ) : null}
+                </>
+              )}
             </a>
           </li>
         ))}

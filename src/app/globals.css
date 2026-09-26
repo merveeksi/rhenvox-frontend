@@ -111,7 +111,7 @@
   --rv-globe-stroke: rgba(127, 164, 206, 0.72);
   --rv-work-stage: #12151c;
   --rv-close-base: #10131a;
-  --rv-footer: #0c0e13;
+  --rv-footer: #1c1f27;
 
   --background: 225 16% 9%;
   --foreground: 43 17% 92%;
@@ -394,26 +394,16 @@
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-  background: transparent;
   line-height: 0;
 }
 
 .rv-logo-img {
-  height: 1.7rem;
+  height: 2rem;
   width: auto;
-  background: transparent;
 }
 
-.rv-logo-for-light {
-  display: none;
-}
-
-html.light .rv-logo-for-dark {
-  display: none;
-}
-
-html.light .rv-logo-for-light {
-  display: block;
+.rv-footer-logo .rv-logo-img {
+  height: 1.55rem;
 }
 
 .rv-store-links {
@@ -1944,10 +1934,87 @@ html.light .rv-logo-for-light {
   color: var(--rhenvox-text);
 }
 
+.rv-founder {
+  display: grid;
+  gap: 1.75rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.rv-founder-portrait {
+  overflow: hidden;
+  width: min(100%, 16.5rem);
+  aspect-ratio: 4 / 5;
+  border: 1px solid color-mix(in srgb, var(--rhenvox-border) 90%, transparent);
+  border-radius: 0.85rem;
+  background: var(--rhenvox-surface);
+}
+
+.rv-founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.rv-founder-copy {
+  max-width: 36rem;
+}
+
+.rv-founder-name {
+  margin: 0.55rem 0 0;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.rv-founder-bio {
+  margin: 1rem 0 0;
+  max-width: 38rem;
+  color: var(--rhenvox-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.rv-founder-links ul {
+  gap: 0.4rem 1.35rem;
+  margin-top: 1.35rem;
+}
+
+.rv-founder-links a {
+  color: var(--rhenvox-muted);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-color: color-mix(in srgb, var(--rhenvox-border) 90%, transparent);
+}
+
+.rv-founder-links a:hover {
+  color: var(--rhenvox-text);
+}
+
+.rv-external-mark {
+  margin-left: 0.3rem;
+  font-size: 0.85em;
+}
+
+@media (min-width: 800px) {
+  .rv-founder {
+    grid-template-columns: minmax(15rem, 18.5rem) minmax(0, 1fr);
+    gap: 3.25rem 4rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .rv-founder-portrait {
+    width: 100%;
+  }
+}
+
 .rv-footer {
   background: var(--rv-footer);
   color: var(--rhenvox-text);
-  border-top: 1px solid color-mix(in srgb, var(--rhenvox-border) 65%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--rhenvox-text) 16%, transparent);
 }
 
 .rv-footer-frame {
@@ -1957,13 +2024,6 @@ html.light .rv-logo-for-light {
 .rv-footer-main {
   display: grid;
   gap: 2.5rem;
-}
-
-.rv-footer-mark {
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  line-height: 1;
 }
 
 .rv-footer-desc {

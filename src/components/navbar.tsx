@@ -36,7 +36,7 @@ export function Navbar() {
   return (
     <header className={cn("rv-header", scrolled && "is-scrolled", mobileMenuOpen && "is-open")}>
       <nav className="rv-header-bar" aria-label={t("navbar.primary")}>
-        <Logo />
+        <Logo priority />
 
         <div className="hidden items-center gap-5 md:flex lg:gap-7">
           <div className="flex items-center gap-6 lg:gap-7">

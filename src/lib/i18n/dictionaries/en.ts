@@ -88,6 +88,7 @@ export const en = {
     story: "The company was incorporated in 2025. Rhenvox builds web, mobile, and backend products.",
     founderTitle: "Founder",
     founderName: "Merve Ekşi",
+    founderAlt: "Portrait of Merve Ekşi, founder of Rhenvox",
     founderBody: "Merve Ekşi founded Rhenvox LTD in the United Kingdom in May 2025 and runs the company from Türkiye. She leads the product work, including Nur Bilgi, across web, mobile, and backend.",
     howTitle: "How Rhenvox works",
     p1Title: "Build around the product",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n";
+import { Logo } from "@/components/logo";
 import { SocialLinks } from "@/components/social-links";
 
 export function Footer() {
@@ -26,9 +27,7 @@ export function Footer() {
       <div className="rv-footer-frame">
         <div className="rv-footer-main">
           <div className="rv-footer-brand">
-            <Link href={href("/")} className="rv-footer-mark">
-              Rhenvox
-            </Link>
+            <Logo className="rv-footer-logo" />
             <p className="rv-footer-desc">{t("footer.description")}</p>
             <a className="rv-footer-mail" href="mailto:hello@rhenvox.com">
               hello@rhenvox.com

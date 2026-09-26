@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/social-links";
@@ -43,14 +44,24 @@ export function AboutPage() {
         </p>
       </section>
 
-      <section className="mb-12 md:mb-14">
-        <h2 className="mb-4 text-xl font-semibold tracking-tight text-rhenvox-text">
-          {t("about.founderTitle")}
-        </h2>
-        <div className="rv-card max-w-prose p-5 md:p-6">
-          <p className="mb-2 text-base font-medium text-rhenvox-text">{t("about.founderName")}</p>
-          <p className="mb-4 text-base leading-relaxed text-rhenvox-muted">{t("about.founderBody")}</p>
-          <SocialLinks />
+      <section className="rv-founder" aria-labelledby="founder-heading">
+        <div className="rv-founder-portrait">
+          <Image
+            src="/images/profile.png"
+            alt={t("about.founderAlt")}
+            width={1080}
+            height={1080}
+            sizes="(max-width: 800px) 80vw, 280px"
+            className="rv-founder-photo"
+          />
+        </div>
+        <div className="rv-founder-copy">
+          <p className="rv-kicker">{t("about.founderTitle")}</p>
+          <h2 id="founder-heading" className="rv-founder-name">
+            {t("about.founderName")}
+          </h2>
+          <p className="rv-founder-bio">{t("about.founderBody")}</p>
+          <SocialLinks className="rv-founder-links" external />
         </div>
       </section>
 
