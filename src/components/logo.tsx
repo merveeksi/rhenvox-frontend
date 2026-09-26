@@ -6,8 +6,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 
-const DARK_WORDMARK = "/images/rhenvox-header.png";
-const LIGHT_WORDMARK = "/images/rhenvox-header-ink.png";
+const DARK_WORDMARK = "/images/rhenvox-word-sharp.png";
+const LIGHT_WORDMARK = "/images/rhenvox-word-sharp-ink.png";
 
 export function Logo({
   className = "",
@@ -31,10 +31,11 @@ export function Logo({
       <Image
         src={src}
         alt=""
-        width={795}
-        height={160}
+        width={582}
+        height={147}
         priority={priority}
-        sizes="200px"
+        quality={100}
+        sizes="180px"
         className="rv-logo-img"
       />
     </Link>
